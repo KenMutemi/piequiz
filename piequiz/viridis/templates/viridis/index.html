@@ -1,1 +1,22 @@
 {% extends "base.html" %}
+
+{% block content %}
+{% if tests %}
+  <table class="table">
+    <thead>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Date</th>
+    </thead>
+    {% for test in tests %}
+    <tr>
+      <td><a href="{{ test.id}}">{{test.title}}</a></td>
+      <td> {{ test.user }}</td>
+      <td> {{ test.pub_date }} </td>
+    </tr>
+    {% endfor %}
+  </table>
+    {% else %}
+        <strong>There are no tests at present</strong>
+{% endif %}
+{% endblock %}

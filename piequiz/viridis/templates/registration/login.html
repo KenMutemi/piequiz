@@ -1,0 +1,39 @@
+{% extends "registration/base.html" %}
+{% load staticfiles %}
+{% block head %}
+<link href='http://fonts.googleapis.com/css?family=Pompiere' rel='stylesheet' type='text/css'>
+{% endblock %}
+{% block title %}Sign in &middot;{% endblock %}
+{% block content %}
+<div class="auth-wrapper">
+<div class="well">
+<h1>PieQuiz</h1>
+</div>
+{% if form.errors %}
+<p class="error">Please correct the errors below:</p>
+{% endif %}
+
+<form class="well" method="post" action="">
+{% csrf_token %}
+<div class="row">
+<div class="col-md-6">
+<input type="hidden" name="next" value="{{ next|default:"/" }}">
+<dl>
+<dt><label for="id_username">Username</label>{% if form.username.errors %} <span class="error">{{ form.username.errors|join:", " }}</span>{% endif %}</dt>
+<dd><input type="text" class="form-control" name="username" value="" id="username"></dd>
+<dt><label for="id_password">Password</label>{% if form.password.errors %} <span class="error">{{ form.password.errors|join:", " }}</span>{% endif %}</dt>
+<dd><input type="password" class="form-control" name="password" value="" id="password"></dd>
+<dt><input class="btn btn-default" type="submit" value="Log in" /></dt>
+</dl>
+</div>
+</div>
+</form>
+
+<div class="well">
+<p>If you don't have an account, you can <a href="/accounts/register/">sign
+up</a> for one.</p>
+<p>If you forgot your password, you can <a href="/accounts/password/reset/">reset it</a>.</p>
+</div>
+</div>
+
+{% endblock %}

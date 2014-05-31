@@ -36,9 +36,16 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.humanize',
     'bootstrap3',
+    'registration',
+    'widget_tweaks',
     'viridis',
 )
+
+# Registration
+
+ACCOUNT_ACTIVATION_DAYS = 7 # One-week activation window;
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -67,6 +74,10 @@ DATABASES = {
 	'PORT': '5432',
     }
 }
+
+# Dumb SMTP server
+EMAIL_HOST = 'localhost'
+EMAIL_PORT = 1025
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/

@@ -1,3 +1,4 @@
+from viridis.models import Test
 from django.contrib import admin
 
-# Register your models here.
+admin.site.register(Test)

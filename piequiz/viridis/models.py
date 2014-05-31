@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 class Test(models.Model):
     user = models.ForeignKey(User)
     title = models.CharField(max_length=200)
-    organization = models.CharField(default=None, max_length=200)
+    institution = models.CharField(default=None, max_length=200)
     marks = models.IntegerField(default=0)
     slug = models.SlugField()
     pub_date = models.DateTimeField('date-published')

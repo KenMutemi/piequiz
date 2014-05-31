@@ -1,0 +1,26 @@
+[
+  {
+    "model": "viridis.test",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "title": "Mathematics",
+      "institution": "Strathmore University",
+      "marks": 40,
+      "slug": "mathematics",
+      "pub_date": "2014-05-31"
+    }
+  },
+  {
+    "model": "viridis.test",
+    "pk": 2,
+    "fields": {
+      "user": 1,
+      "title": "Science",
+      "institution": "Nairobi Primary School",
+      "marks": 50 ,
+      "slug": "science",
+      "pub_date": "2014-05-31"
+    }
+  }
+]

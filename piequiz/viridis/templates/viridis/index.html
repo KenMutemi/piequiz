@@ -1,20 +1,33 @@
 {% extends "base.html" %}
 
+{% block sidebar %}
+<div id="sidebar-header" class="well well-sm">
+<p>My Tests<i class="fa fa-angle-double-down"></i></p>
+</div>
+{% for user_test in user.test_set.all %}
+<div id="sidebar-body">
+  <p><a href="{{ user_test.get_absolute_url }}">{{ user_test.title }}</a></p>
+</div>
+{% endfor %}
+{% endblock %}
+
 {% block content %}
 {% if tests %}
   <table class="table">
-    <thead>
+    <thead id="table-header" class="well">
       <th>Title</th>
       <th>Author</th>
       <th>Date</th>
     </thead>
+    <tbody>
     {% for test in tests %}
     <tr>
-      <td><a href="{{ test.id}}">{{test.title}}</a></td>
+      <td><a href="{{ test.get_absolute_url }}">{{test.title}}</a></td>
       <td> {{ test.user }}</td>
       <td> {{ test.pub_date }} </td>
     </tr>
     {% endfor %}
+  </tbody>
   </table>
     {% else %}
         <strong>There are no tests at present</strong>

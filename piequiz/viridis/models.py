@@ -14,6 +14,9 @@ class Test(models.Model):
     def __unicode__(self):
         return self.title
 
+    def get_absolute_url(self):
+        return "/%s/%s" % (self.id, self.slug)
+
     def was_published_recently(self):
         now = timezone.now()
         return now - datetime.timedelta(days=1) <= self.pub_date < now

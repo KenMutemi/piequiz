@@ -3,10 +3,10 @@
 }
 
 .content {
-  width: 500px;
+  width: 50%;
   padding: 5px;
   background-color: #fff;
-  margin: 5% auto;
+  margin: 2% auto;
 }
 
 input:not([type="checkbox"]) { 
@@ -54,3 +54,30 @@ nav a {
   color: #fff;
   width: 70px;
 }
+
+#sidebar-header {
+  background-color: #2cc9f0;
+  color: #fff;
+  font-size: 12pt;
+  padding: 5% 0 0 28%;
+  font-weight: bold;
+}
+
+#sidebar-body {
+  padding: 0 0 0 25%;
+}
+
+#sidebar {
+  width: 20%;
+  padding: 5px;
+  background-color: #fff;
+  float: left;
+}
+
+#table-header {
+  background-color: #2cc9f0;
+  color: #fff;
+  font-size: 12pt;
+  font-weight: bold;
+}
+

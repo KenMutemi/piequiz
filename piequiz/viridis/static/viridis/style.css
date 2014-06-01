@@ -1,5 +1,5 @@
 .inside {
-  background-color: #d3d3d3 !important;
+  background-color: #fff !important;
 }
 
 .content {
@@ -23,7 +23,7 @@ input:not([type="checkbox"]) {
 }
 
 .navbar-custom {
-  background-color: #fff;
+  background-color: #d3d3d3;
   border-radius:0;
 }
 
@@ -42,7 +42,7 @@ input:not([type="checkbox"]) {
 }
 
 nav a {
-  color: #2cc9f0;
+  
 }
 
 #search-input {
@@ -68,7 +68,7 @@ nav a {
 }
 
 #sidebar {
-  width: 20%;
+  width: 23%;
   padding: 5px;
   background-color: #fff;
   float: left;

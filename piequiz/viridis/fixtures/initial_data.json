@@ -199,5 +199,181 @@
       "marks": 0,
       "pub_date": "2014-06-2 03:44"
     }
+  },
+
+  {
+    "model": "viridis.choice",
+    "pk": 5,
+    "fields": {
+      "question": 2,
+      "choice_text": "work done in rolling is more than in lifting",
+      "marks": 4,
+      "pub_date": "2014-06-2 16:44"
+    }
+  },
+  
+  {
+    "model": "viridis.choice",
+    "pk": 6,
+    "fields": {
+      "question": 2,
+      "choice_text": "work done in lifting the stone is equal to rolling it",
+      "marks": 0,
+      "pub_date": "2014-06-2 16:45"
+    }
+  },
+
+  {
+    "model": "viridis.choice",
+    "pk": 7,
+    "fields": {
+      "question": 2,
+      "choice_text": "work done in both is same but the rate of doing work is less in rolling",
+      "marks": 0,
+      "pub_date": "2014-06-2 16:46"
+    }
+  },
+  
+  {
+    "model": "viridis.choice",
+    "pk": 8,
+    "fields": {
+      "question": 2,
+      "choice_text": "work done in rolling a stone is less than in lifting it",
+      "marks": 2,
+      "pub_date": "2014-06-2 16:46"
+    }
+  },
+
+  {
+    "model": "viridis.choice",
+    "pk": 9,
+    "fields": {
+      "question": 3,
+      "choice_text": "viscosity of ink",
+      "marks": 0,
+      "pub_date": "2014-06-2 23:50"
+    }
+  },
+  
+  {
+    "model": "viridis.choice",
+    "pk": 10,
+    "fields": {
+      "question": 3,
+      "choice_text": "capillary action phenomenon",
+      "marks": 2,
+      "pub_date": "2014-06-2 23:51"
+    }
+  },
+  
+  {
+    "model": "viridis.choice",
+    "pk": 11,
+    "fields": {
+      "question": 3,
+      "choice_text": "diffusion of ink through the blotting",
+      "marks": 0,
+      "pub_date": "2014-06-2 23:53"
+    }
+  },
+  
+  {
+    "model": "viridis.choice",
+    "pk": 12,
+    "fields": {
+      "question": 3,
+      "choice_text": "siphon action",
+      "marks": 0,
+      "pub_date": "2014-06-2 23:54"
+    }
+  },
+  
+  {
+    "model": "viridis.choice",
+    "pk": 13,
+    "fields": {
+      "question": 4,
+      "choice_text": "the heating effect of current alone",
+      "marks": 0,
+      "pub_date": "2014-06-3 00:26"
+    }
+  },
+  
+  {
+    "model": "viridis.choice",
+    "pk": 14,
+    "fields": {
+      "question": 4,
+      "choice_text": "hysteresis loss alone",
+      "marks": 0,
+      "pub_date": "2014-06-2 00:27"
+    }
+  },
+  
+  {
+    "model": "viridis.choice",
+    "pk": 15,
+    "fields": {
+      "question": 4,
+      "choice_text": "both the heating effect of current and hysteresis loss",
+      "marks": 2,
+      "pub_date": "2014-06-3 00:28"
+    }
+  },
+  
+  {
+    "model": "viridis.choice",
+    "pk": 16,
+    "fields": {
+      "question": 4,
+      "choice_text": "intense sunlight at noon",
+      "marks": 0,
+      "pub_date": "2014-06-3 00:29"
+    }
+  },
+  
+  {
+    "model": "viridis.choice",
+    "pk": 17,
+    "fields": {
+      "question": 5,
+      "choice_text": "Fermi",
+      "marks": 2,
+      "pub_date": "2014-06-3 00:31"
+    }
+  },
+  
+  {
+    "model": "viridis.choice",
+    "pk": 18,
+    "fields": {
+      "question": 5,
+      "choice_text": "angstrom",
+      "marks": 0,
+      "pub_date": "2014-06-3 00:32"
+    }
+  },
+  
+  {
+    "model": "viridis.choice",
+    "pk": 19,
+    "fields": {
+      "question": 5,
+      "choice_text": "newton",
+      "marks": 0,
+      "pub_date": "2014-06-2 00:33"
+    }
+  },
+  
+  {
+    "model": "viridis.choice",
+    "pk": 20,
+    "fields": {
+      "question": 5,
+      "choice_text": "tesla",
+      "marks": 0,
+      "pub_date": "2014-06-3 00:33"
+    }
   }
 ]

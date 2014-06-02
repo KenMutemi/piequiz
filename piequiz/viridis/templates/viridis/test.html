@@ -3,15 +3,27 @@
 {% block content %}
 <div id="test">
   <div id = "test-header" class="well"><label>{{ test.title }}<label></div>
-  <div id="test-body">
-  {% if test.question_set.all %}
+    <div id="test-body">
+    {% if test.question_set.all %}
+    {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+    <form action="" class="" method="post">
     {% for question in test.question_set.all %}
-    <p><b>{{ forloop.counter }}. {{ question.question_text }} ({{ question.marks }} marks)</b></p>
-    <hr>
-    {% endfor %}
-  {% else %}
-    <b>There are no questions for <i>{{ test.title }}</i>.</b>
-  {% endif %}
+      {% csrf_token %}
+        <ul class="list-unstyled">
+          <li>{{ forloop.counter }} . <b>{{ question.question_text }}</b></li>
+        </ul>
+      {% for choice in question.choice_set.all %}
+        <label class="label-choice">
+          <input class="input-choice" type="checkbox" name="choice" id="choice{{ choice.id }}" value="{{ choice.id }}"/>
+{{ choice.choice_text }}</label><br />
+      {% endfor %}
+      <hr>
+      {% endfor %}
+      <input class="btn btn-default" type="submit" value="Submit" />
+      </form>
+   {% else %}
+     <p>There are no questions for <i>{{ test.title }}</i>.</p>
+    {% endif %}
   </div>
 </div>
 {% endblock %}

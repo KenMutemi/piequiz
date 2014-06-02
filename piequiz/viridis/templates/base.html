@@ -25,7 +25,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">PieQuiz</a>
+      <a class="navbar-brand" href="{% url 'viridis:index' %}">PieQuiz</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -54,35 +54,38 @@
       </form>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Logout</a></li>
+        {% if user.is_authenticated %}
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ user.username }} <b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
+            <li><a href="#">Profile</a></li>
             <li><a href="#">Another action</a></li>
             <li><a href="#">Something else here</a></li>
             <li class="divider"></li>
             <li><a href="{% url 'django.contrib.auth.views.logout' %}">Sign Out</a></li>
           </ul>
         </li>
+        {% else %}
+            <li><a href="{% url 'django.contrib.auth.views.login' %}">Sign in</a></li>
+        {% endif %}
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 
 </div>
+{% if user.is_authenticated %}
 <div id="sidebar">
-{% block sidebar %}
 <div id="sidebar-header" class="well well-sm">
-<p>My Tests<i class="fa fa-angle-double-down"></i></p>
+<p>My Tests <i class="fa fa-angle-double-down"></i></p>
 </div>
 {% for user_test in user.test_set.all %}
 <div id="sidebar-body">
   <p><a href="{{ user_test.get_absolute_url }}">{{ user_test.title }}</a></p>
 </div>
 {% endfor %}
-
-{% endblock %}
 </div>
+{% endif %}
 <div class="content">
 {% block content %}
 {% endblock %}

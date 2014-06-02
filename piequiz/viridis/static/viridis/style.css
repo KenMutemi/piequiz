@@ -19,6 +19,7 @@ input:not([type="checkbox"]) {
   width: 700px; 
   padding:5px;
   border:1px solid #ccc !important;
+  background-color: #2cc9f0;
   margin: 50px auto; 
 }
 
@@ -41,10 +42,6 @@ input:not([type="checkbox"]) {
   color: #2cc9f0;
 }
 
-nav a {
-  
-}
-
 #search-input {
   width: 350px;
 }
@@ -59,7 +56,8 @@ nav a {
   background-color: #2cc9f0;
   color: #fff;
   font-size: 12pt;
-  padding: 5% 0 0 28%;
+  font-family:"Marked Fool",Junkyard,Balker,Papyrus,Haettenschweiler,Impact,fantasy;
+  padding: 5% 0 0 20%;
   font-weight: bold;
 }
 
@@ -74,17 +72,25 @@ nav a {
   float: left;
 }
 
-#table-header {
+#index-main-header {
   background-color: #2cc9f0;
+  padding: 0 0 0 34%;
   color: #fff;
-  font-size: 12pt;
-  font-weight: bold;
+  font-size: 20pt;
+  font-family:"Marked Fool",Junkyard,Balker,Papyrus,Haettenschweiler,Impact,fantasy;
+}
+
+td {
+  text-align: left;
+  padding: 5px 0;
+  height: 20px;
 }
 
 #test-header {
   background-color: #2cc9f0;
   color: #fff;
-  font-size: 24pt;
+  font-size: 21pt;
   padding: 0 0 0 37%;
   font-weight: bold;
+  font-family:"Marked Fool",Junkyard,Balker,Papyrus,Haettenschweiler,Impact,fantasy;
 }

@@ -2,11 +2,11 @@
 
 {% block content %}
 <div id="test">
-  <div id = "test-header" class="well">{{ test.title }}</div>
+  <div id = "test-header" class="well"><label>{{ test.title }}<label></div>
   <div id="test-body">
   {% if test.question_set.all %}
     {% for question in test.question_set.all %}
-    <p><b>{{ forloop.counter }}. {{ question.question_text }}</b></p>
+    <p><b>{{ forloop.counter }}. {{ question.question_text }} ({{ question.marks }} marks)</b></p>
     <hr>
     {% endfor %}
   {% else %}

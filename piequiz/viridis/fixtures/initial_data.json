@@ -155,5 +155,49 @@
       "marks": 2,
       "pub_date": "2014-06-1 16:30"
     }
+  },
+
+  {
+    "model": "viridis.choice",
+    "pk": 1,
+    "fields": {
+      "question": 1,
+      "choice_text": "collision between fast neutrons and nitrogen nuclei present in the atmosphere",
+      "marks": 2,
+      "pub_date": "2014-06-2 03:38"
+    }
+  },
+  
+  {
+    "model": "viridis.choice",
+    "pk": 2,
+    "fields": {
+      "question": 1,
+      "choice_text": "action of ultraviolet light from the sun on atmospheric oxygen",
+      "marks": 0,
+      "pub_date": "2014-06-2 03:42"
+    }
+  },
+
+  {
+    "model": "viridis.choice",
+    "pk": 3,
+    "fields": {
+      "question": 1,
+      "choice_text": "action of solar radiations particularly cosmic rays on carbon dioxide present in the atmosphere",
+      "marks": 0,
+      "pub_date": "2014-06-2 03:43"
+    }
+  },
+  
+  {
+    "model": "viridis.choice",
+    "pk": 4,
+    "fields": {
+      "question": 1,
+      "choice_text": "lightning discharge in atmosphere",
+      "marks": 0,
+      "pub_date": "2014-06-2 03:44"
+    }
   }
 ]

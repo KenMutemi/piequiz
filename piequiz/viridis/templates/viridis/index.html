@@ -1,24 +1,26 @@
 {% extends "base.html" %}
 
 {% block content %}
+<div id="index-main">
+<div id="index-main-header" class="well"><label>Recent Tests</label></div>
 {% if tests %}
-  <table class="table">
-    <thead id="table-header" class="well">
-      <th>Title</th>
-      <th>Author</th>
-      <th>Date</th>
-    </thead>
-    <tbody>
+<table class="table">
     {% for test in tests %}
-    <tr>
-      <td><a href="{{ test.get_absolute_url }}">{{test.title}}</a></td>
-      <td> {{ test.user }}</td>
-      <td> {{ test.pub_date }} </td>
-    </tr>
+      <tr height="20">
+        <td>
+          <a href="{{ test.get_absolute_url }}">{{test.title}}</a>
+        </td>
+        <td>
+            {{ test.user }} 
+        </td>
+        <td>
+          {{ test.pub_date|date:"M d, Y" }}
+        </td>
+      </tr>
     {% endfor %}
-  </tbody>
-  </table>
+</table>
     {% else %}
         <strong>There are no tests at present</strong>
 {% endif %}
+</div>
 {% endblock %}

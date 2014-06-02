@@ -29,3 +29,9 @@ class Question(models.Model):
     test = models.ForeignKey(Test)
     marks = models.IntegerField(default=0)
     pub_date = models.DateTimeField()
+
+class Choice(models.Model):
+    choice_text = models.CharField(max_length = 500)
+    question = models.ForeignKey(Question)
+    marks = models.IntegerField(default=0)
+    pub_date = models.DateTimeField()

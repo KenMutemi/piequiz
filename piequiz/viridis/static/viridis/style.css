@@ -52,6 +52,14 @@ input:not([type="checkbox"]) {
   width: 70px;
 }
 
+#search-header {
+  background-color: #2cc9f0;
+  padding: 0 0 0 34%;
+  color: #fff;
+  font-size: 20pt;
+  font-family:"Marked Fool",Junkyard,Balker,Papyrus,Haettenschweiler,Impact,fantasy;
+}
+
 #sidebar-header {
   background-color: #2cc9f0;
   color: #fff;
@@ -109,4 +117,13 @@ td {
   position: relative;
   top: -1px;
   *overflow: hidden;
+}
+
+.fa {
+  color: #ffffff;
+}
+
+.ac-results {
+  background-color: #2cc9f0;
+  color: #ffffff;
 }

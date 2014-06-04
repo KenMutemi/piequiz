@@ -41,3 +41,12 @@ class Choice(models.Model):
   
     def __unicode__(self):
         return self.choice_text
+
+class Answer(models.Model):
+    user = models.IntegerField()
+    choice = models.ForeignKey(Choice)
+    test = models.IntegerField()
+    answer_date = models.DateTimeField()
+    
+    def __unicode__(self):
+        return self.choice

@@ -31,13 +31,12 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      {% if user.is_authenticated %}
       <ul class="nav navbar-nav">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Settings</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Create...<b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Tests</a></li>
+            <li><a href="{% url 'viridis:add_test' %}">Tests</a></li>
             <li><a href="#">Questions</a></li>
             <li><a href="#">Something else here</a></li>
             <li class="divider"></li>
@@ -47,6 +46,7 @@
           </ul>
         </li>
       </ul>
+      {% endif %}
       <form id="search" class="navbar-form navbar-left" method="get" action="/search?=">
         <div class="form-group">
         <input type="search" id="search-input" name="q" class="form-control" placeholder="Search" />
@@ -54,6 +54,7 @@
         <button type="submit" id="btn-search" class="btn btn-default"><i class="fa fa-search"></i></button>
       </form>
       <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Settings</a></li>
         <li><a href="#">Logout</a></li>
         {% if user.is_authenticated %}
         <li class="dropdown">

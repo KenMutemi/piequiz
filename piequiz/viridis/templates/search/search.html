@@ -16,7 +16,7 @@
         
         {% for result in page.object_list %}
             <p>
-                <a href="{{ result.object }}"> {{ result.object.title }}</a> by {{ result.object.user }}
+                <a href="{{ result.object.get_absolute_url }}"> {{ result.object.title }}</a> by {{ result.object.user }}
             </p>
             <p>Date: {{ result.object.pub_date }}</p>
         <hr>

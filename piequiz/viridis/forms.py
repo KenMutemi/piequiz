@@ -1,7 +1,9 @@
 from django import forms
-from viridis.models import Choice
+from viridis.models import Test
 
-class ChoiceForm(forms.Form):
-    choice = forms.ModelMultipleChoiceField(queryset=Choice.objects.all(),
-        widget=forms.CheckboxSelectMultiple,
-        required=False)
+class AddTestForm(forms.Form):
+    title = forms.CharField(widget=forms.TextInput(attrs={'class' : 'form-control', 'type':'text'}))
+    institution = forms.CharField(widget=forms.TextInput(attrs={'class' : 'form-control', 'type':'text'}))
+    mark = forms.IntegerField(widget=forms.TextInput(attrs={'class' : 'form-control mark-test', 'type':'number'}))
+    no_of_question = forms.IntegerField(widget=forms.TextInput(attrs={'class' : 'form-control', 'type':'number'}))
+

@@ -1,5 +1,8 @@
 import datetime
 import simplejson as json
+from viridis.forms import AddTestForm
+from django.template.defaultfilters import slugify
+from django.contrib.auth.decorators import login_required
 from haystack.query import SearchQuerySet
 from viridis.models import Test, Question, Choice, Answer
 from django.contrib.auth.models import User
@@ -38,6 +41,30 @@ def answer(request, test_id):
 def results(request, test_id):
     test = get_object_or_404(Test, pk=test_id)
     return render(request, 'viridis/results.html', {'test': test})
+
+@login_required(login_url = "/accounts/login/")
+def add_test(request):
+    if request.method == "POST":
+        form = AddTestForm(request.POST)
+        if form.is_valid():
+            cd = form.cleaned_data 
+            request.session['no_of_question'] = cd['no_of_question']
+            test = Test(
+                user_id = request.user.id,
+                pub_date = datetime.datetime.now(),
+                title = cd['title'],
+                institution = cd['institution'],
+                marks = cd['mark'],
+                slug = slugify(cd['title']),
+            )
+            test.save()
+	    
+            return HttpResponseRedirect('/test/new')
+    else:
+        form = AddTestForm(label_suffix='')
+    return render(request, 'viridis/new_test.html', {
+        "form": form
+    })
 
 def autocomplete(request):
     """User enters search term in search box. The system tries

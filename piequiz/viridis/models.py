@@ -50,3 +50,9 @@ class Answer(models.Model):
     
     def __unicode__(self):
         return self.choice
+
+class Approve(models.Model):
+    user = models.ManyToManyField(User, related_name='approves')
+    test = models.ForeignKey(Test)
+    date = models.DateTimeField(auto_now_add=True)
+    total_approvals = models.IntegerField(default=0)

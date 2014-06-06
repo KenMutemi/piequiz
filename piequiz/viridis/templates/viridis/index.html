@@ -8,7 +8,12 @@
     {% for test in tests %}
       <tr height="20">
         <td>
-          <a href="{{ test.get_absolute_url }}">{{test.title}}</a>
+          <p><a href="{{ test.get_absolute_url }}">{{test.title}}</a></p>
+          {% if test.question_set.all %}
+            {{ test.question_set.all|length }} questions
+          {% else %}
+            <p>No questions</p>
+          {% endif %}
         </td>
         <td>
             {{ test.user }} 

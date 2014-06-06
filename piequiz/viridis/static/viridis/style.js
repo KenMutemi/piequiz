@@ -1,3 +1,12 @@
+$(document).ready(function() {
+      window.autocomplete = new Autocomplete({
+        form_selector: '#search'
+      });
+      window.autocomplete.setup();
+ });
+
+$(document).tooltip();
+
 var Autocomplete = function(options) {
       this.form_selector = options.form_selector
       this.url = options.url || '/search/autocomplete/'
@@ -71,11 +80,3 @@ var Autocomplete = function(options) {
 
       this.query_box.after(results_wrapper)
     }
-
-$(document).ready(function() {
-      window.autocomplete = new Autocomplete({
-        form_selector: '#search'
-      });
-      window.autocomplete.setup();
- });
-

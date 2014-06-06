@@ -2,28 +2,28 @@
 
 {% block content %}
 <div id="test">
-  <div id = "test-header" class="well"><label>{{ test.title }}<label></div>
-    <div id="test-body">
-    {% if test.question_set.all %}
-    {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
-    {% for question in test.question_set.all %}
-    <form action="{% url 'viridis:answer' test.id %}" class="test-form" method="post">
-      {% csrf_token %}
-        <ul class="list-unstyled">
-          <li>{{ forloop.counter }} . <b>{{ question.question_text }}</b></li>
-        </ul>
-      {% for choice in question.choice_set.all %}
-        <label class="label-choice">
-          <input class="input-choice" type="checkbox" name="choice" id="choice{{ choice.id }}" value="{{ choice.id }}"/>
-{{ choice.choice_text }}</label><br />
-      {% endfor %}
-      <input class="btn btn-default" type="submit" value="Submit" />
-      <hr>
-      </form>
-      {% endfor %}
-   {% else %}
-     <p>There are no questions for <i>{{ test.title }}</i>.</p>
-    {% endif %}
+  <div id = "test-header" class="well">
+    <label>{{ test.title }}</label>
   </div>
+  <div id="test-body">
+{% if test.question_set.all %}
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+{% for question in test.question_set.all %}
+<form class="test-form" action="{% url 'viridis:answer' test.id %}" method="post">
+{% csrf_token %}
+<ul class="list-unstyled">
+  <li>{{ forloop.counter }} . <b>{{ question.question_text }}</b></li>
+</ul>
+    {% for choice in question.choice_set.all %}
+      <label for="choice{{ choice.id }}" class="label-choice"><input class="input-choice" type="checkbox" name="choice" id="choice{{ choice.id }}" value="{{ choice.id }}"/> {{ choice.choice_text }}</label><br />
+    {% endfor %}
+<input class="btn btn-default" type="submit" value="Submit" />
+</form>
+{% endfor %}
+{% else %}
+<p>There are no questions for <i>{{ test.title }}</i>.</p>
+{% endif %}
+    </div>
 </div>
 {% endblock %}
+

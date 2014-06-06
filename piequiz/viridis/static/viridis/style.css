@@ -28,6 +28,11 @@ input:not([type="checkbox"]) {
   border-radius:0;
 }
 
+
+.navbar-custom .navbar-nav > li > a {
+  color: #000000; 
+}
+
 .navbar-custom .navbar-nav > li > a:hover, .nav > li > a:focus {  
   text-decoration: none;     
   background-color: #2cc9f0; color: #fff; 
@@ -65,7 +70,7 @@ input:not([type="checkbox"]) {
   color: #fff;
   font-size: 12pt;
   font-family:"Marked Fool",Junkyard,Balker,Papyrus,Haettenschweiler,Impact,fantasy;
-  padding: 5% 0 0 20%;
+  padding: 5% 0 0 30%;
   font-weight: bold;
 }
 

@@ -48,7 +48,7 @@ def add_test(request):
         form = AddTestForm(request.POST)
         if form.is_valid():
             cd = form.cleaned_data 
-            request.session['no_of_question'] = cd['no_of_question']
+            request.session['no_of_question'] = cd['questions']
             test = Test(
                 user_id = request.user.id,
                 pub_date = datetime.datetime.now(),
@@ -77,3 +77,30 @@ def autocomplete(request):
         'results' : suggestions # Return json to avoid XSS attack
     })
     return HttpResponse(the_data, content_type='application/json')
+
+def approve(request):
+    vars = {}
+    if request.method == 'POST':
+        user = request.user
+        slug = request.POST.get('slug', None)
+        test = get_object_or_404(Test, slug=slug)
+
+        approved, created = Approve.objects.create(test=test)
+
+        try:
+            user_approved = Test.objects.get(test=test, user=user)
+        except:
+            user_approved = None
+
+        if user_approved:
+            user_approved.total_likes -= 1
+            approved.user.remove(request.user)
+            user_approved.save()
+        else:
+            approved.user.add(request.user)
+            approved.total_likes += 1
+            approved.save()
+
+
+    return HttpResponse(json.dumps(vars),
+                    mimetype='application/javascript')

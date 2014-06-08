@@ -28,6 +28,6 @@ This README would normally document whatever steps are necessary to get your app
 ### Who do I talk to? ###
 
 * Repo owner or admin
-  Kennedy Mutemi
+* Kennedy Mutemi
 * Other community or team contact
-  None
+* None

@@ -1,5 +1,6 @@
 import datetime
 import simplejson as json
+from os.path import join as pjoin
 from viridis.forms import AddTestForm
 from django.template.defaultfilters import slugify
 from django.contrib.auth.decorators import login_required
@@ -9,6 +10,10 @@ from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
 from django.http import HttpResponsePermanentRedirect, HttpResponseRedirect, HttpResponse
 from django.shortcuts import render, get_object_or_404
+
+@login_required
+def profile(request):
+    return render(request, 'viridis/profile.html')
 
 def index(request):
     tests = Test.objects.order_by('-pub_date')

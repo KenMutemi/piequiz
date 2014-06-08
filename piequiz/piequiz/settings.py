@@ -41,6 +41,7 @@ INSTALLED_APPS = (
     'bootstrap3',
     'registration',
     'widget_tweaks',
+    'avatar',
     'viridis',
 )
 
@@ -104,8 +105,16 @@ USE_L10N = True
 
 USE_TZ = True
 
+AUTO_GENERATE_AVATAR_SIZES = 40
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = '/home/re/dev/python/piequiz/piequiz/piequiz/media/'
+

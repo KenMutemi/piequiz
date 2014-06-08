@@ -28,6 +28,18 @@ input:not([type="checkbox"]) {
   border-radius:0;
 }
 
+.navbar-brand,
+.navbar-nav li a {
+  line-height: 0;
+  height: 50px;
+  padding-top: 0;
+}
+
+* {
+  -webkit-border-radius: 0 !important;
+     -moz-border-radius: 0 !important;
+          border-radius: 0 !important;
+}
 
 .navbar-custom .navbar-nav > li > a {
   color: #000000; 
@@ -86,6 +98,14 @@ input:not([type="checkbox"]) {
 }
 
 #index-main-header {
+  background-color: #2cc9f0;
+  padding: 0 0 0 34%;
+  color: #fff;
+  font-size: 20pt;
+  font-family:"Marked Fool",Junkyard,Balker,Papyrus,Haettenschweiler,Impact,fantasy;
+}
+
+#profile-main-header {
   background-color: #2cc9f0;
   padding: 0 0 0 34%;
   color: #fff;

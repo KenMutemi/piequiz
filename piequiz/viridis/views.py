@@ -16,9 +16,13 @@ from django.shortcuts import render, get_object_or_404
 
 @login_required
 def profile(request):
-    user = request.user.id
-    test = TestTable(Test.objects.filter(user=user))
     return render(request, 'viridis/profile.html', {"test": test})
+
+@login_required
+def my_tests(request):
+    test = TestTable(Test.objects.filter(user=request.user.id))
+    test.paginate(page=request.GET.get('page', 1), per_page=10)
+    return render(request, 'viridis/mytests.html', {"test": test})
 
 def index(request):
     tests = Test.objects.order_by('-pub_date')

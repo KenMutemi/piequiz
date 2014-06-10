@@ -10,7 +10,6 @@ class AddTestForm(forms.Form):
 
 class AddQuestionForm(forms.Form):
     test_id = forms.ModelChoiceField(queryset = Test.objects.order_by('-pub_date'), empty_label=None, widget=forms.Select(attrs={'class' : 'form-control test-select'}), label="Test")
-    
     question_text = forms.CharField(widget=forms.Textarea(attrs={'class':'form-control','rows':2, 'cols': 15}), label="Question")
     image_file = forms.FileField(required=False)
     mark = forms.IntegerField(widget=forms.TextInput(attrs={'class' : 'form-control mark-question', 'type':'number'}))

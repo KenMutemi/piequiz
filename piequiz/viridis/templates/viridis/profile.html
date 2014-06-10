@@ -1,9 +1,9 @@
 {% extends "base.html" %}
-{% load render_table from django_tables2 %}
 {% block content %}
 <div id="profile">
 <div id="profile-main-header" class="well"><label>{{ user.username }}</label></div>
-{% render_table test %}
+<a href="{% url 'viridis:my_tests' %}">My Tests</a>
+<hr>
 <a href="{% url 'avatar_change' %}">Change your profile picture</a>
 <hr>
 </div>

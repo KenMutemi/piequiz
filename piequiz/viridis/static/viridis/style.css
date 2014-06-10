@@ -15,6 +15,21 @@ input:not([type="checkbox"]) {
   border:1px solid #ccc !important;
 }
 
+textarea {
+  outline: none;
+  box-shadow:none !important;
+  border:1px solid #ccc !important;
+  resize: none;
+}
+
+.error {
+  color: red;
+}
+
+#delete {
+  color: red;
+}
+
 .auth-wrapper {
   width: 700px; 
   padding:5px;
@@ -26,13 +41,6 @@ input:not([type="checkbox"]) {
 .navbar-custom {
   background-color: #d3d3d3;
   border-radius:0;
-}
-
-.navbar-brand,
-.navbar-nav li a {
-  line-height: 0;
-  height: 50px;
-  padding-top: 0;
 }
 
 * {
@@ -82,7 +90,7 @@ input:not([type="checkbox"]) {
   color: #fff;
   font-size: 12pt;
   font-family:"Marked Fool",Junkyard,Balker,Papyrus,Haettenschweiler,Impact,fantasy;
-  padding: 5% 0 0 30%;
+  padding: 5% 0 0 21%;
   font-weight: bold;
 }
 

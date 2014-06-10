@@ -3,6 +3,22 @@ $(document).ready(function() {
         form_selector: '#search'
       });
       window.autocomplete.setup();
+
+      /*var form = $('#question-form')
+      form.submit(function(){
+        $.ajax({
+          type: form.attr('method'),
+          url: form.attr('action'),
+          data: form.serialize(),
+          success: function(data) {
+            form.reset();
+          },
+          error: function(data){
+            alert(data)
+          }
+        })
+        return false;
+      })*/
  });
 
 $(document).tooltip();

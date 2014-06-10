@@ -1,7 +1,10 @@
 import datetime
 import simplejson as json
-from os.path import join as pjoin
-from viridis.forms import AddTestForm
+from os.path import join as pjoin  
+from django_tables2   import RequestConfig
+from viridis.tables import TestTable
+from django.forms.formsets import formset_factory
+from viridis.forms import AddTestForm, AddQuestionForm
 from django.template.defaultfilters import slugify
 from django.contrib.auth.decorators import login_required
 from haystack.query import SearchQuerySet
@@ -13,7 +16,9 @@ from django.shortcuts import render, get_object_or_404
 
 @login_required
 def profile(request):
-    return render(request, 'viridis/profile.html')
+    user = request.user.id
+    test = TestTable(Test.objects.filter(user=user))
+    return render(request, 'viridis/profile.html', {"test": test})
 
 def index(request):
     tests = Test.objects.order_by('-pub_date')
@@ -64,11 +69,42 @@ def add_test(request):
             )
             test.save()
 	    
-            return HttpResponseRedirect('/test/new')
+            return HttpResponseRedirect('/question/new')
     else:
         form = AddTestForm(label_suffix='')
     return render(request, 'viridis/new_test.html', {
         "form": form
+    })
+
+@login_required(login_url = "/accounts/login/")
+def add_question(request):
+    """User accesses the add_question view.
+    If the number of extra forms has been defined by the user, display them.
+    Else, display one form.
+    """
+    try:
+        extra_questions = request.session['no_of_question']
+    except KeyError:
+        extra_questions = 1
+    QuestionFormSet = formset_factory(AddQuestionForm, extra=extra_questions)
+    if request.method == "POST":
+        formset = QuestionFormSet(request.POST)
+        if formset.is_valid():
+            for i in range(0, extra_questions):
+                question = Question(
+                question_text = request.POST.get('form-' + str(i) + '-question_text'),
+                test_id = request.POST.get('form-' + str(i) + '-test_id'),
+                marks = request.POST.get('form-' + str(i) + '-mark'),
+                )
+                question.save()
+            return HttpResponseRedirect('/question/new')
+    else:
+        try:
+            formset = QuestionFormSet()
+        except KeyError:
+            formset = QuestionFormSet()
+    return render(request, 'viridis/create_questions.html', {
+        "formset": formset
     })
 
 def autocomplete(request):

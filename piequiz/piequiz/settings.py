@@ -42,10 +42,16 @@ INSTALLED_APPS = (
     'registration',
     'widget_tweaks',
     'avatar',
+    'django_tables2',
     'viridis',
 )
 
 # Registration
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.core.context_processors.request',
+    'django.contrib.auth.context_processors.auth',
+)
 
 ACCOUNT_ACTIVATION_DAYS = 7 # One-week activation window;
 
@@ -104,9 +110,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
-AUTO_GENERATE_AVATAR_SIZES = 40
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/

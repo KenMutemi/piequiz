@@ -10,7 +10,7 @@
         <td>
           <p><a href="{{ test.get_absolute_url }}">{{test.title}}</a></p>
           {% if test.question_set.all %}
-            {{ test.question_set.all|length }} questions
+           <i><a href="#">{{ test.question_set.all|length }} questions</a></i>
           {% else %}
             <p>No questions</p>
           {% endif %}

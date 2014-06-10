@@ -95,9 +95,10 @@ def add_question(request):
                 question_text = request.POST.get('form-' + str(i) + '-question_text'),
                 test_id = request.POST.get('form-' + str(i) + '-test_id'),
                 marks = request.POST.get('form-' + str(i) + '-mark'),
+                pub_date = datetime.datetime.now(),
                 )
                 question.save()
-            return HttpResponseRedirect('/question/new')
+            return HttpResponseRedirect('/test/new')
     else:
         try:
             formset = QuestionFormSet()

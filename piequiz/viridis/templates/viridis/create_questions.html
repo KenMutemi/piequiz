@@ -6,7 +6,7 @@
 {% if form.errors %}
   <p><i class="glyphicon glyphicon-info-sign"></i>Please correct the errors below: {{ form.non_field_errors }}</p>
   {% endif %}
-  <h1>Add questions to your test</h1>
+  <div class="well custom-header-well"><label>Add questions</label></div>
   <form id="question-form" method="post" action="" class="well span9">
   {% csrf_token %}
 <div class="item">
@@ -16,6 +16,5 @@
       {{ formset.management_form }}
 </div>
   <p class="submit"><input class="btn btn-default" type="submit" value="submit &rarr;" /></p>
-  <button id="add-another" title="Add another question" type="button" class="btn btn-default"><i class="fa fa-plus"></i></button>
   </form>
 {% endblock %}

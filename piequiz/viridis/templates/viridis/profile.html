@@ -1,11 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
 <div id="profile">
-<div id="profile-main-header" class="well"><label>{{ user.username }}</label></div>
+<div class="well custom-header-well"><label>{{ user.username }}</label></div>
 <a href="{% url 'viridis:my_tests' %}">My Tests</a>
 <hr>
 <a href="{% url 'avatar_change' %}">Change your profile picture</a>
 <hr>
 </div>
 {% endblock %}
-

@@ -4,22 +4,62 @@ $(document).ready(function() {
       });
       window.autocomplete.setup();
 
-      /*var form = $('#question-form')
-      form.submit(function(){
+      $('#approve').click(function(){
+      $.ajax({
+               type: "POST",
+               url: "/approve/",
+               data: {'csrfmiddlewaretoken': '{{csrf_token}}'},
+               dataType: "text",
+               success: function(response) {
+                      alert('You liked this')
+                },
+                error: function(rs, e) {
+                       alert(rs.responseText);
+                }
+          }); 
+    })
+
+    /** ajax for test form*/
+    var new_test_form = $('#new-test-form');
+    new_test_form.submit(function () {
         $.ajax({
-          type: form.attr('method'),
-          url: form.attr('action'),
-          data: form.serialize(),
-          success: function(data) {
-            form.reset();
-          },
-          error: function(data){
-            alert(data)
-          }
-        })
+            type: new_test_form.attr('method'),
+            url: new_test_form.attr('action'),
+            data: new_test_form.serialize(),
+            success: function (data) {
+               location.href = "/question/new"
+            },
+            error: function(data) {
+                alert("Something went wrong!");
+            }
+        });
         return false;
-      })*/
- });
+    });
+
+    var test_form = $('.test-form');
+    test_form.submit(function () {
+        $.ajax({
+            type: test_form.attr('method'),
+            url: test_form.attr('action'),
+            data: test_form.serialize(),
+            success: function (data) {
+            },
+            error: function(data) {
+                alert(JSON.stringify(data));
+            }
+        });
+        return false;
+    });
+
+});
+
+
+      function toggle(source) {
+    checkboxes = document.getElementsByName('selection');
+    for(var i in checkboxes)
+        checkboxes[i].checked = source.checked;
+    }
+
 
 $(document).tooltip();
 

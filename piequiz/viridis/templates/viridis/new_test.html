@@ -6,8 +6,8 @@
 {% if form.errors %}
   <div><i class="glyphicon glyphicon-info-sign"></i><label>Please correct the errors below:</label>{{ form.non_field_errors }}</div>
   {% endif %}
-  <div id="new-test-header" class="well"><label>New test<label></div>
-  <form id="question-form" method="post" action="" class="">
+  <div class="well custom-header-well"><label>New test<label></div>
+  <form id="new-test-form" method="post" action="" class="">
   {% csrf_token %}
 <div class="item">
   <table>

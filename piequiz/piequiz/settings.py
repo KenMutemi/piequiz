@@ -121,3 +121,5 @@ MEDIA_URL = '/media/'
 
 MEDIA_ROOT = '/home/re/dev/python/piequiz/piequiz/piequiz/media/'
 
+STATIC_ROOT = '/home/re/dev/python/piequiz/piequiz/piequiz/media/static/'
+

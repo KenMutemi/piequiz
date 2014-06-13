@@ -2,9 +2,20 @@
 
 {% block content %}
 <div id="test">
-  <div id = "test-header" class="well">
+  <div class="well custom-header-well">
     <label>{{ test.title }}</label>
   </div>
+  <div class="rating">
+  <p>
+    <b id="approval_count">{{ test.approvals }}</b> Rate this quiz
+  {% if user.is_authenticated %}
+    <button id ="approve" data-testid="{{test.id}}" class="btn btn-mini btn-success" title="approve" type="button"><i class="fa fa-thumbs-o-up"></i></button>
+     <button id ="disprove" data-testid="{{test.id}}" class="btn btn-mini btn-warning" title="disapprove" type="button"><i class="fa fa-thumbs-o-down"></i></button>
+
+  {% endif %}
+
+</p>
+</div>
   <div id="test-body">
 {% if test.question_set.all %}
 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}

@@ -5,11 +5,11 @@ from django.contrib.auth.models import User
 
 class Test(models.Model):
     user = models.ForeignKey(User)
-    title = models.CharField(max_length=200)
+    title = models.CharField(max_length=200, verbose_name='quiz')
     institution = models.CharField(default=None, max_length=200)
     marks = models.IntegerField(default=0)
     slug = models.SlugField()
-    pub_date = models.DateTimeField('date-published')
+    pub_date = models.DateTimeField('date')
 
     def __unicode__(self):
         return self.title
@@ -52,7 +52,7 @@ class Answer(models.Model):
         return self.choice
 
 class Approve(models.Model):
-    user = models.ManyToManyField(User, related_name='approves')
+    user = models.IntegerField()
     test = models.ForeignKey(Test)
     date = models.DateTimeField(auto_now_add=True)
     total_approvals = models.IntegerField(default=0)

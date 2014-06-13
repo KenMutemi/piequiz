@@ -47,10 +47,13 @@ def answer(request, test_id):
     except(KeyError, Choice.DoesNotExist):
         # Redisplay the test form
         return render(request, 'viridis/test.html', {
-            'test': test, 'error_message': "You didn't answer the questions",})
+        'test': test, 'error_message': "You didn't answer the questions",})
     else:
         selected_choice.save()
-        return HttpResponseRedirect(reverse('viridis:results', args=(test.id,)))
+        if request.is_ajax(): # I don't know why but it works
+            return HttpResponseRedirect(reverse('viridis:results', args=(test.id,)))
+        else:
+            return HttpResponseRedirect(reverse('viridis:results', args=(test.id,)))
 
 def results(request, test_id):
     test = get_object_or_404(Test, pk=test_id)
@@ -72,8 +75,10 @@ def add_test(request):
                 slug = slugify(cd['title']),
             )
             test.save()
-	    
-            return HttpResponseRedirect('/question/new')
+	    if request.is_ajax():    
+                return HttpResponseRedirect('/question/new')
+            else:
+                return HttpResponseRedirect('/question/new')
     else:
         form = AddTestForm(label_suffix='')
     return render(request, 'viridis/new_test.html', {
@@ -124,28 +129,25 @@ def autocomplete(request):
     })
     return HttpResponse(the_data, content_type='application/json')
 
+@login_required
 def approve(request):
     vars = {}
     if request.method == 'POST':
-        user = request.user
-        slug = request.POST.get('slug', None)
-        test = get_object_or_404(Test, slug=slug)
-
-        approved, created = Approve.objects.create(test=test)
+        test = Test.objects.get(id=int(test_id))
 
         try:
-            user_approved = Test.objects.get(test=test, user=user)
+            approve = Approve.objects.get(user_id=request.user.id)
         except:
-            user_approved = None
+            user_id = None
 
-        if user_approved:
-            user_approved.total_likes -= 1
-            approved.user.remove(request.user)
-            user_approved.save()
+        if approve:
+            approve.total_approvals -= 1
+            approve.user.remove(request.user)
+            approve.save()
         else:
-            approved.user.add(request.user)
-            approved.total_likes += 1
-            approved.save()
+            approve.user.add(request.user)
+            approve.total_approvals += 1
+            approve.save()
 
 
     return HttpResponse(json.dumps(vars),

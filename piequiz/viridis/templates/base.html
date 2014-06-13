@@ -15,6 +15,11 @@
 <script src="{% static 'viridis/style.js' %}"></script>
 </head>
 <body class="inside">
+<noscript>
+  <div id="noscript">
+    <b>Please enable javascript so that this site plays nicely :)</b>
+  </div>
+</noscript>
 <div id="navigation">
 <nav class="navbar navbar-custom" role="navigation">
   <div class="container-fluid">
@@ -56,8 +61,8 @@
       </form>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="">Settings</a></li>
-        <li id="settings">{% avatar user 40 %}</li>
         {% if user.is_authenticated %}
+        <li id="settings">{% avatar user 40 %}</li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ user.username }} <b class="caret"></b></a>
           <ul class="dropdown-menu">
@@ -87,6 +92,7 @@
   <p><a href="{{ user_test.get_absolute_url }}">{{ user_test.title }}</a></p>
 </div>
 {% endfor %}
+<p><a href="{% url 'viridis:my_tests' %}">view all</a></p>
 </div>
 {% endif %}
 <div class="content">

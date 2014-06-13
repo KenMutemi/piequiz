@@ -1,14 +1,12 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+This README documents the steps that are necessary to get PieQuiz up and running.
 
 ### What is this repository for? ###
 
-* Quick summary
-  The project is a sjango-based web application used for setting and taking multiple    choice questions. Applications for this project include quizes, questionnairs, job interviews, exams, etc.
-* Version
-  1.0
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+* The project is a django-based web application used for setting and taking multiple    choice questions. Applications for this project include quizes, questionnairs, job interviews, exams, etc.
+* Version 1.0
+
 
 ### How do I get set up? ###
 
@@ -27,7 +25,4 @@ This README would normally document whatever steps are necessary to get your app
 
 ### Who do I talk to? ###
 
-* Repo owner or admin
-* Kennedy Mutemi
-* Other community or team contact
-* None
+* Kennedy Mutemi (mutemikennedy@gmail.com)

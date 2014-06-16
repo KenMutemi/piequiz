@@ -10,7 +10,9 @@
         <td>
           <p><a href="{{ test.get_absolute_url }}">{{test.title}}</a></p>
           {% if test.question_set.all %}
-           <i><a href="#">{{ test.question_set.all|length }} questions</a></i>
+           <span id="questions-preview"><a href="#" onclick="return false;"><i>{{ test.question_set.all|length }} questions</i></a>
+             <div class="box">Popup box</div>
+           </span>
           {% else %}
             <p>No questions</p>
           {% endif %}

@@ -19,7 +19,7 @@ $(document).ready(function() {
           }); 
     })
 
-    /** ajax for test form*/
+    /** ajax for new_test form*/
     var new_test_form = $('#new-test-form');
     new_test_form.submit(function () {
         $.ajax({
@@ -35,7 +35,7 @@ $(document).ready(function() {
         });
         return false;
     });
-
+    /** ajax for the test*/
     var test_form = $('.test-form');
     test_form.submit(function () {
         $.ajax({

@@ -1,9 +1,11 @@
 {% extends "base.html" %}
+{% load avatar_tags %}
 {% block content %}
 <div id="profile">
 <div class="well custom-header-well"><label>{{ user.username }}</label></div>
 <a href="{% url 'viridis:my_tests' %}">My Tests</a>
 <hr>
+{% avatar user 40 %}
 <a href="{% url 'avatar_change' %}">Change your profile picture</a>
 <hr>
 </div>

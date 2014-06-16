@@ -34,6 +34,7 @@ def test(request, test_id, slug):
         return HttpResponsePermanentRedirect(test.get_absolute_url())
     return render(request, 'viridis/test.html', {'test': test})
 
+@login_required
 def answer(request, test_id):
     test = Test.objects.get(pk=test_id)
     try:
@@ -55,6 +56,7 @@ def answer(request, test_id):
         else:
             return HttpResponseRedirect(reverse('viridis:results', args=(test.id,)))
 
+@login_required
 def results(request, test_id):
     test = get_object_or_404(Test, pk=test_id)
     return render(request, 'viridis/results.html', {'test': test})

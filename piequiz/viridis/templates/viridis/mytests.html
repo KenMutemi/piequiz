@@ -1,8 +1,12 @@
 {% extends "base.html" %}
 {% load render_table from django_tables2 %}
 {% block content %}
-<div id="profile">
 <div class="well custom-header-well"><label>Quizes</label></div>
+<div class="btn-group">
+<button type="submit" name="delete" id="mytests-delete" class="btn btn-danger" title="delete"><i class="fa fa-trash-o"></i></button>
+<button type="submit" name="delete" id="mytests-delete" class="btn btn-primary" title="edit"><i class="fa fa-edit"></i></button>
+</div>
+<div id="table-mytests">
 {% render_table test %}
 </div>
 {% endblock %}

@@ -138,10 +138,28 @@ td {
 }
 
 .rating {
-  padding: 0 0 0 63%;
+  float: right;
+  padding: 0 0px 0 0;
+  /*right: absolute;*/
 }
 
 #noscript {
   background-color: red;
   color: white;
+}
+
+#table-mytests {
+  border:2px solid #d3d3d3;
+}
+
+.box {
+  display:none;
+  top: 30px; 
+  left: 10px;
+   background: #d3d3d3;
+   padding: 5px;
+}
+
+a:hover + .box {
+     display:block;   
 }

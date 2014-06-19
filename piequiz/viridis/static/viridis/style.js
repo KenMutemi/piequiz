@@ -1,9 +1,9 @@
 $(document).ready(function() {
-      window.autocomplete = new Autocomplete({
-        form_selector: '#search'
-      });
-      window.autocomplete.setup();
 
+  window.autocomplete = new Autocomplete({
+        form_selector: '#search'
+      })
+      window.autocomplete.setup()
       $('#approve').click(function(){
       $.ajax({
                type: "POST",
@@ -54,16 +54,16 @@ $(document).ready(function() {
 });
 
 
-      function toggle(source) {
-    checkboxes = document.getElementsByName('selection');
-    for(var i in checkboxes)
-        checkboxes[i].checked = source.checked;
+    function toggle(source) {
+      checkboxes = document.getElementsByName('selection');
+      for(var i in checkboxes)
+      checkboxes[i].checked = source.checked;
     }
 
-
-$(document).tooltip();
-
-var Autocomplete = function(options) {
+        // In a perfect world, this would be its own library file that got included
+    // on the page and only the ``$(document).ready(...)`` below would be present.
+    // But this is an example.
+    var Autocomplete = function(options) {
       this.form_selector = options.form_selector
       this.url = options.url || '/search/autocomplete/'
       this.delay = parseInt(options.delay || 300)
@@ -130,9 +130,11 @@ var Autocomplete = function(options) {
       }
       else {
         var elem = base_elem.clone()
-        elem.text("No results found.")
+        elem.text("")
         results_wrapper.append(elem)
       }
 
       this.query_box.after(results_wrapper)
     }
+
+$(document).tooltip();

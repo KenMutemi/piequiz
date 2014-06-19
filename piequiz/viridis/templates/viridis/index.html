@@ -1,8 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div id="index-main">
-<div class="well custom-header-well"><label>Recent Tests</label></div>
+<div class="panel panel-primary">
+<div class="panel panel-heading"><h3 class="panel-title">Recent Tests</h3></div>
+<div class="panel panel-body">
 {% if tests %}
 <table class="table index-table">
     {% for test in tests %}
@@ -29,5 +30,6 @@
     {% else %}
         <strong>There are no tests at present</strong>
 {% endif %}
+</div>
 </div>
 {% endblock %}

@@ -1,12 +1,12 @@
-.inside {
+#wrap {
   background-color: #fff !important;
 }
 
-.content {
-  width: 50%;
-  padding: 5px;
-  background-color: #fff;
-  margin: 2% auto;
+#main {
+float:left;
+width: 50%;
+margin: 0 0 0 15%;
+background:#ffffff;
 }
 
 input:not([type="checkbox"]) { 
@@ -68,7 +68,7 @@ textarea {
 }
 
 #search-input {
-  width: 350px;
+  width: 400px;
 }
 
 #btn-search {
@@ -77,33 +77,11 @@ textarea {
   width: 70px;
 }
 
-
-#sidebar-header {
-  background-color: #2cc9f0;
-  color: #fff;
-  font-size: 12pt;
-  font-family:"Marked Fool",Junkyard,Balker,Papyrus,Haettenschweiler,Impact,fantasy;
-  padding: 5% 0 0 21%;
-  font-weight: bold;
-}
-
-#sidebar-body {
-  padding: 0 0 0 15%;
-}
-
 #sidebar {
-  width: 23%;
-  padding: 5px;
-  background-color: #fff;
-  float: left;
-}
-
-.custom-header-well {
-  background-color: #2cc9f0;
-  padding: 0 0 0 5%;
-  color: #fff;
-  font-size: 20pt;
-  font-family:"Marked Fool",Junkyard,Balker,Papyrus,Haettenschweiler,Impact,fantasy;
+  float:right;
+  right: 5%;
+  width:250px;
+  background:#ffffff;
 }
 
 td {

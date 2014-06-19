@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div id="test">
-  <div class="well custom-header-well">
-    <label>{{ test.title }}</label>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h1 class="panel-title">{{ test.title }}</h1>
   </div>
-  <div id="test-body">
+  <div class="panel-body">
 {% if test.question_set.all %}
 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 {% for question in test.question_set.all %}

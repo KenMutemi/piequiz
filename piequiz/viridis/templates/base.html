@@ -3,7 +3,7 @@
 {% load avatar_tags %}
 <html>
 <head>
-<title>PieQuiz</title>
+<title>{% block title %}{% endblock %} &middot; PieQuiz</title>
 {% load bootstrap3 %}
 {% bootstrap_css %}
 <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
@@ -14,7 +14,8 @@
 <link rel="stylesheet" type="text/css" href="{% static 'viridis/style.css' %}">
 <script src="{% static 'viridis/style.js' %}"></script>
 </head>
-<body class="inside">
+<body>
+<div id="wrap">
 <noscript>
   <div id="noscript">
     <b>Please enable javascript so that this site plays nicely :)</b>
@@ -60,8 +61,8 @@
         <button type="submit" id="btn-search" class="btn btn-default"><i class="fa fa-search"></i></button>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="">Settings</a></li>
         {% if user.is_authenticated %}
+        <li><a href="">Settings</a></li>
         <li id="settings">{% avatar user 40 %}</li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ user.username }} <b class="caret"></b></a>
@@ -82,22 +83,27 @@
 </nav>
 
 </div>
+<div id="main">
+{% block content %}
+{% endblock %}
+</div>
 {% if user.is_authenticated %}
 <div id="sidebar">
-<div id="sidebar-header" class="well well-sm">
-<p>My Tests <i class="fa fa-angle-double-down"></i></p>
+<div class="btn-group">
+<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+  My Quizes <span class="caret"></span>
+</button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="{% url 'viridis:my_tests' %}">View All</a></li>
+  </ul>
 </div>
 {% for user_test in user.test_set.all|slice:":5" %}
 <div id="sidebar-body">
   <p><a href="{{ user_test.get_absolute_url }}">{{ user_test.title }}</a></p>
 </div>
 {% endfor %}
-<p><a href="{% url 'viridis:my_tests' %}">view all</a></p>
 </div>
 {% endif %}
-<div class="content">
-{% block content %}
-{% endblock %}
 </div>
 </body>
 </html>

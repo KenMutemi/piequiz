@@ -16,7 +16,8 @@ urlpatterns = patterns('',
     (r'^search/autocomplete/', include('haystack.urls')),
     url(r'^(?P<test_id>\d+)/$', RedirectView.as_view(url='slug/')),
     url(r'^question/new$', views.add_question, name='add_question'),
-    url(r'^(?P<test_id>\d+)/(?P<slug>[\w-]+)/$', views.test, name='test')
+    url(r'^choices/add$', views.add_choice, name='add_choice'),
+    url(r'^(?P<test_id>\d+)/(?P<slug>[\w-]+)/$', views.test, name='test'),
 ) 
 
 if settings.DEBUG:

@@ -4,7 +4,7 @@ from os.path import join as pjoin
 from django_tables2   import RequestConfig
 from viridis.tables import TestTable
 from django.forms.formsets import formset_factory
-from viridis.forms import AddTestForm, AddQuestionForm
+from viridis.forms import AddTestForm, AddQuestionForm, AddChoiceForm
 from django.template.defaultfilters import slugify
 from django.contrib.auth.decorators import login_required
 from haystack.query import SearchQuerySet
@@ -28,6 +28,7 @@ def index(request):
     tests = Test.objects.order_by('-pub_date')
     return render(request, 'viridis/index.html', { 'tests': tests })
 
+@login_required(login_url = "/accounts/login/")
 def test(request, test_id, slug):
     test = get_object_or_404(Test, pk=test_id)
     if not slug == test.slug:
@@ -109,7 +110,7 @@ def add_question(request):
                 pub_date = datetime.datetime.now(),
                 )
                 question.save()
-            return HttpResponseRedirect('/test/new')
+            return HttpResponseRedirect('/choices/add')
     else:
         try:
             formset = QuestionFormSet()
@@ -119,6 +120,39 @@ def add_question(request):
         "formset": formset
     })
 
+@login_required
+def add_choice(request):
+    """User accesses the add_choice view.
+    If the number of extra forms has been defined by the user, display them.
+    Else, display one form.
+    """
+    try:
+        extra_questions = request.session['no_of_question']
+    except KeyError:
+        extra_questions = 1
+    ChoiceFormSet = formset_factory(AddChoiceForm, extra=extra_questions)
+    if request.method == "POST":
+        formset = ChoiceFormSet(request.POST)
+        if formset.is_valid():
+            for i in range(0, extra_questions):
+                choice = Choice(
+                choice_text = request.POST.get('form-' + str(i) + '-choice_text'),
+                question_id = request.POST.get('form-' + str(i) + '-question_id'),
+                marks = request.POST.get('form-' + str(i) + '-mark'),
+                pub_date = datetime.datetime.now(),
+                )
+                choice.save()
+            return HttpResponseRedirect('/choices/add')
+    else:
+        try:
+            formset = ChoiceFormSet()
+        except KeyError:
+            formset = ChoiceFormSet()
+    return render(request, 'viridis/add_choices.html', {
+        "formset": formset
+    })
+    return render(request, 'viridis/add_choices.html')
+    
 def autocomplete(request):
     """User enters search term in search box. The system tries
     to match with words similar to what is being input.
@@ -150,7 +184,6 @@ def approve(request):
             approve.user.add(request.user)
             approve.total_approvals += 1
             approve.save()
-
 
     return HttpResponse(json.dumps(vars),
                     mimetype='application/javascript')

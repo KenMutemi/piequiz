@@ -5,7 +5,6 @@ from django_tables2   import RequestConfig
 from viridis.tables import TestTable
 from django.forms.formsets import formset_factory
 from viridis.forms import AddTestForm, AddQuestionForm, AddChoiceForm
-from django.template.defaultfilters import slugify
 from django.contrib.auth.decorators import login_required
 from haystack.query import SearchQuerySet
 from viridis.models import Test, Question, Choice, Answer
@@ -63,32 +62,22 @@ def results(request, test_id):
     return render(request, 'viridis/results.html', {'test': test})
 
 @login_required(login_url = "/accounts/login/")
-def add_test(request):
+def add_test(request):   
     if request.method == "POST":
         form = AddTestForm(request.POST)
         if form.is_valid():
-            cd = form.cleaned_data 
+            test = form.save(commit=False)
+            cd = form.cleaned_data
+            test.user_id = request.user.id
             request.session['no_of_question'] = cd['questions']
-            test = Test(
-                user_id = request.user.id,
-                pub_date = datetime.datetime.now(),
-                title = cd['title'],
-                institution = cd['institution'],
-                marks = cd['mark'],
-                slug = slugify(cd['title']),
-            )
             test.save()
-	    if request.is_ajax():    
-                return HttpResponseRedirect('/question/new')
-            else:
-                return HttpResponseRedirect('/question/new')
+            request.session['test_id'] = test.pk
+            return HttpResponseRedirect('/question/new')
     else:
         form = AddTestForm(label_suffix='')
     return render(request, 'viridis/new_test.html', {
         "form": form
     })
-
-@login_required(login_url = "/accounts/login/")
 def add_question(request):
     """User accesses the add_question view.
     If the number of extra forms has been defined by the user, display them.
@@ -105,7 +94,7 @@ def add_question(request):
             for i in range(0, extra_questions):
                 question = Question(
                 question_text = request.POST.get('form-' + str(i) + '-question_text'),
-                test_id = request.POST.get('form-' + str(i) + '-test_id'),
+                test_id = request.session['test_id'],
                 marks = request.POST.get('form-' + str(i) + '-mark'),
                 pub_date = datetime.datetime.now(),
                 )
@@ -137,7 +126,7 @@ def add_choice(request):
             for i in range(0, extra_questions):
                 choice = Choice(
                 choice_text = request.POST.get('form-' + str(i) + '-choice_text'),
-                question_id = request.POST.get('form-' + str(i) + '-question_id'),
+                question_id = request.POST.get('form-' + str(i) + '-choice_id'),
                 marks = request.POST.get('form-' + str(i) + '-mark'),
                 pub_date = datetime.datetime.now(),
                 )

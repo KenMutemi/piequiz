@@ -2,6 +2,7 @@ import datetime
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
+from django.template.defaultfilters import slugify
 
 class Test(models.Model):
     user = models.ForeignKey(User)
@@ -9,10 +10,17 @@ class Test(models.Model):
     institution = models.CharField(default=None, max_length=200)
     marks = models.IntegerField(default=0)
     slug = models.SlugField()
-    pub_date = models.DateTimeField('date')
+    pub_date = models.DateTimeField('date', auto_now_add=True)
 
     def __unicode__(self):
         return self.title
+
+    def save(self, *args, **kwargs):
+        if not self.id:
+            # Newly created object, so set slug
+            self.slug = slugify(self.title)
+
+        super(Test, self).save(*args, **kwargs)
 
     def get_absolute_url(self):
         return "/%s/%s" % (self.id, self.slug)

@@ -1,13 +1,14 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 {% load widget_tweaks %}
+{% block title %}New Quiz{% endblock %}
 {% block content %}
 
 {% if form.errors %}
   <div><i class="glyphicon glyphicon-info-sign"></i><label>Please correct the errors below:</label>{{ form.non_field_errors }}</div>
   {% endif %}
-<div class="panel panel-warning">
-  <div class="panel-heading"><h3 class="panel-title">New test</h3></div>
+<div class="panel panel-default">
+  <div class="panel-heading"><h3 class="panel-title">New quiz</h3></div>
 <div class="panel-body">
   <form id="new-test-form" method="post" action="" class="">
   {% csrf_token %}
@@ -17,7 +18,7 @@
   </table>
       {{ formset.management_form }}
 </div><br />
-  <p class="submit"><input class="btn btn-default" type="submit" value="submit" /></p>
+  <p class="submit"><input class="btn btn-default" type="submit" value="next" /></p>
   </form>
 </div>
 </div>

@@ -20,7 +20,7 @@ $(document).ready(function() {
     })
 
     /** ajax for new_test form*/
-    var new_test_form = $('#new-test-form');
+    /*var new_test_form = $('#new-test-form');
     new_test_form.submit(function () {
         $.ajax({
             type: new_test_form.attr('method'),
@@ -30,11 +30,11 @@ $(document).ready(function() {
                location.href = "/question/new"
             },
             error: function(data) {
-                alert("Something went wrong!");
+                alert(data);
             }
         });
         return false;
-    });
+    });*/
     /** ajax for the test*/
     var test_form = $('.test-form');
     test_form.submit(function () {

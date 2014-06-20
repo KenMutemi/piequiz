@@ -141,3 +141,20 @@ td {
 a:hover + .box {
      display:block;   
 }
+
+.label-choice {
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  transition: all .5s ease;
+  cursor: pointer;
+}
+
+.label-choice:hover {
+  color: #2cc9f0;
+}
+
+.input-choice:checked + .label-choice {
+  color: #2cc9f0;
+}

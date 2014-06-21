@@ -71,6 +71,7 @@ def add_test(request):
             test.user_id = request.user.id
             request.session['no_of_question'] = cd['questions']
             test.save()
+            request.session['test_title'] = test.title
             request.session['test_id'] = test.pk
             return HttpResponseRedirect('/question/new')
     else:
@@ -106,7 +107,8 @@ def add_question(request):
         except KeyError:
             formset = QuestionFormSet()
     return render(request, 'viridis/create_questions.html', {
-        "formset": formset
+        "formset": formset, 
+        "title": request.session['test_title']
     })
 
 @login_required
@@ -119,11 +121,11 @@ def add_choice(request):
         extra_questions = request.session['no_of_question']
     except KeyError:
         extra_questions = 1
-    ChoiceFormSet = formset_factory(AddChoiceForm, extra=extra_questions)
+    ChoiceFormSet = formset_factory(AddChoiceForm, extra=extra_questions*4)
     if request.method == "POST":
         formset = ChoiceFormSet(request.POST)
         if formset.is_valid():
-            for i in range(0, extra_questions):
+            for i in range(0, extra_questions*4):
                 choice = Choice(
                 choice_text = request.POST.get('form-' + str(i) + '-choice_text'),
                 question_id = request.POST.get('form-' + str(i) + '-choice_id'),
@@ -131,7 +133,7 @@ def add_choice(request):
                 pub_date = datetime.datetime.now(),
                 )
                 choice.save()
-            return HttpResponseRedirect('/choices/add')
+            return HttpResponseRedirect('/profile/tests/')
     else:
         try:
             formset = ChoiceFormSet()

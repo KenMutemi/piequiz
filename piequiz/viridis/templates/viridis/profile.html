@@ -10,6 +10,9 @@
 {% avatar user 40 %}
 <a href="{% url 'avatar_change' %}">Change your profile picture</a>
 <hr>
+
+<a href="{% url 'django.contrib.auth.views.password_change' %}">Change your password</a>
+<hr>
 </div>
 </div>
 {% endblock %}

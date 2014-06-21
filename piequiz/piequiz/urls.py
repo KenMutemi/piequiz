@@ -9,6 +9,7 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     (r'^avatar/', include('avatar.urls')),
+    (r'^reset/', include('password_reset.urls')),
     (r'^accounts/', include('registration.backends.default.urls')),
     url(r'^', include('viridis.urls', namespace="viridis"))
 )

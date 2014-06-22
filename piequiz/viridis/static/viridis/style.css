@@ -26,16 +26,31 @@ textarea {
   color: red;
 }
 
-#delete {
-  color: red;
+.auth-wrapper {
+  width: 20%;
+  min-width: 20%; 
+  padding:8px 10px 8px 10px;
+  border:1px solid #ccc !important;
+  /*background-color: #2cc9f0;*/
+  margin: 100px auto; 
 }
 
-.auth-wrapper {
-  width: 700px; 
-  padding:5px;
-  border:1px solid #ccc !important;
-  background-color: #2cc9f0;
-  margin: 50px auto; 
+.left-inner-addon input {
+    padding-left: 30px;    
+}
+
+.left-inner-addon {
+    position: relative;
+}
+
+.left-inner-addon i {
+    position: absolute;
+    padding: 10px 12px;
+    pointer-events: none;
+}
+
+.panel-heading-login {
+  padding-left: 0px;
 }
 
 .navbar-custom {
@@ -113,12 +128,6 @@ td {
 .ac-results {
   background-color: #2cc9f0;
   color: #ffffff;
-}
-
-.rating {
-  float: right;
-  padding: 0 0px 0 0;
-  /*right: absolute;*/
 }
 
 #noscript {

@@ -4,7 +4,7 @@
 
 #main {
 float:left;
-width: 50%;
+width: 40%;
 margin: 0 0 0 15%;
 background:#ffffff;
 }
@@ -33,6 +33,10 @@ textarea {
   border:1px solid #ccc !important;
   background-color: #ffffff;
   margin: 100px auto; 
+}
+
+.glyphicon {
+  color: #2cc9f0;
 }
 
 #auth-body {
@@ -97,9 +101,8 @@ textarea {
 }
 
 #sidebar {
-  float:right;
-  right: 5%;
-  width:250px;
+  float: right;
+  width: 25%;
   background:#ffffff;
 }
 

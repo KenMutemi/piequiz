@@ -6,14 +6,14 @@
 
 {% block content %}
 
-  {% if form.errors %}
-  <p class="errors">Please correct the errors below: {{ form.non_field_errors }}</p>
-  {% endif %}
   <div class="auth-wrapper">
   <div class="panel-heading panel-heading-login">
   <h1 class="panel-title">Create an account - PieQuiz</h1>
   </div>
   
+  {% if form.errors %}
+  <p class="errors">Please correct the errors below ... {{ form.non_field_errors }}</p>
+  {% endif %}
   <form class="form-horizontal" method="post" action="" role="form">
     {% csrf_token %}
     <div>
@@ -22,7 +22,10 @@
         <p class="errors">{{ form.username.errors.as_text }}</p>
       {% endif %}
       <div class="col-sm-12">
+      <div class="left-inner-addon">
+      <i class="glyphicon glyphicon-user"></i>
       {% render_field form.username class="form-control" placeholder="Username" %}
+      </div>
       </div>
     </div>
     <div class="form-group">
@@ -30,7 +33,10 @@
         <p class="errors">{{ form.email.errors.as_text }}</p>
       {% endif %}
       <div class="col-sm-12">
+      <div class="left-inner-addon">
+      <i class="glyphicon glyphicon-envelope"></i>
       {% render_field form.email class="form-control" placeholder="Email" %}
+      </div>
       </div>
     </div>
     <div class="form-group">
@@ -38,7 +44,10 @@
         <p class="errors">{{ form.password1.errors.as_text }}</p>
       {% endif %}
       <div class="col-sm-12">
+      <div class="left-inner-addon">
+      <i class="glyphicon glyphicon-lock"></i>
       {% render_field form.password1 class="form-control" placeholder="Password" %}
+      </div>
       </div>
     </div>
     <div class="form-group">
@@ -46,7 +55,10 @@
         <p class="errors">{{ form.password2.errors.as_text }}</p>
       {% endif %}
       <div class="col-sm-12">
+      <div class="left-inner-addon">
+      <i class="glyphicon glyphicon-lock"></i>
       {% render_field form.password2 class="form-control" placeholder="Confirm Password" %}
+      </div>
       </div>
     </div>
   <div class="form-group">

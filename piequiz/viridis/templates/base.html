@@ -75,7 +75,7 @@
           </ul>
         </li>
         {% else %}
-            <li><a href="{% url 'django.contrib.auth.views.login' %}">Sign in</a></li>
+            <li><a href="/accounts/register/">Sign up</a></li>
         {% endif %}
       </ul>
     </div><!-- /.navbar-collapse -->
@@ -87,8 +87,8 @@
 {% block content %}
 {% endblock %}
 </div>
-{% if user.is_authenticated %}
 <div id="sidebar">
+{% if user.is_authenticated %}
 <div class="btn-group">
 <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
   My Quizzes <span class="caret"></span>
@@ -98,12 +98,37 @@
   </ul>
 </div>
 {% for user_test in user.test_set.all|slice:":5" %}
-<div id="sidebar-body">
   <p><a href="{{ user_test.get_absolute_url }}">{{ user_test.title }}</a></p>
-</div>
 {% endfor %}
+{% else %}
+<div class="panel panel-info">
+<div class="panel-heading"><h1 class=panel-title>Log in</h1></div>
+<div class="panel-body">
+<form class="form-horizontal" method="post" action="{% url 'auth_login' %}" role="form">
+    {% csrf_token %}
+    <div class="form-group">
+    <div class="col-sm-8">
+    <div class="left-inner-addon">
+    <i class="glyphicon glyphicon-user"></i>
+    <input class="form-control" type="text" name="username" placeholder="Username"/>
+    </div>
+    </div>
+    </div>
+    <div class="form-group">
+    <div class="col-sm-8">
+    <div class="left-inner-addon">
+    <i class="glyphicon glyphicon-lock"></i>
+    <input class="form-control" type="password" name="password" placeholder="Password" />
+    </div>
+    </div>
+    </div>
+    <button class="btn btn-success" type="submit">Sign in</button>
+    <input type="hidden" name="next" value="/" />
+</form>
+</div>
 </div>
 {% endif %}
+</div>
 </div>
 </body>
 </html>

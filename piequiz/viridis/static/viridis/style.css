@@ -31,8 +31,12 @@ textarea {
   min-width: 20%; 
   padding:8px 10px 8px 10px;
   border:1px solid #ccc !important;
-  /*background-color: #2cc9f0;*/
+  background-color: #ffffff;
   margin: 100px auto; 
+}
+
+#auth-body {
+  background-color: #d3d3d3;
 }
 
 .left-inner-addon input {

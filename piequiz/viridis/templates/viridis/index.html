@@ -12,9 +12,11 @@
         <td>
           <p><a href="{{ test.get_absolute_url }}">{{test.title}}</a></p>
           {% if test.question_set.all %}
-           <span id="questions-preview"><a href="#" onclick="return false;"><i>{{ test.question_set.all|length }} questions</i></a>
-             <div class="box">Popup box</div>
-           </span>
+           <div id="pop1" class="popbox">
+             <h2>Questions Preview</h2>
+             <p>This is an example popbox.</p>
+           </div>
+           <a class="popper" href="#" data-popbox="pop1"><i>{{ test.question_set.all|length }} questions</i></a>
           {% else %}
             <p>No questions</p>
           {% endif %}

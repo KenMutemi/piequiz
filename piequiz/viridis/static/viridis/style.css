@@ -146,16 +146,28 @@ td {
   border:2px solid #d3d3d3;
 }
 
-.box {
-  display:none;
-  top: 30px; 
-  left: 10px;
-   background: #d3d3d3;
-   padding: 5px;
+.popbox {
+    display: none;
+    position: absolute;
+    z-index: 99999;
+    width: 350px;
+    padding: 10px;
+    background: #EEEFEB;
+    color: #000000;
+    border: 1px solid #2cc9f0;
+    margin: 0px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(164, 164, 164, 1);
+    box-shadow: 0px 0px 5px 0px rgba(164, 164, 164, 1);
 }
-
-a:hover + .box {
-     display:block;   
+.popbox h2
+{
+    background-color: #2cc9f0;
+    color:  #ffffff;
+    font-size: 14px;
+    display: block;
+    width: 349px;
+    margin: -10px 0px 8px -10px;
+    padding: 5px 10px;
 }
 
 .label-choice {

@@ -99,8 +99,9 @@ def add_question(request):
                 marks = request.POST.get('form-' + str(i) + '-mark'),
                 pub_date = datetime.datetime.now(),
                 )
-                question.save()
-                request.session['question_id'] = question.pk
+                for form in formset:
+                    myobject = question.save
+                request.session['question_id'] = myobject.id
             return HttpResponseRedirect('/choices/add')
     else:
         try:

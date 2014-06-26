@@ -9,8 +9,12 @@ class Test(models.Model):
     title = models.CharField(max_length=200, verbose_name='quiz')
     institution = models.CharField(default=None, max_length=200)
     marks = models.IntegerField(default=0)
-    slug = models.SlugField()
+    slug = models.SlugField(max_length=200)
     pub_date = models.DateTimeField('date', auto_now_add=True)
+   
+    class Meta:
+        verbose_name_plural = 'quizzes'
+        verbose_name = 'quiz'
 
     def __unicode__(self):
         return self.title

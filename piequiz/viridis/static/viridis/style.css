@@ -146,6 +146,10 @@ td {
   border:2px solid #d3d3d3;
 }
 
+.panel-default {
+  background-color: #fff;
+}
+
 .popbox {
     display: none;
     position: absolute;

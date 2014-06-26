@@ -100,6 +100,7 @@ def add_question(request):
                 pub_date = datetime.datetime.now(),
                 )
                 question.save()
+                request.session['question_id'] = question.pk
             return HttpResponseRedirect('/choices/add')
     else:
         try:
@@ -133,14 +134,15 @@ def add_choice(request):
                 pub_date = datetime.datetime.now(),
                 )
                 choice.save()
-            return HttpResponseRedirect('/profile/tests/')
+            return HttpResponseRedirect('/{0}/'.format(request.session['test_id']))
     else:
         try:
             formset = ChoiceFormSet()
         except KeyError:
             formset = ChoiceFormSet()
     return render(request, 'viridis/add_choices.html', {
-        "formset": formset
+        "formset": formset,
+        "question": request.session['question_id']
     })
     return render(request, 'viridis/add_choices.html')
     

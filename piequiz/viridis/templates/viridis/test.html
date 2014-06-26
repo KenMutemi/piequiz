@@ -14,7 +14,7 @@
 <form class="test-form" action="{% url 'viridis:answer' test.id %}" method="post">
 {% csrf_token %}
 <ul class="list-unstyled">
-  <li>{{ forloop.counter }} . <b>{{ question.question_text }}</b></li>
+  <li>{{ forloop.counter }}. {{ question.question_text }}</li>
 </ul>
     {% for choice in question.choice_set.all %}
       <label for="choice{{ choice.id }}" class="label-choice"><input class="input-choice" type="checkbox" name="choice" id="choice{{ choice.id }}" value="{{ choice.id }}"/> {{ choice.choice_text }}</label><br />
@@ -27,17 +27,18 @@
 <p>There are no questions for <i>{{ test.title }}</i>.</p>
 {% endif %}
     </div>
+</div>
   <div class="rating">
   <p>
     <b id="approval_count">{{ test.approvals }}</b> Rate this quiz
   {% if user.is_authenticated %}
-    <button id ="approve" data-testid="{{test.id}}" class="btn btn-mini btn-success" title="approve" type="button"><i class="fa fa-thumbs-o-up"></i></button>
-     <button id ="disprove" data-testid="{{test.id}}" class="btn btn-mini btn-warning" title="disapprove" type="button"><i class="fa fa-thumbs-o-down"></i></button>
+    <button id ="approve" data-testid="{{ test.id }}" class="btn btn-mini btn-success" title="approve" type="button"><i class="fa fa-thumbs-o-up"></i></button>
+     <button id ="disprove" data-testid="{{ test.id }}" class="btn btn-mini btn-warning" title="disapprove" type="button"><i class="fa fa-thumbs-o-down"></i></button>
+
 
   {% endif %}
 
 </p>
-</div>
 </div>
 {% endblock %}
 

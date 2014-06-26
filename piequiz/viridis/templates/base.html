@@ -56,7 +56,7 @@
       {% endif %}
       <form id="search" class="navbar-form navbar-left" method="get" action="/search?=">
         <div class="form-group">
-        <input type="search" id="search-input" name="q" class="form-control" placeholder="Search" />
+        <input type="search" id="search-input" name="q" class="form-control" placeholder="Search for tests, questions and users" />
         </div>
         <button type="submit" id="btn-search" class="btn btn-default"><i class="fa fa-search"></i></button>
       </form>
@@ -89,6 +89,7 @@
 </div>
 <div id="sidebar">
 {% if user.is_authenticated %}
+<hr>
 <div class="btn-group">
 <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
   My Quizzes <span class="caret"></span>
@@ -100,6 +101,7 @@
 {% for user_test in user.test_set.all|slice:":5" %}
   <p><a href="{{ user_test.get_absolute_url }}">{{ user_test.title }}</a></p>
 {% endfor %}
+<hr>
 {% else %}
 <div class="panel panel-info">
 <div class="panel-heading"><h1 class=panel-title>Log in</h1></div>

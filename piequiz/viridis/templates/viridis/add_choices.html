@@ -10,14 +10,18 @@
 <div class="panel panel-default">
   <div class="panel-heading"><h3 class="panel-title">Add choices</h3></div>
 <div class="panel-body">
-{{ question }}
-  <form id="question-form" method="post" action="">
+{% for q in questions %}
+<p>{{ forloop.counter }}. {{ q }}</p>
+{% endfor %}
+  <form id="question-form" method="post" action="" role="form">
   {% csrf_token %}
 <div class="item">
-  <table>
-      {{ formset }}
-  </table>
       {{ formset.management_form }}
+  <table width="400">
+    {% for form in formset %}
+      {{ form }}
+    {% endfor %}
+  </table>
 </div>
   <p class="submit"><input class="btn btn-default" type="submit" value="Finish" /></p>
   </form>

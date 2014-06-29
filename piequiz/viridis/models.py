@@ -46,10 +46,10 @@ class Question(models.Model):
         return self.question_text
 
 class Choice(models.Model):
-    choice_text = models.CharField(max_length = 500)
+    choice_text = models.CharField(max_length=500)
     question = models.ForeignKey(Question)
     marks = models.IntegerField(default=0)
-    pub_date = models.DateTimeField()
+    pub_date = models.DateTimeField(auto_now_add=True)
   
     def __unicode__(self):
         return self.choice_text

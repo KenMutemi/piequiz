@@ -4,6 +4,7 @@ from os.path import join as pjoin
 from django_tables2   import RequestConfig
 from viridis.tables import TestTable
 from django.forms.formsets import formset_factory
+from django.forms.models import modelformset_factory
 from viridis.forms import AddTestForm, AddQuestionForm, AddChoiceForm
 from django.contrib.auth.decorators import login_required
 from haystack.query import SearchQuerySet
@@ -79,6 +80,8 @@ def add_test(request):
     return render(request, 'viridis/new_test.html', {
         "form": form
     })
+
+@login_required
 def add_question(request):
     """User accesses the add_question view.
     If the number of extra forms has been defined by the user, display them.
@@ -99,9 +102,7 @@ def add_question(request):
                 marks = request.POST.get('form-' + str(i) + '-mark'),
                 pub_date = datetime.datetime.now(),
                 )
-                for form in formset:
-                    myobject = question.save
-                request.session['question_id'] = myobject.id
+                question.save()
             return HttpResponseRedirect('/choices/add')
     else:
         try:
@@ -109,7 +110,7 @@ def add_question(request):
         except KeyError:
             formset = QuestionFormSet()
     return render(request, 'viridis/create_questions.html', {
-        "formset": formset, 
+        "formset": formset,
         "title": request.session['test_title']
     })
 
@@ -119,31 +120,29 @@ def add_choice(request):
     If the number of extra forms has been defined by the user, display them.
     Else, display one form.
     """
+    test = Test.objects.get(id = request.session['test_id'])
+    questions = Question.objects.filter(test_id=test.pk)
+    for question_id in questions:
+        q =questions
     try:
         extra_questions = request.session['no_of_question']
     except KeyError:
         extra_questions = 1
-    ChoiceFormSet = formset_factory(AddChoiceForm, extra=extra_questions*4)
+    ChoiceFormSet = modelformset_factory(Choice, form=AddChoiceForm, extra=extra_questions*4)
     if request.method == "POST":
         formset = ChoiceFormSet(request.POST)
         if formset.is_valid():
-            for i in range(0, extra_questions*4):
-                choice = Choice(
-                choice_text = request.POST.get('form-' + str(i) + '-choice_text'),
-                question_id = request.POST.get('form-' + str(i) + '-choice_id'),
-                marks = request.POST.get('form-' + str(i) + '-mark'),
-                pub_date = datetime.datetime.now(),
-                )
-                choice.save()
+            choice = formset.save(commit=False)
+            choice.save()
             return HttpResponseRedirect('/{0}/'.format(request.session['test_id']))
     else:
         try:
-            formset = ChoiceFormSet()
+            formset = ChoiceFormSet(queryset=Choice.objects.none())
         except KeyError:
-            formset = ChoiceFormSet()
+            formset = ChoiceFormSet(queryset=Choice.objects.none())
     return render(request, 'viridis/add_choices.html', {
         "formset": formset,
-        "question": request.session['question_id']
+        "questions": q
     })
     return render(request, 'viridis/add_choices.html')
     

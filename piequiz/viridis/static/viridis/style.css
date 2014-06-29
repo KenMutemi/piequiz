@@ -190,3 +190,13 @@ td {
 .input-choice:checked + .label-choice {
   color: #2cc9f0;
 }
+
+
+.heading-mytests {
+    overflow: hidden;
+    padding-top: 20px;
+}
+.group-mytests {
+    position: relative;
+    top: -5px;
+}

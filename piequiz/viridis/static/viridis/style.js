@@ -9,37 +9,26 @@ $(document).ready(function() {
         form_selector: '#search'
       })
       window.autocomplete.setup()
-      $('#approve').click(function(){
-      $.ajax({
-               type: "POST",
-               url: "/approve/",
-               data: {'csrfmiddlewaretoken': '{{csrf_token}}'},
-               dataType: "text",
-               success: function(response) {
-                      alert('You liked this')
-                },
-                error: function(rs, e) {
-                       alert(rs.responseText);
-                }
-          }); 
+
     })
 
-    /** ajax for new_test form*/
-    /*var new_test_form = $('#new-test-form');
-    new_test_form.submit(function () {
-        $.ajax({
-            type: new_test_form.attr('method'),
-            url: new_test_form.attr('action'),
-            data: new_test_form.serialize(),
-            success: function (data) {
-               location.href = "/question/new"
-            },
-            error: function(data) {
-                alert(data);
+$(".vote_form").submit(function(e) 
+    {
+        e.preventDefault(); 
+        var btn = $("button", this);
+        var l_id = $(".hidden_id", this).val();
+        btn.attr('disabled', true);
+        $.post("/vote/", $(this).serializeArray(),
+        function(data) {
+            if(data["voteobj"]) {
+          btn.text("-");
+            }
+            else {
+          btn.text("+");
             }
         });
-        return false;
-    });*/
+        btn.attr('disabled', false);
+    });
     /** ajax for the test*/
     var test_form = $('.test-form');
     test_form.submit(function () {

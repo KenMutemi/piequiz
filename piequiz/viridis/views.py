@@ -5,15 +5,55 @@ from django_tables2   import RequestConfig
 from viridis.tables import TestTable
 from django.forms.formsets import formset_factory
 from django.forms.models import modelformset_factory
-from viridis.forms import AddTestForm, AddQuestionForm, AddChoiceForm
+from viridis.forms import AddTestForm, AddQuestionForm, AddChoiceForm, VoteForm
 from django.contrib.auth.decorators import login_required
 from haystack.query import SearchQuerySet
-from viridis.models import Test, Question, Choice, Answer
+from viridis.models import Test, Question, Choice, Answer, Vote
 from itertools import repeat
 from django.contrib.auth.models import User
+from django.views.generic.edit import FormView
+from django.views.generic.list import ListView
 from django.core.urlresolvers import reverse
 from django.http import HttpResponsePermanentRedirect, HttpResponseRedirect, HttpResponse
 from django.shortcuts import render, get_object_or_404
+
+class JSONFormMixin(object):
+    def create_response(self, vdict=dict(), valid_form=True):
+        response = HttpResponse(json.dumps(vdict),
+content_type='application/json')
+        response.status = 200 if valid_form else 500
+        return response
+
+class VoteFormBaseView(FormView):
+    form_class = VoteForm
+
+    def create_response(self, vdict=dict(), valid_form=True):
+        response = HttpResponse(json.dumps(vdict))
+        response.status = 200 if valid_form else 500
+        return response
+
+    def form_valid(self, form):
+        test = get_object_or_404(Test, pk=form.data["test"])
+        user = self.request.user
+        prev_votes = Vote.objects.filter(voter=user, test=test)
+        has_voted = (len(prev_votes)>0)
+
+        ret = {"success": 1}
+        if not has_voted:
+            # add vote
+            v = Vote.objects.create(voter=user, test=test)
+            ret["voteobj"] = v.id
+        else:
+            # delete vote
+            prev_votes[0].delete()
+            ret["unvoted"] = 1
+        return self.create_response(ret, True)
+
+    def form_invalid(self, form):
+        ret = {"success": 0, "form_errors": form.errors}
+
+class VoteFormView(JSONFormMixin, VoteFormBaseView):
+    pass
 
 @login_required
 def profile(request):
@@ -28,6 +68,20 @@ def my_tests(request):
 def index(request):
     tests = Test.objects.order_by('-pub_date')
     return render(request, 'viridis/index.html', { 'tests': tests })
+
+class TestListView(ListView):
+    model = Test
+    queryset = Test.with_votes.all()
+    paginate_by = 3
+    def get_context_data(self, **kwargs):
+        context = super(TestListView, self).get_context_data(**kwargs)
+        if self.request.user.is_authenticated():
+            voted = Vote.objects.filter(voter=self.request.user)
+            tests_in_page = [test.id for test in context["object_list"]]
+            voted = voted.filter(test_id__in=tests_in_page)
+            voted = voted.values_list('test_id', flat=True)
+            context['voted'] = voted
+        return context
 
 @login_required(login_url = "/accounts/login/")
 def test(request, test_id, slug):
@@ -72,6 +126,7 @@ def add_test(request):
             cd = form.cleaned_data
             test.user_id = request.user.id
             request.session['no_of_question'] = cd['questions']
+            request.session['total_marks'] = cd['marks']
             test.save()
             request.session['test_title'] = test.title
             request.session['test_id'] = test.pk
@@ -90,6 +145,7 @@ def add_question(request):
     """
     try:
         extra_questions = request.session['no_of_question']
+        mark_per_question = (request.session['total_marks']/request.session['no_of_question'])
     except KeyError:
         extra_questions = 1
     QuestionFormSet = formset_factory(AddQuestionForm, extra=extra_questions)
@@ -100,7 +156,7 @@ def add_question(request):
                 question = Question(
                 question_text = request.POST.get('form-' + str(i) + '-question_text'),
                 test_id = request.session['test_id'],
-                marks = request.POST.get('form-' + str(i) + '-mark'),
+                marks = mark_per_question,
                 pub_date = datetime.datetime.now(),
                 )
                 question.save()
@@ -166,25 +222,3 @@ def autocomplete(request):
     })
     return HttpResponse(the_data, content_type='application/json')
 
-@login_required
-def approve(request):
-    vars = {}
-    if request.method == 'POST':
-        test = Test.objects.get(id=int(test_id))
-
-        try:
-            approve = Approve.objects.get(user_id=request.user.id)
-        except:
-            user_id = None
-
-        if approve:
-            approve.total_approvals -= 1
-            approve.user.remove(request.user)
-            approve.save()
-        else:
-            approve.user.add(request.user)
-            approve.total_approvals += 1
-            approve.save()
-
-    return HttpResponse(json.dumps(vars),
-                    mimetype='application/javascript')

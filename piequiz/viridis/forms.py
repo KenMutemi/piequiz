@@ -1,6 +1,6 @@
 from django import forms
 from django.forms import ModelForm
-from viridis.models import Test, Question, Choice
+from viridis.models import Test, Question, Choice, Vote
 
 
 class BaseModelForm(forms.ModelForm):
@@ -25,7 +25,7 @@ class AddTestForm(forms.ModelForm):
 class AddQuestionForm(BaseForm):
     question_text = forms.CharField(widget=forms.Textarea(attrs={'class':'form-control','rows':2, 'cols': 15}), label="Question")
     #image_file = forms.FileField(required=False)
-    mark = forms.IntegerField(widget=forms.TextInput(attrs={'class' : 'form-control mark-question', 'type':'number'}))
+    #mark = forms.IntegerField(widget=forms.TextInput(attrs={'class' : 'form-control mark-question', 'type':'number'}))
    
 class AddChoiceForm(BaseModelForm):
     #choice_id = forms.ModelChoiceField(queryset = Question.objects.order_by('-pub_date'), empty_label=None, widget=forms.Select(attrs={'class' : 'form-control test-select'}), label="Question")
@@ -35,3 +35,7 @@ class AddChoiceForm(BaseModelForm):
     class Meta:
         model = Choice
         fields = ['choice_text', 'mark']
+
+class VoteForm(forms.ModelForm):
+    class Meta:
+        model = Vote

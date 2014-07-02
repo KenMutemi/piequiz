@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load staticfiles %}
-{% load widget_tweaks %}
+{% load bootstrap3 %}
 {% block title %}Add Questions{% endblock %}
 {% block content %}
 
@@ -14,9 +14,7 @@
   {% csrf_token %}
 <div class="item">
   <table>
-    {% for form in formset %}
-      {{ form }}
-    {% endfor %}
+    {% bootstrap_formset formset layout='vertical' %}
   </table>
       {{ formset.management_form }}
 </div>

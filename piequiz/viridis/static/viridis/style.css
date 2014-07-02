@@ -150,8 +150,16 @@ td {
   *overflow: hidden;
 }
 
-.fa {
+.fa-white {
   color: #ffffff;
+}
+
+.fa-blue {
+  color: #2cc9f0;
+}
+
+.fa-green {
+  color: #458B00;
 }
 
 .ac-results {
@@ -222,3 +230,5 @@ td {
     position: relative;
     top: -5px;
 }
+
+label{font-weight:normal !important};

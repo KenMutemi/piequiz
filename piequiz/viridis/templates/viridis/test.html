@@ -1,4 +1,10 @@
 {% extends "base.html" %}
+{% load humanize %}
+
+{% block date_created %}
+  <p><i class="fa fa-edit fa-2x fa-blue"></i>created {{ test.pub_date|naturaltime|capfirst }}</p>
+  <p><i class="fa fa-thumbs-o-up fa-2x fa-green"></i> approved by {{ test.votes }} people</p>
+{% endblock %}
 
 {% block title %}{{ test.title }}{% endblock %}
 
@@ -29,16 +35,20 @@
     </div>
 </div>
   <div class="rating">
-  <p>
-    <b id="approval_count">{{ test.approvals }}</b> Rate this quiz
-  {% if user.is_authenticated %}
-    <button id ="approve" data-testid="{{ test.id }}" class="btn btn-mini btn-success" title="approve" type="button"><i class="fa fa-thumbs-o-up"></i></button>
-     <button id ="disprove" data-testid="{{ test.id }}" class="btn btn-mini btn-warning" title="disapprove" type="button"><i class="fa fa-thumbs-o-down"></i></button>
-
-
-  {% endif %}
-
-</p>
+<form method="post" action="{% url 'viridis:vote' %}" class="vote_form">
+ {% csrf_token %}
+ <li class="list-unstyled"> {{ test.votes }} people approve this quiz
+   <input type="hidden" id="id_test" name="test" class="hidden_id" value="{{ test.pk }}" />
+   <input type="hidden" id="id_voter" name="voter" class="hidden_id" value="{{ user.pk }}" />
+   {% if not user.is_authenticated %}
+     <button id="approve" class="btn btn-mini btn-success" disabled title="Please login to vote"><i class="fa fa-thumbs-o-up"></i></button>
+   {% elif test.pk not in voted %}
+     <button id="approve" class="btn btn-mini btn-success"><i class="fa fa-thumbs-up"></i></button>
+   {% else %}
+     <button id="approve" class="btn btn-mini btn-success"><i class="fa fa-check"></i></button>    
+   {% endif %}
+  </li>
+</form>
 </div>
 {% endblock %}
 

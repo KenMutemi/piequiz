@@ -1,8 +1,16 @@
 import datetime
 from django.db import models
+from django.db.models import Count
 from django.utils import timezone
 from django.contrib.auth.models import User
 from django.template.defaultfilters import slugify
+
+
+class TestVoteCountManager(models.Manager):
+    def get_query_set(self):
+        return super(TestVoteCountManager,
+self).get_query_set().annotate(
+        votes=Count('vote')).order_by('-votes')
 
 class Test(models.Model):
     user = models.ForeignKey(User)
@@ -11,6 +19,9 @@ class Test(models.Model):
     marks = models.IntegerField(default=0)
     slug = models.SlugField(max_length=200)
     pub_date = models.DateTimeField('date', auto_now_add=True)
+    
+    with_votes = TestVoteCountManager()
+    objects = models.Manager()
    
     class Meta:
         verbose_name_plural = 'quizzes'
@@ -43,7 +54,7 @@ class Question(models.Model):
     pub_date = models.DateTimeField()
 
     def __unicode__(self):
-        return self.pk
+        return self.question_text
 
 class Choice(models.Model):
     choice_text = models.CharField(max_length=500)
@@ -63,8 +74,10 @@ class Answer(models.Model):
     def __unicode__(self):
         return self.choice
 
-class Approve(models.Model):
-    user = models.IntegerField()
+class Vote(models.Model):
+    voter = models.ForeignKey(User)
     test = models.ForeignKey(Test)
-    date = models.DateTimeField(auto_now_add=True)
-    total_approvals = models.IntegerField(default=0)
+
+    def __unicode__(self):
+        return "%s upvoted %s" % (self.voter.username, self.test.title)
+

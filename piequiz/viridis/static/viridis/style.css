@@ -27,12 +27,34 @@ textarea {
 }
 
 .auth-wrapper {
-  width: 20%;
-  min-width: 20%; 
+  width: 580px;
+  margin: 100px auto;
+}
+
+.auth-register {
+  width: 45%;
   padding:8px 10px 8px 10px;
   border:1px solid #ccc !important;
   background-color: #ffffff;
-  margin: 100px auto; 
+  margin: auto;
+}
+
+.auth-left {
+  width: 45%;
+  float: left;
+  min-width: 20%;
+  padding:8px 10px 8px 10px;
+  border:1px solid #ccc !important;
+  background-color: #ffffff;
+  /*margin: 100px auto;*/
+}
+
+.auth-right {
+  padding:8px 10px 8px 10px;
+  border:1px solid #ccc !important;
+  background-color: #ffffff;
+  width: 45%;
+  float: right;
 }
 
 .glyphicon {

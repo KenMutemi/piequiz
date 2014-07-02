@@ -43,7 +43,7 @@ class Question(models.Model):
     pub_date = models.DateTimeField()
 
     def __unicode__(self):
-        return self.question_text
+        return self.pk
 
 class Choice(models.Model):
     choice_text = models.CharField(max_length=500)

@@ -9,6 +9,7 @@ from viridis.forms import AddTestForm, AddQuestionForm, AddChoiceForm
 from django.contrib.auth.decorators import login_required
 from haystack.query import SearchQuerySet
 from viridis.models import Test, Question, Choice, Answer
+from itertools import repeat
 from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
 from django.http import HttpResponsePermanentRedirect, HttpResponseRedirect, HttpResponse
@@ -122,6 +123,8 @@ def add_choice(request):
     """
     test = Test.objects.get(id = request.session['test_id'])
     questions = Question.objects.filter(test_id=test.pk)
+    questions_pks = [x.pk for item in questions for x in repeat(item, 4)] # multiply ...
+        # pk elements in this list by 4
     for question_id in questions:
         q =questions
     try:
@@ -132,8 +135,13 @@ def add_choice(request):
     if request.method == "POST":
         formset = ChoiceFormSet(request.POST)
         if formset.is_valid():
-            choice = formset.save(commit=False)
-            choice.save()
+            for i in range(0, extra_questions*4):
+                choice = Choice(
+                question_id = questions_pks[i],
+                choice_text = request.POST.get('form-' + str(i) + '-choice_text'),
+                marks = request.POST.get('form-' + str(i) + '-mark'),
+                )
+                choice.save()
             return HttpResponseRedirect('/{0}/'.format(request.session['test_id']))
     else:
         try:
@@ -142,7 +150,7 @@ def add_choice(request):
             formset = ChoiceFormSet(queryset=Choice.objects.none())
     return render(request, 'viridis/add_choices.html', {
         "formset": formset,
-        "questions": q
+        "questions": q,
     })
     return render(request, 'viridis/add_choices.html')
     

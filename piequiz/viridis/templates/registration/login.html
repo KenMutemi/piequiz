@@ -6,6 +6,7 @@
 {% block title %}Sign in &middot; PieQuiz{% endblock %}
 {% block content %}
 <div class="auth-wrapper">
+<div class="auth-left">
 <div class="panel-heading panel-heading-login">
 <h3 class="panel-title">Sign In - PieQuiz</h3>
 </div>
@@ -38,13 +39,25 @@
     </div>
 </div>
 </form>
-
 <div>
 <hr>
-<p><a href="/accounts/register/">Sign
-up</a> for a new account.</p>
 <p><a href="{% url "password_reset_recover" %}">Forgot your password?</a></p>
 <hr>
+</div>
+</div>
+<div class="panel panel-info auth-right">
+<div class="panel-heading">
+<h3 class="panel-title">Sign up</h3>
+</div>
+<div class="panel-body">
+<a href="" class="zocial googleplus">Sign up with Google</a><br>
+<hr>
+<a href="" class="zocial yahoo">Sign up with Yahoo</a>
+<hr>
+<p><a href="/accounts/register/">Sign
+up</a> with email.</p>
+<hr>
+</div>
 </div>
 </div>
 

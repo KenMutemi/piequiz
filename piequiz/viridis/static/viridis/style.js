@@ -12,6 +12,21 @@ $(document).ready(function() {
 
     })
 
+$('input[type=checkbox]').each(function(){
+    $(this).wrap('<span class="circle">');
+});
+
+$('.circle').on("click", function(){
+    if($(this).css("background-color") == 'rgb(223, 223, 223)') { 
+        $(this).find('.input-choice').prop('checked', true);
+        $(this).css({'background-color':'rgb(0, 64, 212)'});
+    }
+    else {
+        $(this).find('.input-choice').prop('checked', false);
+        $(this).css({'background-color':'rgb(223, 223, 223)'});
+    }
+});
+
 $(".vote_form").submit(function(e) 
     {
         e.preventDefault(); 
@@ -45,7 +60,6 @@ $(".vote_form").submit(function(e)
         return false;
     });
 
-});
 
 
     function toggle(source) {

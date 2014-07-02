@@ -1,24 +1,26 @@
 {% extends "base.html" %}
 {% load staticfiles %}
-{% load widget_tweaks %}
+{% load bootstrap3 %}
 {% block title %}New Quiz{% endblock %}
 {% block content %}
 
 {% if form.errors %}
   <div><i class="glyphicon glyphicon-info-sign"></i><label>Please correct the errors below:</label>{{ form.non_field_errors }}</div>
   {% endif %}
-<div class="panel panel-default">
+<div class="panel panel-info">
   <div class="panel-heading"><h3 class="panel-title">New quiz</h3></div>
-<div class="panel-body">
+<div class="panel-body new-test-panel">
   <form id="new-test-form" method="post" action="" class="">
   {% csrf_token %}
-<div class="item">
-  <table>
-      {{ form }}
-  </table>
+  <div class="new-test-wrap">
+      {% bootstrap_form form %}
+            {% buttons %}
+            <button type="submit" class="btn btn-primary">
+                {% bootstrap_icon "arrow-right" %} Continue
+            </button>
+        {% endbuttons %}
+  </div>
       {{ formset.management_form }}
-</div><br />
-  <p class="submit"><input class="btn btn-default" type="submit" value="next" /></p>
   </form>
 </div>
 </div>

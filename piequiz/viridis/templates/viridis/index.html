@@ -11,7 +11,6 @@
       <tr height="20">
         <td>
           <p><a href="{{ test.get_absolute_url }}">{{test.title}}</a></p>
-          <p>[{{ test.votes }}]</p>
           {% if test.question_set.all %}
            <div id="pop1" class="popbox">
              <h2>Questions Preview</h2>

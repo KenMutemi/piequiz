@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "rerank.py", line 6, in <module>
+    from test.models import Test
+ImportError: No module named models
+Traceback (most recent call last):
+  File "rerank.py", line 6, in <module>
+    from test.models import Test
+ImportError: No module named models

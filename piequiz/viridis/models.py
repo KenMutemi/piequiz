@@ -10,12 +10,13 @@ class TestVoteCountManager(models.Manager):
     def get_query_set(self):
         return super(TestVoteCountManager,
 self).get_query_set().annotate(
-        votes=Count('vote')).order_by('-votes')
+        votes=Count('vote')).order_by('-rank_score', '-votes')
 
 class Test(models.Model):
     user = models.ForeignKey(User)
     title = models.CharField(max_length=200, verbose_name='quiz')
     institution = models.CharField(default=None, max_length=200)
+    rank_score = models.FloatField(default=0.0)
     marks = models.IntegerField(default=0)
     slug = models.SlugField(max_length=200)
     pub_date = models.DateTimeField('date', auto_now_add=True)
@@ -39,6 +40,17 @@ class Test(models.Model):
 
     def get_absolute_url(self):
         return "/%s/%s" % (self.id, self.slug)
+
+    def set_rank(self):
+        # Based on HN ranking algo
+        SECS_IN_HOUR = float(60*60)
+        GRAVITY = 1.2
+
+        delta = now() - self.submitted_on
+        item_hour_age = delta.total_seconds() // SECS_IN_HOUR
+        votes = self.votes - 1
+        self.rank_score = votes / pow((item_hour_age+2), GRAVITY)
+        self.save()
 
     def was_published_recently(self):
         now = timezone.now()

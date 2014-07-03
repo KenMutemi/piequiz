@@ -2,11 +2,11 @@ from django.conf.urls import patterns, url, include
 from django.conf import settings
 from django.conf.urls.static import static
 from django.views.generic import RedirectView
-from viridis.views import VoteFormView
+from viridis.views import VoteFormView, TestListView
 from viridis import views
 
 urlpatterns = patterns('',
-    url(r'^$', views.index, name='index'),
+    url(r'^$', TestListView.as_view(), name='home'),
     url(r'^results/(?P<test_id>\d+)/$', views.results, name='results'),
     url(r'^(?P<test_id>\d+)/answer/$', views.answer, name='answer'),
     url(r'^test/new$', views.add_test, name='add_test'),

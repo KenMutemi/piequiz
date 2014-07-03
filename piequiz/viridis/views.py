@@ -1,6 +1,5 @@
 import datetime
 import simplejson as json
-from os.path import join as pjoin  
 from django_tables2   import RequestConfig
 from viridis.tables import TestTable
 from django.forms.formsets import formset_factory
@@ -66,7 +65,7 @@ def my_tests(request):
     return render(request, 'viridis/mytests.html', {"test": test})
 
 def index(request):
-    tests = Test.objects.order_by('-pub_date')
+    tests = Test.objects.order_by('-rank_score', '-votes')
     return render(request, 'viridis/index.html', { 'tests': tests })
 
 class TestListView(ListView):

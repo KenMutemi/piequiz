@@ -64,14 +64,9 @@ def my_tests(request):
     test.paginate(page=request.GET.get('page', 1), per_page=10)
     return render(request, 'viridis/mytests.html', {"test": test})
 
-def index(request):
-    tests = Test.objects.order_by('-rank_score', '-votes')
-    return render(request, 'viridis/index.html', { 'tests': tests })
-
 class TestListView(ListView):
     model = Test
     queryset = Test.with_votes.all()
-    paginate_by = 3
     def get_context_data(self, **kwargs):
         context = super(TestListView, self).get_context_data(**kwargs)
         if self.request.user.is_authenticated():

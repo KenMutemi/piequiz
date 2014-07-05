@@ -6,11 +6,13 @@
 <title>{% block title %}{% endblock %} &middot; PieQuiz</title>
 {% load bootstrap3 %}
 {% bootstrap_css %}
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open Sans">
 <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 {% bootstrap_javascript %}
 <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+{% block head %}{% endblock %}
 <link rel="stylesheet" type="text/css" href="{% static 'viridis/style.css' %}">
 <script src="{% static 'viridis/style.js' %}"></script>
 </head>
@@ -101,7 +103,7 @@
   </ul>
 </div>
 {% for user_test in user.test_set.all|slice:":5" %}
-  <p><a href="{{ user_test.get_absolute_url }}">{{ user_test.title }}</a></p>
+  <p><a href="{{ user_test.get_absolute_url }}">{{ user_test.title|truncatechars:30 }}</a></p>
 {% endfor %}
 <hr>
 {% else %}

@@ -83,6 +83,27 @@ textarea {
   padding-left: 0px;
 }
 
+.list-border {
+  border-left-width: thin;
+  border-left-style: solid;
+  border-left-color: #F00;
+  padding: 10px;
+}
+
+p, div {
+  font-family: 'Open Sans';
+}
+
+.index-div {
+  padding: 0 5% 5% 5%;
+}
+
+.bordered-heading {
+  border-top: 4px solid #006699; /* mid blue */
+  background-color: #33CCFF;     /* pale blue */
+  color: #ffffff;                /* dark blue */
+}
+
 .navbar-custom {
   background-color: #d3d3d3;
   border-radius:0;

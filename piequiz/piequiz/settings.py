@@ -44,6 +44,7 @@ INSTALLED_APPS = (
     'registration',
     'widget_tweaks',
     'avatar',
+    'endless_pagination',
     'django_tables2',
     'viridis',
 )
@@ -99,6 +100,9 @@ HAYSTACK_CONNECTIONS = {
 # Dumb SMTP server
 EMAIL_HOST = 'localhost'
 EMAIL_PORT = 1025
+
+# Endless pagination
+ENDLESS_PAGINATION_PER_PAGE = 3
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/

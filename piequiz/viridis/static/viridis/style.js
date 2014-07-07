@@ -1,5 +1,10 @@
 $(document).ready(function() {
 
+  $('.heading-collapse').click(function() {
+    $(this).toggleClass('active').find('i').toggleClass('fa fa-chevron-up fa fa-chevron-down')
+           .removeClass('active').find('i').removeClass('fa fa-chevron-up').addClass('fa fa-chevron-down');
+         });
+
   $(".questions-preview").click(function(e){
     e.preventDefault();
     $(this).find(".popup").fadeIn("slow");

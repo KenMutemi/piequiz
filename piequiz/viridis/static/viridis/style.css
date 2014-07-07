@@ -282,3 +282,7 @@ td {
 }
 
 label{font-weight:normal !important};
+
+.color-white {
+  background-color: #ffffff;
+}

@@ -102,7 +102,8 @@ EMAIL_HOST = 'localhost'
 EMAIL_PORT = 1025
 
 # Endless pagination
-ENDLESS_PAGINATION_PER_PAGE = 3
+ENDLESS_PAGINATION_PER_PAGE = 5
+ENDLESS_PAGINATION_NEXT_LABEL = '&gt;&gt;'
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/

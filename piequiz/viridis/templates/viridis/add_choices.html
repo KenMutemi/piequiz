@@ -2,27 +2,51 @@
 {% load staticfiles %}
 {% load bootstrap3 %}
 {% load widget_tweaks %}
-{% block title %}Add Choices{% endblock %}
-{% block content %}
 
+{% block title %}Add Choices to {{ test }}{% endblock %}
+
+{% block content %}
 {% if form.errors %}
   <p><i class="glyphicon glyphicon-info-sign"></i>Please correct the errors below: {{ form.non_field_errors }}</p>
-  {% endif %}
-<div class="panel panel-default">
-  <div class="panel-heading"><h3 class="panel-title">Add choices</h3></div>
-<div class="panel-body">
-{% for q in questions %}
-<p>{{ forloop.counter }}. {{ q.question_text }}</p>
-{% endfor %}
-  <form id="question-form" method="post" action="" role="form">
-  {% csrf_token %}
-<div class="item">
-      {{ formset.management_form }}
-    {% bootstrap_formset formset layout='vertical' %}
-</div>
-  <p class="submit"><input class="btn btn-default" type="submit" value="Finish" /></p>
+{% endif %}
+<div class="panel-group" id="accordion">
+  <form  method="post" action="" role="form">
+    {% csrf_token %}
+    {{ formset.management_form }}
+    <div class="item">
+      {% for field in formset %}
+        {% if forloop.revcounter|divisibleby:4 %}
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{ forloop.counter }}">
+                <span class="heading-collapse">Add choices <i class="fa fa-chevron-up"></i></span>
+              </a>
+            </h3>
+          </div>
+          <div id="collapse{{ forloop.counter }}" class="panel-collapse collapse in">
+            <div class="panel-body">
+        {% endif %}
+        {% if forloop.revcounter|divisibleby:4 %}
+        {% for question in test.question_set.all %}
+          <p>{{ forloop.counter }}. {{ question.question_text }}</p>
+        {% endfor %}
+        {% endif %}
+            {{ field }}
+        {% if forloop.counter|divisibleby:4 %}
+          </div>
+         </div>
+        </div>
+        {% endif %}
+    {% endfor %}
+    </div>
+      <hr>
+      {% buttons %}
+        <button type="submit" class="btn btn-primary">
+          {% bootstrap_icon "save" %} Complete
+        </button>
+      {% endbuttons %}
+    </div>
   </form>
 </div>
-</div>
 {% endblock %}
-

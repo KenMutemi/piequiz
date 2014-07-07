@@ -175,8 +175,6 @@ def add_choice(request):
     questions = Question.objects.filter(test_id=test.pk)
     questions_pks = [x.pk for item in questions for x in repeat(item, 4)] # multiply ...
         # pk elements in this list by 4
-    for question_id in questions:
-        q =questions
     try:
         extra_questions = request.session['no_of_question']
     except KeyError:
@@ -192,6 +190,7 @@ def add_choice(request):
                 marks = request.POST.get('form-' + str(i) + '-mark'),
                 )
                 choice.save()
+            test_choice = [test, formset]
             return HttpResponseRedirect('/{0}/'.format(request.session['test_id']))
     else:
         try:
@@ -200,7 +199,7 @@ def add_choice(request):
             formset = ChoiceFormSet(queryset=Choice.objects.none())
     return render(request, 'viridis/add_choices.html', {
         "formset": formset,
-        "questions": q,
+        "test": test
     })
     return render(request, 'viridis/add_choices.html')
     

@@ -199,3 +199,11 @@ $(function() {
     });
  
 });
+
+function timeout_trigger() {
+    window.alert('Hello!');  
+}
+ 
+function timeout_init() {
+    setTimeout('timeout_trigger()', 2000);
+}

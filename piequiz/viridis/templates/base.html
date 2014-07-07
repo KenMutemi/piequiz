@@ -42,11 +42,11 @@
       {% if user.is_authenticated %}
       <ul class="nav navbar-nav">
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Create...<b class="caret"></b></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Quiz<b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <li><a href="{% url 'viridis:add_test' %}">Test</a></li>
-            <li><a href="#">Questions</a></li>
-            <li><a href="#">Choices</a></li>
+            <li><a href="{% url 'viridis:add_test' %}">New</a></li>
+            <li><a href="#">Set</a></li>
+            <li><a href="#">Take a quiz</a></li>
             <li class="divider"></li>
             <li><a href="#">Separated link</a></li>
             <li class="divider"></li>
@@ -66,7 +66,7 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Settings<b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Start timer</a></li>
+            <li><a href="#" onclick="timeout_init()">Start timer</a></li>
           </ul>
       </li>
         <li id="settings">{% avatar user 40 %}</li>

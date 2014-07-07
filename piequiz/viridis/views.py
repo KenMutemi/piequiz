@@ -140,6 +140,7 @@ def add_question(request):
     try:
         extra_questions = request.session['no_of_question']
         mark_per_question = (request.session['total_marks']/request.session['no_of_question'])
+        request.session['mark_per_question'] = mark_per_question
     except KeyError:
         extra_questions = 1
     QuestionFormSet = formset_factory(AddQuestionForm, extra=extra_questions)
@@ -171,6 +172,7 @@ def add_choice(request):
     If the number of extra forms has been defined by the user, display them.
     Else, display one form.
     """
+    mark = request.session['mark_per_question']
     test = Test.objects.get(id = request.session['test_id'])
     questions = Question.objects.filter(test_id=test.pk)
     questions_pks = [x.pk for item in questions for x in repeat(item, 4)] # multiply ...
@@ -190,8 +192,8 @@ def add_choice(request):
                 marks = request.POST.get('form-' + str(i) + '-mark'),
                 )
                 choice.save()
-            test_choice = [test, formset]
             return HttpResponseRedirect('/{0}/'.format(request.session['test_id']))
+            del request.session['test_id']
     else:
         try:
             formset = ChoiceFormSet(queryset=Choice.objects.none())
@@ -199,9 +201,9 @@ def add_choice(request):
             formset = ChoiceFormSet(queryset=Choice.objects.none())
     return render(request, 'viridis/add_choices.html', {
         "formset": formset,
-        "test": test
+        "test": test,
+        "mark": mark
     })
-    return render(request, 'viridis/add_choices.html')
     
 def autocomplete(request):
     """User enters search term in search box. The system tries

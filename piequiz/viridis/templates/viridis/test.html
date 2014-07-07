@@ -23,7 +23,7 @@
   <li>{{ forloop.counter }}. {{ question.question_text }}</li>
 </ul>
     {% for choice in question.choice_set.all %}
-      <label for="choice{{ choice.id }}" class="label-choice"><input class="input-choice" type="checkbox" name="choice" id="choice{{ choice.id }}" value="{{ choice.id }}"/> {{ choice.choice_text }}</label><br />
+      <label for="choice{{ choice.id }}" class="label-choice">{% cycle '(A)' '(B)' '(C)' '(D)' %} <input class="input-choice" type="checkbox" name="choice" id="choice{{ choice.id }}" value="{{ choice.id }}"/>  {{ choice.choice_text }}</label><br />
     {% endfor %}
 <input class="btn btn-default" type="submit" value="Submit" />
 </form>

@@ -10,6 +10,22 @@ $(document).ready(function() {
     $(this).find(".popup").fadeIn("slow");
 });
 
+      /** ajax for the test*/
+    var test_form = $('.test-form');
+    test_form.submit(function () {
+        $.ajax({
+            type: test_form.attr('method'),
+            url: test_form.attr('action'),
+            data: test_form.serialize(),
+            success: function (data) {
+            },
+            error: function(data) {
+                alert(JSON.stringify(data));
+            }
+        });
+        return false;
+    });
+
   window.autocomplete = new Autocomplete({
         form_selector: '#search'
       })
@@ -17,20 +33,6 @@ $(document).ready(function() {
 
     })
 
-$('input[type=checkbox]').each(function(){
-    $(this).wrap('<span class="circle">');
-});
-
-$('.circle').on("click", function(){
-    if($(this).css("background-color") == 'rgb(223, 223, 223)') { 
-        $(this).find('.input-choice').prop('checked', true);
-        $(this).css({'background-color':'rgb(0, 64, 212)'});
-    }
-    else {
-        $(this).find('.input-choice').prop('checked', false);
-        $(this).css({'background-color':'rgb(223, 223, 223)'});
-    }
-});
 
 $(".vote_form").submit(function(e) 
     {
@@ -49,29 +51,7 @@ $(".vote_form").submit(function(e)
         });
         btn.attr('disabled', false);
     });
-    /** ajax for the test*/
-    var test_form = $('.test-form');
-    test_form.submit(function () {
-        $.ajax({
-            type: test_form.attr('method'),
-            url: test_form.attr('action'),
-            data: test_form.serialize(),
-            success: function (data) {
-            },
-            error: function(data) {
-                alert(JSON.stringify(data));
-            }
-        });
-        return false;
-    });
 
-
-
-    function toggle(source) {
-      checkboxes = document.getElementsByName('selection');
-      for(var i in checkboxes)
-      checkboxes[i].checked = source.checked;
-    }
 
         // In a perfect world, this would be its own library file that got included
     // on the page and only the ``$(document).ready(...)`` below would be present.
@@ -206,4 +186,10 @@ function timeout_trigger() {
  
 function timeout_init() {
     setTimeout('timeout_trigger()', 2000);
+}
+
+function toggle(source) {
+  checkboxes = document.getElementsByName('selection');
+  for(var i in checkboxes)
+  checkboxes[i].checked = source.checked;
 }

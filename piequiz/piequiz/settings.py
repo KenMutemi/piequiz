@@ -103,7 +103,8 @@ EMAIL_PORT = 1025
 
 # Endless pagination
 ENDLESS_PAGINATION_PER_PAGE = 5
-ENDLESS_PAGINATION_NEXT_LABEL = '&gt;&gt;'
+ENDLESS_PAGINATION_NEXT_LABEL = 'next'
+ENDLESS_PAGINATION_PREVIOUS_LABEL = 'prev'
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/

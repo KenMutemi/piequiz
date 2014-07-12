@@ -15,16 +15,20 @@ class BaseForm(forms.Form):
 
 class AddTestForm(forms.ModelForm):
     title = forms.CharField(widget=forms.TextInput(attrs={'class' : 'form-control', 'type':'text'}))
-    institution = forms.CharField(widget=forms.TextInput(attrs={'class' : 'form-control', 'type':'text', 'title':'not required'}))
+    institution = forms.CharField(widget=forms.TextInput(attrs={'class' : 'form-control', 'type':'text'}))
     marks = forms.IntegerField(widget=forms.TextInput(attrs={'class' : 'form-control mark-test', 'type':'number'}))
     questions = forms.IntegerField(widget=forms.TextInput(attrs={'class' : 'form-control', 'type':'number', 'title':'number of questions'}))
     class Meta:
         model = Test
         fields = ['title', 'institution', 'marks']
 
-class AddQuestionForm(BaseForm):
+class AddQuestionForm(BaseModelForm):
     question_text = forms.CharField(widget=forms.Textarea(attrs={'class':'form-control','rows':2, 'cols': 15}), label="Question")
-    #image_file = forms.FileField(required=False)
+    image_file = forms.ImageField(required=False, label="Image")
+    
+    class Meta:
+        model = Question
+        fields = ['question_text', 'image_file']
    
 class AddChoiceForm(BaseModelForm):
     #choice_id = forms.ModelChoiceField(queryset = Question.objects.order_by('-pub_date'), empty_label=None, widget=forms.Select(attrs={'class' : 'form-control test-select'}), label="Question")

@@ -61,9 +61,10 @@ class Test(models.Model):
 
 class Question(models.Model):
     question_text = models.CharField(max_length = 1000)
+    question_pic = models.ImageField(upload_to='images/', blank=True)
     test = models.ForeignKey(Test)
     marks = models.IntegerField(default=0)
-    pub_date = models.DateTimeField()
+    pub_date = models.DateTimeField(auto_now_add=True)
 
     def __unicode__(self):
         return self.question_text

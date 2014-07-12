@@ -32,7 +32,7 @@
           <p>{{ forloop.counter }}. {{ question.question_text }} <i>({{ mark }} mks)</i></p>
         {% endfor %}
         {% endif %}
-            {{ field }}
+            {% cycle 'A' 'B' 'C' 'D' %}. {{ field }}
         {% if forloop.counter|divisibleby:4 %}
           </div>
          </div>

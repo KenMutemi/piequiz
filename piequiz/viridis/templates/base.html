@@ -107,6 +107,8 @@
 </div>
 {% for user_test in user.test_set.all|slice:":5" %}
   <p><a href="{{ user_test.get_absolute_url }}">{{ user_test.title|truncatechars:30 }}</a></p>
+  {% empty %}
+    <p>You haven't created any quizzes yet. <a href="{% url 'viridis:add_test' %}">Get to work!</a></p>
 {% endfor %}
 <hr>
 {% else %}

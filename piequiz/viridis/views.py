@@ -124,7 +124,7 @@ def add_test(request):
             test.save()
             request.session['test_title'] = test.title
             request.session['test_id'] = test.pk
-            return HttpResponseRedirect('/question/new')
+            return HttpResponseRedirect('/questions/add')
     else:
         form = AddTestForm(label_suffix='')
     return render(request, 'viridis/new_test.html', {
@@ -145,11 +145,12 @@ def add_question(request):
         extra_questions = 1
     QuestionFormSet = formset_factory(AddQuestionForm, extra=extra_questions)
     if request.method == "POST":
-        formset = QuestionFormSet(request.POST)
+        formset = QuestionFormSet(request.POST, request.FILES)
         if formset.is_valid():
             for i in range(0, extra_questions):
                 question = Question(
                 question_text = request.POST.get('form-' + str(i) + '-question_text'),
+                question_pic = request.FILES.get('form-' + str(i) + '-image_file'),
                 test_id = request.session['test_id'],
                 marks = mark_per_question,
                 pub_date = datetime.datetime.now(),

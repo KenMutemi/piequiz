@@ -4,18 +4,6 @@
     "pk": 1,
     "fields": {
       "user": 1,
-      "title": "Mathematics",
-      "institution": "Strathmore University",
-      "marks": 40,
-      "slug": "mathematics",
-      "pub_date": "2014-05-31"
-    }
-  },
-  {
-    "model": "viridis.test",
-    "pk": 2,
-    "fields": {
-      "user": 1,
       "title": "Physics",
       "institution": "Kagumo High School",
       "marks": 80,
@@ -28,7 +16,7 @@
     "model": "viridis.question",
     "pk": 1,
     "fields": {
-      "test": 2,
+      "test": 1,
       "question_text": "Radiocarbon is produced in the atmosphere as a result of",
       "marks": 2,
       "pub_date": "2014-06-1 16:25"
@@ -39,7 +27,7 @@
     "model": "viridis.question",
     "pk": 2,
     "fields": {
-      "test": 2,
+      "test": 1,
       "question_text": "It is easier to roll a stone up a sloping road than to lift it vertical upwards because",
       "marks": 2,
       "pub_date": "2014-06-1 16:28"
@@ -50,7 +38,7 @@
     "model": "viridis.question",
     "pk": 3,
     "fields": {
-      "test": 2,
+      "test": 1,
       "question_text": "The absorption of ink by blotting paper involves",
       "marks": 2,
       "pub_date": "2014-06-1 16:28"
@@ -61,7 +49,7 @@
     "model": "viridis.question",
     "pk": 4,
     "fields": {
-      "test": 2,
+      "test": 1,
       "question_text": "Siphon will fail to work if",
       "marks": 2,
       "pub_date": "2014-06-1 16:29"
@@ -72,7 +60,7 @@
     "model": "viridis.question",
     "pk": 5,
     "fields": {
-      "test": 2,
+      "test": 1,
       "question_text": "Large transformers, when used for some time, become very hot and are cooled by circulating oil. The heating of the transformer is due to",
       "marks": 2,
       "pub_date": "2014-06-1 16:30"
@@ -84,8 +72,9 @@
     "pk": 1,
     "fields": {
       "question": 1,
+      "test_id": 1,
       "choice_text": "collision between fast neutrons and nitrogen nuclei present in the atmosphere",
-      "marks": 2,
+      "is_correct": "True",
       "pub_date": "2014-06-2 03:38"
     }
   },
@@ -95,8 +84,9 @@
     "pk": 2,
     "fields": {
       "question": 1,
+      "test_id": 1,
       "choice_text": "action of ultraviolet light from the sun on atmospheric oxygen",
-      "marks": 0,
+      "is_correct": "False",
       "pub_date": "2014-06-2 03:42"
     }
   },
@@ -106,8 +96,9 @@
     "pk": 3,
     "fields": {
       "question": 1,
+      "test_id": 1,
       "choice_text": "action of solar radiations particularly cosmic rays on carbon dioxide present in the atmosphere",
-      "marks": 0,
+      "is_correct": "False",
       "pub_date": "2014-06-2 03:43"
     }
   },
@@ -117,8 +108,9 @@
     "pk": 4,
     "fields": {
       "question": 1,
+      "test_id": 1,
       "choice_text": "lightning discharge in atmosphere",
-      "marks": 0,
+      "is_correct": "False",
       "pub_date": "2014-06-2 03:44"
     }
   },
@@ -128,8 +120,9 @@
     "pk": 5,
     "fields": {
       "question": 2,
+      "test_id": 1,
       "choice_text": "work done in rolling is more than in lifting",
-      "marks": 4,
+      "is_correct": "False",
       "pub_date": "2014-06-2 16:44"
     }
   },
@@ -139,8 +132,9 @@
     "pk": 6,
     "fields": {
       "question": 2,
+      "test_id": 1,
       "choice_text": "work done in lifting the stone is equal to rolling it",
-      "marks": 0,
+      "is_correct": "False",
       "pub_date": "2014-06-2 16:45"
     }
   },
@@ -150,8 +144,9 @@
     "pk": 7,
     "fields": {
       "question": 2,
+      "test_id": 1,
       "choice_text": "work done in both is same but the rate of doing work is less in rolling",
-      "marks": 0,
+      "is_correct": "True",
       "pub_date": "2014-06-2 16:46"
     }
   },
@@ -161,8 +156,9 @@
     "pk": 8,
     "fields": {
       "question": 2,
+      "test_id": 1,
       "choice_text": "work done in rolling a stone is less than in lifting it",
-      "marks": 2,
+      "is_correct": "False",
       "pub_date": "2014-06-2 16:46"
     }
   },
@@ -172,8 +168,9 @@
     "pk": 9,
     "fields": {
       "question": 3,
+      "test_id": 1,
       "choice_text": "viscosity of ink",
-      "marks": 0,
+      "is_correct": "False",
       "pub_date": "2014-06-2 23:50"
     }
   },
@@ -183,8 +180,9 @@
     "pk": 10,
     "fields": {
       "question": 3,
+      "test_id": 1,
       "choice_text": "capillary action phenomenon",
-      "marks": 2,
+      "is_correct": "True",
       "pub_date": "2014-06-2 23:51"
     }
   },
@@ -194,8 +192,9 @@
     "pk": 11,
     "fields": {
       "question": 3,
+      "test_id": 1,
       "choice_text": "diffusion of ink through the blotting",
-      "marks": 0,
+      "is_correct": "False",
       "pub_date": "2014-06-2 23:53"
     }
   },
@@ -205,8 +204,9 @@
     "pk": 12,
     "fields": {
       "question": 3,
+      "test_id": 1,
       "choice_text": "siphon action",
-      "marks": 0,
+      "is_correct": "False",
       "pub_date": "2014-06-2 23:54"
     }
   },
@@ -216,8 +216,9 @@
     "pk": 13,
     "fields": {
       "question": 4,
+      "test_id": 1,
       "choice_text": "the heating effect of current alone",
-      "marks": 0,
+      "is_correct": "True",
       "pub_date": "2014-06-3 00:26"
     }
   },
@@ -227,8 +228,9 @@
     "pk": 14,
     "fields": {
       "question": 4,
+      "test_id": 1,
       "choice_text": "hysteresis loss alone",
-      "marks": 0,
+      "is_correct": "False",
       "pub_date": "2014-06-2 00:27"
     }
   },
@@ -238,8 +240,9 @@
     "pk": 15,
     "fields": {
       "question": 4,
+      "test_id": 1,
       "choice_text": "both the heating effect of current and hysteresis loss",
-      "marks": 2,
+      "is_correct": "False",
       "pub_date": "2014-06-3 00:28"
     }
   },
@@ -249,8 +252,9 @@
     "pk": 16,
     "fields": {
       "question": 4,
+      "test_id": 1,
       "choice_text": "intense sunlight at noon",
-      "marks": 0,
+      "is_correct": "False",
       "pub_date": "2014-06-3 00:29"
     }
   },
@@ -260,8 +264,9 @@
     "pk": 17,
     "fields": {
       "question": 5,
+      "test_id": 1,
       "choice_text": "Fermi",
-      "marks": 2,
+      "is_correct": "True",
       "pub_date": "2014-06-3 00:31"
     }
   },
@@ -271,8 +276,9 @@
     "pk": 18,
     "fields": {
       "question": 5,
+      "test_id": 1,
       "choice_text": "angstrom",
-      "marks": 0,
+      "is_correct": "False",
       "pub_date": "2014-06-3 00:32"
     }
   },
@@ -282,8 +288,9 @@
     "pk": 19,
     "fields": {
       "question": 5,
+      "test_id": 1,
       "choice_text": "newton",
-      "marks": 0,
+      "is_correct": "False",
       "pub_date": "2014-06-2 00:33"
     }
   },
@@ -293,8 +300,9 @@
     "pk": 20,
     "fields": {
       "question": 5,
+      "test_id": 1,
       "choice_text": "tesla",
-      "marks": 0,
+      "is_correct": "False",
       "pub_date": "2014-06-3 00:33"
     }
   }

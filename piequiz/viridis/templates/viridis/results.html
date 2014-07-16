@@ -1,3 +1,8 @@
 {% extends "base.html" %}
+{% block title %}Results for {{ test.title }}{% endblock %}
 {% block content %}
+  <p>selected choices: {{ answer }}
+  <p>answer sheet: {% for answer in answer_sheet %}
+                     {{ answer.pk }}
+                   {% endfor %}
 {% endblock %}

@@ -9,6 +9,7 @@ from django.contrib.auth.decorators import login_required
 from haystack.query import SearchQuerySet
 from viridis.models import Test, Question, Choice, Answer, Vote
 from itertools import repeat
+from django.core import serializers
 from django.contrib.auth.models import User
 from django.views.generic.edit import FormView
 from django.views.generic.list import ListView
@@ -95,12 +96,12 @@ def answer(request, test_id):
             answer_date = datetime.datetime.now()
         )
         selected_choice.save()
+
     except(KeyError, Choice.DoesNotExist):
         # Redisplay the test form
         return render(request, 'viridis/test.html', {
         'test': test, 'error_message': "You didn't answer the questions",})
     else:
-        selected_choice.save()
         if request.is_ajax(): # I don't know why but it works
             return HttpResponseRedirect(reverse('viridis:results', args=(test.id,)))
         else:
@@ -109,7 +110,12 @@ def answer(request, test_id):
 @login_required
 def results(request, test_id):
     test = get_object_or_404(Test, pk=test_id)
-    return render(request, 'viridis/results.html', {'test': test})
+    answer_sheet = Choice.objects.filter(test_id=test_id, is_correct=True)
+    answer = Answer.objects.filter(test=test.pk)
+    return render(request, 'viridis/results.html',{
+    'answer': answer,
+    'answer_sheet': answer_sheet,
+    'test': test })
 
 @login_required(login_url = "/accounts/login/")
 def add_test(request):   
@@ -188,13 +194,13 @@ def add_choice(request):
         if formset.is_valid():
             for i in range(0, extra_questions*4):
                 choice = Choice(
+                test_id = request.session['test_id'],
                 question_id = questions_pks[i],
                 choice_text = request.POST.get('form-' + str(i) + '-choice_text'),
-                marks = request.POST.get('form-' + str(i) + '-mark'),
+                is_correct = request.POST.get('form-' + str(i) + '-mark'),
                 )
                 choice.save()
             return HttpResponseRedirect('/{0}/'.format(request.session['test_id']))
-            del request.session['test_id']
     else:
         try:
             formset = ChoiceFormSet(queryset=Choice.objects.none())

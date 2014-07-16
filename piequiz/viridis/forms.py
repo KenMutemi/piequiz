@@ -33,7 +33,8 @@ class AddQuestionForm(BaseModelForm):
 class AddChoiceForm(BaseModelForm):
     #choice_id = forms.ModelChoiceField(queryset = Question.objects.order_by('-pub_date'), empty_label=None, widget=forms.Select(attrs={'class' : 'form-control test-select'}), label="Question")
     choice_text = forms.CharField(widget=forms.Textarea(attrs={'class':'form-control','rows':2, 'cols': 18}), label="Choice")
-    mark = forms.IntegerField(widget=forms.TextInput(attrs={'class' : 'form-control mark-question', 'type':'number'}))
+    mark = forms.NullBooleanField(initial=False, required=False, widget=forms.CheckboxInput(attrs={'class':'checkbox'}), label="Right answer?")
+    #mark = forms.IntegerField(widget=forms.TextInput(attrs={'class' : 'form-control mark-question', 'type':'number'}))
 
     class Meta:
         model = Choice

@@ -72,7 +72,8 @@ class Question(models.Model):
 class Choice(models.Model):
     choice_text = models.CharField(max_length=500)
     question = models.ForeignKey(Question)
-    marks = models.IntegerField(default=0)
+    test_id = models.IntegerField()
+    is_correct = models.NullBooleanField()
     pub_date = models.DateTimeField(auto_now_add=True)
   
     def __unicode__(self):
@@ -85,7 +86,7 @@ class Answer(models.Model):
     answer_date = models.DateTimeField()
     
     def __unicode__(self):
-        return self.choice
+        return unicode(self.choice.pk)
 
 class Vote(models.Model):
     voter = models.ForeignKey(User)

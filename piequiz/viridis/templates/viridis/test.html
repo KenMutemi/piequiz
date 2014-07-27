@@ -9,22 +9,29 @@
 {% endblock %}
 {% block footer %}
   <div class="rating">
-    <form method="post" action="{% url 'viridis:vote' %}" class="vote_form">
-    {% csrf_token %}
-    <li class="list-unstyled"> 
-      <input type="hidden" id="id_test" name="test" class="hidden_id" value="{{ test.pk }}" />
-      <input type="hidden" id="id_voter" name="voter" class="hidden_id" value="{{ user.pk }}" />
-      {% if not user.is_authenticated %}
-      <button id="approve" class="btn btn-sm btn-success" disabled title="Please login to vote"><i class="fa fa-thumbs-o-up"></i></button>
-    {% elif test.pk not in voted %}
-     <button id="approve" class="btn btn-sm btn-success"><i class="fa fa-thumbs-up"></i></button>
-   {% else %}
-     <button id="approve" class="btn btn-sm btn-success"><i class="fa fa-check"></i> Upvote</button>    
-   {% endif %}
-     <span>{{ test.votes }} <i class="fa fa-heart fa-green"></i>s</span>
-  </li>
-</form>
-</div>
+    <ul class="footer-list">
+      <li>
+      <form method="post" action="{% url 'viridis:vote' %}" class="vote_form" role="form">
+      {% csrf_token %}
+        <input type="hidden" id="id_test" name="test" class="hidden_id" value="{{ test.pk }}" />
+        <input type="hidden" id="id_voter" name="voter" class="hidden_id" value="{{ user.pk }}" />
+        {% if not user.is_authenticated %}
+          <button id="approve" class="btn btn-sm btn-success" disabled title="Please login to vote"><i class="fa fa-thumbs-o-up"></i></button>
+        {% elif test.pk not in voted %}
+          <button id="approve" class="btn btn-sm btn-success"><i class="fa fa-thumbs-up"></i></button>
+        {% else %}
+          <button id="approve" class="btn btn-sm btn-success"><i class="fa fa-check"></i> Upvote</button>    
+        {% endif %}
+        <span>{{ test.votes }} <i class="fa fa-heart fa-green"></i>s</span>
+      </form>
+      </li>
+      <li>
+        <a href="/results/{{ test.pk }}" class="btn btn-primary">
+          Finish
+        </a>
+      </li>
+    </ul>
+  </div>
 {% endblock %}
 
 {% block title %}{{ test.title }}{% endblock %}
@@ -59,8 +66,5 @@
 {% endif %}
     </div>
 </div>
-  <a href="/results/{{ test.pk }}" class="btn btn-primary">
-     Finish
-  </a>
   <hr>
 {% endblock %}

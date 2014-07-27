@@ -91,11 +91,11 @@ textarea {
 }
 
 p, div {
-  font-family: 'Open Sans';
+  font: 12px/20px 'Helvetica Neue', Arial, sans-serif;
 }
 
 .index-div {
-  padding: 0 5% 5% 5%;
+  padding: 0 5% 5% 0;
 }
 
 .bordered-heading {
@@ -290,19 +290,23 @@ label{font-weight:normal !important};
 
 .panel-top {
   border-top: 0px;
+  border-left: 0px;
+  border-right: 2px solid #2cc9f0;
 }
 
 .footer {
   bottom: 0;
+  margin: 0 0 0 15%;
   position: fixed;
-  width: 100%;
+  width: 40%;
   /* Set the fixed height of the footer here */
   height: 50px;
-  background-color: #d3d3d3;
+  color: #ffffff;
+  background-color: #2cc9f0;
 }
 
 .container { 
-  padding:10px 0 0 10%;
+  padding: 2%;
 }
 
 #percent-score {
@@ -318,4 +322,14 @@ u {
 .navbar-brand{
   /*background-color:red;*/
   font-weight:bold;
+}
+
+.footer-list li {
+  display: inline;
+  list-style-type: none;
+  padding-right: 5%;
+}
+
+.vote_form {
+  float: left;
 }

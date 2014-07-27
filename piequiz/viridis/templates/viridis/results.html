@@ -13,5 +13,8 @@
   <p>Correct answers: {{ answer_sheet }}</p>
   <p>questions attempted: {{ question }}</p>
   </div>
+{% endblock %}
+
+{% block footer %}
   <p><i class="fa fa-refresh fa-spin fa-green"></i> <a href="{{ test.get_absolute_url }}">Redo</a> the quiz!</p>
 {% endblock %}

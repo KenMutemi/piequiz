@@ -88,33 +88,30 @@ def test(request, test_id, slug):
 @login_required
 def answer(request, test_id):
     test = Test.objects.get(pk=test_id)
-    try:
-        selected_choice = Answer(
-            choice_id = request.POST.get('choice'),
-            test = test.id,
-            user = request.user.id,
-            answer_date = datetime.datetime.now()
-        )
-        selected_choice.save()
+    request.session['choice_id'] = request.POST.getlist('choice')
+    request.session['question_id'] = request.POST.getlist('question_id')
 
-    except(KeyError, Choice.DoesNotExist):
-        # Redisplay the test form
-        return render(request, 'viridis/test.html', {
-        'test': test, 'error_message': "You didn't answer the questions",})
+    if request.is_ajax(): # I don't know why but it works
+        return HttpResponseRedirect(reverse('viridis:results', args=(test.id,)))
     else:
-        if request.is_ajax(): # I don't know why but it works
-            return HttpResponseRedirect(reverse('viridis:results', args=(test.id,)))
-        else:
-            return HttpResponseRedirect(reverse('viridis:results', args=(test.id,)))
+        return HttpResponseRedirect(reverse('viridis:results', args=(test.id,)))
+
 
 @login_required
 def results(request, test_id):
     test = get_object_or_404(Test, pk=test_id)
-    answer_sheet = Choice.objects.filter(test_id=test_id, is_correct=True)
-    answer = Answer.objects.filter(test=test.pk)
+    correct_answers = Choice.objects.filter(test_id=test_id, is_correct=True).values_list("id", flat=True)
+    y = [unicode(i) for i in correct_answers] # Convert int elements to unicode
+    answer_match = set(y).intersection(request.session['choice_id']) # create set
+    l_answer_match = list(answer_match) # Convert answer_match to list
+    score = len(l_answer_match) * test.marks_per_question # get the total marks of scored by user
+
     return render(request, 'viridis/results.html',{
-    'answer': answer,
-    'answer_sheet': answer_sheet,
+    'answer': request.session['choice_id'],
+    'question': request.session['question_id'],
+    'score': score,
+    'percentage_score': int(float(score)/test.marks*100),
+    'answer_sheet': y,
     'test': test })
 
 @login_required(login_url = "/accounts/login/")
@@ -127,6 +124,7 @@ def add_test(request):
             test.user_id = request.user.id
             request.session['no_of_question'] = cd['questions']
             request.session['total_marks'] = cd['marks']
+            test.marks_per_question = request.session['total_marks']/request.session['no_of_question']
             test.save()
             request.session['test_title'] = test.title
             request.session['test_id'] = test.pk

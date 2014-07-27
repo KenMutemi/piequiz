@@ -7,6 +7,12 @@
 {% if form.errors %}
   <div><i class="glyphicon glyphicon-info-sign"></i><label>Please correct the errors below:</label>{{ form.non_field_errors }}</div>
   {% endif %}
+<hr>
+<ol class="breadcrumb">
+  <li><a href="{% url 'viridis:add_test' %}">Quiz</a></li>
+  <li>Questions</li>
+  <li>Choices</li>
+</ol>
 <div class="panel panel-info">
   <div class="panel-heading"><h3 class="panel-title">New quiz</h3></div>
 <div class="panel-body new-test-panel">

@@ -1,8 +1,17 @@
 {% extends "base.html" %}
+{% block head %}
+  <link href="http://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet" type="text/css">
+{% endblock %}
 {% block title %}Results for {{ test.title }}{% endblock %}
 {% block content %}
-  <p>selected choices: {{ answer }}
-  <p>answer sheet: {% for answer in answer_sheet %}
-                     {{ answer.pk }}
-                   {% endfor %}
+  <hr>
+  <h2>Quiz Results for <u>{{ test.title }}</u></h2>
+  <p id="percent-score">{{ percentage_score }}%</p>
+  <div class="alert alert-success"> 
+  <p>You scored <span class="badge">{{score}}</span> marks out of <span class="badge">{{ test.marks }}</span></p>
+  <p>Selected choices: {{ answer }}</p>
+  <p>Correct answers: {{ answer_sheet }}</p>
+  <p>questions attempted: {{ question }}</p>
+  </div>
+  <p><i class="fa fa-refresh fa-spin fa-green"></i> <a href="{{ test.get_absolute_url }}">Redo</a> the quiz!</p>
 {% endblock %}

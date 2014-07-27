@@ -9,6 +9,12 @@
 {% if form.errors %}
   <p><i class="glyphicon glyphicon-info-sign"></i>Please correct the errors below: {{ form.non_field_errors }}</p>
 {% endif %}
+<hr>
+<ol class="breadcrumb">
+  <li>Quiz</li>
+  <li>Questions</li>
+  <li><a href="{% url 'viridis:add_choice' %}">Choices</a></li>
+</ol>
 <div class="panel-group" id="accordion">
   <form  method="post" action="" role="form">
     {% csrf_token %}

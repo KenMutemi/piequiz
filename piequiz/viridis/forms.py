@@ -15,7 +15,7 @@ class BaseForm(forms.Form):
 
 class AddTestForm(forms.ModelForm):
     title = forms.CharField(widget=forms.TextInput(attrs={'class' : 'form-control', 'type':'text'}))
-    institution = forms.CharField(widget=forms.TextInput(attrs={'class' : 'form-control', 'type':'text'}))
+    institution = forms.CharField(required=False, widget=forms.TextInput(attrs={'class' : 'form-control', 'type':'text'}))
     marks = forms.IntegerField(widget=forms.TextInput(attrs={'class' : 'form-control mark-test', 'type':'number'}))
     questions = forms.IntegerField(widget=forms.TextInput(attrs={'class' : 'form-control', 'type':'number', 'title':'number of questions'}))
     class Meta:

@@ -175,7 +175,6 @@ $(function() {
      
         $(target).css('top', topD).css('left', leftD);
      
-     
     });
  
 });

@@ -16,9 +16,10 @@ class Test(models.Model):
     user = models.ForeignKey(User)
     title = models.CharField(max_length=200, verbose_name='quiz')
     institution = models.CharField(default=None, max_length=200)
-    rank_score = models.FloatField(default=0.0)
     marks = models.IntegerField(default=0)
+    marks_per_question = models.IntegerField(default=0)
     slug = models.SlugField(max_length=200)
+    rank_score = models.FloatField(default=0.0)
     pub_date = models.DateTimeField('date', auto_now_add=True)
     
     with_votes = TestVoteCountManager()
@@ -77,12 +78,13 @@ class Choice(models.Model):
     pub_date = models.DateTimeField(auto_now_add=True)
   
     def __unicode__(self):
-        return self.choice_text
+        return unicode(self.id)
 
 class Answer(models.Model):
     user = models.IntegerField()
     choice = models.ForeignKey(Choice)
     test = models.IntegerField()
+    question = models.IntegerField()
     answer_date = models.DateTimeField()
     
     def __unicode__(self):

@@ -6,15 +6,51 @@
 {% block content %}
   <hr>
   <h2>Quiz Results for <u>{{ test.title }}</u></h2>
-  <p id="percent-score">{{ percentage_score }}%</p>
-  <div class="alert alert-success"> 
-  <p>You scored <span class="badge">{{score}}</span> marks out of <span class="badge">{{ test.marks }}</span></p>
+  <p id="percent-score">
+    {{ percentage_score }}% 
+    <small> 
+      <p>You scored <span class="badge">{{score}}</span> marks out of <span class="badge">{{ test.marks }}</span></p>
+    </small>
+  </p>
+  <div> 
   <p>Selected choices: {{ answer }}</p>
-  <p>Correct answers: {{ answer_sheet }}</p>
-  <p>questions attempted: {{ question }}</p>
+  <p>
+  {% if test.question_set.all %}
+    {% for question in test.question_set.all %}
+      <p> {{ forloop.counter }}. {{ question.question_text }} </p>
+      {% for choice in question.choice_set.all %}
+        <p class="{% if choice.is_correct == True %}correct_answer{% endif %}"> {% cycle '(A)' '(B)' '(C)' '(D)' %} {{ choice.choice_text }} </p>
+      {% endfor %}
+    {% endfor %}
+  {% endif %}
+  </p>
   </div>
-{% endblock %}
-
-{% block footer %}
+  
+  <table class="table" id="data-table" border="1" cellpadding="10" cellspacing="0"
+  summary="The five most recently attempted quiz results.">
+    <caption>Last five quizzes score in %</caption>
+    <thead>
+      <tr>
+        <td>&nbsp;</td>
+          <th scope="col">{{ test.title }} 1</th>
+          <th scope="col">{{ test.title }} 2</th>
+          <th scope="col">{{ test.title }} 3</th>
+          <th scope="col">{{ test.title }} 4</th>
+          <th scope="col">{{ test.title }} {{ test.pub_date }}</th>
+          </tr>
+    </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Score</th>
+            <td>60</td>
+            <td>50</td>
+            <td>80</td>
+            <td>100</td>
+            <td>{{ percentage_score }}</td>
+        </tr>
+      </tbody>
+  </table>
+  <hr>
   <p><i class="fa fa-refresh fa-spin fa-green"></i> <a href="{{ test.get_absolute_url }}">Redo</a> the quiz!</p>
 {% endblock %}
+

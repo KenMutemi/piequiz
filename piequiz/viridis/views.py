@@ -107,12 +107,10 @@ def results(request, test_id):
     score = len(l_answer_match) * test.marks_per_question # get the total marks of scored by user
 
     return render(request, 'viridis/results.html',{
-    'answer': request.session['choice_id'],
-    'question': request.session['question_id'],
-    'score': score,
-    'percentage_score': int(float(score)/test.marks*100),
-    'answer_sheet': y,
-    'test': test })
+        'answer': request.session['choice_id'],
+        'score': score,
+        'percentage_score': int(float(score)/test.marks*100),
+        'test': test })
 
 @login_required(login_url = "/accounts/login/")
 def add_test(request):   

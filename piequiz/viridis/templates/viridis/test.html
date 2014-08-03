@@ -7,32 +7,6 @@
   <p><i class="fa fa-edit fa-2x fa-blue"></i>created <span class="badge">{{ test.pub_date|naturaltime|capfirst }}</span></p>
   <p><i class="fa fa-thumbs-o-up fa-2x fa-green"></i> approved by <span class="badge">{{ test.votes }} pe{{ test.votes|pluralize:"rson,ople" }}</span></p>
 {% endblock %}
-{% block footer %}
-  <div class="rating">
-    <ul class="footer-list">
-      <li>
-      <form method="post" action="{% url 'viridis:vote' %}" class="vote_form" role="form">
-      {% csrf_token %}
-        <input type="hidden" id="id_test" name="test" class="hidden_id" value="{{ test.pk }}" />
-        <input type="hidden" id="id_voter" name="voter" class="hidden_id" value="{{ user.pk }}" />
-        {% if not user.is_authenticated %}
-          <button id="approve" class="btn btn-sm btn-success" disabled title="Please login to vote"><i class="fa fa-thumbs-o-up"></i></button>
-        {% elif test.pk not in voted %}
-          <button id="approve" class="btn btn-sm btn-success"><i class="fa fa-thumbs-up"></i></button>
-        {% else %}
-          <button id="approve" class="btn btn-sm btn-success"><i class="fa fa-check"></i> Upvote</button>    
-        {% endif %}
-        <span>{{ test.votes }} <i class="fa fa-heart fa-green"></i>s</span>
-      </form>
-      </li>
-      <li>
-        <a href="/results/{{ test.pk }}" class="btn btn-primary">
-          Finish
-        </a>
-      </li>
-    </ul>
-  </div>
-{% endblock %}
 
 {% block title %}{{ test.title }}{% endblock %}
 
@@ -51,13 +25,15 @@
 <ul class="list-unstyled">
   <li>{{ forloop.counter }}. {{ question.question_text }} (<em>{{ question.marks }} marks</em>)</li>
     {% if question.question_pic %}
-      <img src="/media/{{ question.question_pic }}" alt="">
+      <div class="img-frame">
+        <img class="question-img" src="/media/{{ question.question_pic }}" width="95%" alt="">
+      </div>
     {% endif %}
 </ul>
     {% for choice in question.choice_set.all %}
       <label for="choice{{ choice.id }}" class="label-choice">{% cycle '(A)' '(B)' '(C)' '(D)' %} <input class="input-choice" type="radio" name="choice" id="choice{{ choice.id }}" value="{{ choice.id }}"/>  {{ choice.choice_text }}</label><br />
     {% endfor %}
-<input class="btn btn-default" onclick="this.disabled=true" type="submit" value="Submit" />
+<input class="btn btn-default" type="submit" value="Submit" />
 </form>
 <hr>
 {% endfor %}
@@ -67,4 +43,37 @@
     </div>
 </div>
   <hr>
+<div class="footer">
+  <div class="footer-wrap">
+  <div class="rating">
+    <ul class="footer-list">
+      <li>
+      <form method="post" action="{% url 'viridis:vote' %}" class="vote_form" role="form">
+      {% csrf_token %}
+        <input type="hidden" id="id_test" name="test" class="hidden_id" value="{{ test.pk }}" />
+        <input type="hidden" id="id_voter" name="voter" class="hidden_id" value="{{ user.pk }}" />
+        {% if not user.is_authenticated %}
+          <button id="approve" class="btn btn-sm btn-success" disabled title="Please login to vote"><i class="fa fa-thumbs-o-up"></i></button>
+        {% elif test.pk not in voted %}
+          <button id="approve" class="btn btn-sm btn-success"><i class="fa fa-thumbs-up"></i></button>
+        {% else %}
+          <div class="btn-group">
+            <button class="btn btn-sm btn-success approve">Upvote</button>    
+            <button class= "btn btn-sm btn-success" title="Approved by {{ test.votes }} pe{{ test.votes|pluralize:"rson,ople" }}">{{ test.votes }} </button>
+          </div>
+        {% endif %}
+      </form>
+      </li>
+      <li>
+        <a href="/results/{{ test.pk }}" class="btn btn-sm btn-primary">
+          Finish
+        </a>
+      </li>
+    </ul>
+  </div>
+  </div>
+</div>
+
 {% endblock %}
+
+

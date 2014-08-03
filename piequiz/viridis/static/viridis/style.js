@@ -10,6 +10,24 @@ $(document).ready(function() {
     $(this).find(".popup").fadeIn("slow");
 });
 
+    $(".vote_form").submit(function(e) 
+    {
+        e.preventDefault(); 
+        var btn = $(".approve", this);
+        var l_id = $(".hidden_id", this).val();
+        btn.attr('disabled', true);
+        $.post("/vote/", $(this).serializeArray(),
+        function(data) {
+            if(data["voteobj"]) {
+          btn.text("Downvote");
+            }
+            else {
+          btn.text("Upvote");
+            }
+        });
+        btn.attr('disabled', false);
+    });
+
       /** ajax for the test*/
     var test_form = $('.test-form');
     test_form.submit(function () {
@@ -32,25 +50,6 @@ $(document).ready(function() {
       window.autocomplete.setup()
 
     })
-
-
-$(".vote_form").submit(function(e) 
-    {
-        e.preventDefault(); 
-        var btn = $("button", this);
-        var l_id = $(".hidden_id", this).val();
-        btn.attr('disabled', true);
-        $.post("/vote/", $(this).serializeArray(),
-        function(data) {
-            if(data["voteobj"]) {
-          btn.text("-");
-            }
-            else {
-          btn.text("+");
-            }
-        });
-        btn.attr('disabled', false);
-    });
 
 
         // In a perfect world, this would be its own library file that got included

@@ -7,8 +7,7 @@
 <title>{% block title %}{% endblock %} &#124; Sanzig</title>
 {% load bootstrap3 %}
 {% bootstrap_css %}
-<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open Sans">
-<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 {% bootstrap_javascript %}
@@ -45,7 +44,7 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Quiz<b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <li><a href="{% url 'viridis:add_test' %}">New</a></li>
+            <li><a href="{% url 'viridis:add_test' %}">Multiple Choice</a></li>
             <li><a href="#">Set</a></li>
             <li><a href="#">Take a quiz</a></li>
             <li class="divider"></li>
@@ -90,6 +89,7 @@
 
 </div>
 <div id="main">
+<hr>
 {% block content %}
 {% endblock %}
 </div>
@@ -107,7 +107,7 @@
   </ul>
 </div>
 {% for user_test in user.test_set.all|slice:":5" %}
-  <p><a href="{{ user_test.get_absolute_url }}">{{ user_test.title|truncatechars:30 }}</a></p>
+  <p><a href="{{ user_test.get_absolute_url }}">{{ user_test.title|truncatechars:45 }}</a></p>
   {% empty %}
     <p>You haven't created any quizzes yet. <a href="{% url 'viridis:add_test' %}">Get to work!</a></p>
 {% endfor %}
@@ -142,11 +142,5 @@
 {% endif %}
 </div>
 </div>
-  <div class="footer">
-    <div class="container">
-      {% block footer %}
-      {% endblock %}
-    </div>
-  </div>
 </body>
 </html>

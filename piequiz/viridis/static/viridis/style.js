@@ -122,7 +122,7 @@ $(document).ready(function() {
       }
       else {
         var elem = base_elem.clone()
-        elem.text("")
+        elem.text("Results not found")
         results_wrapper.append(elem)
       }
 
@@ -177,14 +177,6 @@ $(function() {
     });
  
 });
-
-function timeout_trigger() {
-    window.alert('Hello!');  
-}
- 
-function timeout_init() {
-    setTimeout('timeout_trigger()', 2000);
-}
 
 function toggle(source) {
   checkboxes = document.getElementsByName('selection');

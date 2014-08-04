@@ -3,60 +3,59 @@
 {% block head %}
 <link href='http://fonts.googleapis.com/css?family=Pompiere' rel='stylesheet' type='text/css'>
 {% endblock %}
-{% block title %}Sign in &middot; PieQuiz{% endblock %}
+{% block title %}Sign in | Sanzig{% endblock %}
 {% block content %}
-<div class="auth-wrapper">
-<div class="auth-left">
-<div class="panel-heading panel-heading-login">
-<h3 class="panel-title">Sign Into PieQuiz</h3>
-</div>
-{% if form.errors %}
-<p class="error">Sorry, invalid username or password</p>
-{% endif %}
+  <div class="auth-wrapper">
+    <div class="auth-banner">
+      <h1>Sanzig</h1>
+    </div>
+    <div class="auth-left">
+      <div class="panel-heading panel-heading-login">
+        <h3 class="panel-title">Sign in</h3>
+      </div>
+      {% if form.errors %}
+      <p class="error">Sorry, invalid username or password</p>
+      {% endif %}
 
 <form class="form-horizontal" method="post" action="" role="form">
-{% csrf_token %}
-<input type="hidden" name="next" value="{{ next|default:"/" }}">
-<div class="form-group">
-<div class="col-sm-12">
-<div class="left-inner-addon">
-<i class="glyphicon glyphicon-user"></i>
-<input type="text" class="form-control" name="username" placeholder="Username" id="id_username">
-</div>
-</div>
-</div>
-<div class="form-group">
-<div class="col-sm-12">
-<div class="left-inner-addon">
-<i class="glyphicon glyphicon-lock"></i>
-<input type="password" class="form-control" name="password" placeholder="Password" id="id_password">
-</div>
-</div>
-</div>
-<div class="form-group">
+  {% csrf_token %}
+  <input type="hidden" name="next" value="{{ next|default:"/" }}">
+  <div class="form-group">
+    <div class="col-sm-12">
+      <div class="left-inner-addon">
+        <i class="glyphicon glyphicon-user"></i>
+        <input type="text" class="form-control" name="username" placeholder="Username" id="id_username">
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-12">
+      <div class="left-inner-addon">
+        <i class="glyphicon glyphicon-lock"></i>
+        <input type="password" class="form-control" name="password" placeholder="Password" id="id_password">
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
     <div class="col-sm-offset-0 col-sm-12">
       <button type="submit" class="btn btn-success">Sign in</button>
     </div>
-</div>
+  </div>
 </form>
 <div>
-<hr>
-<p><a href="{% url "password_reset_recover" %}">Forgot your password?</a></p>
-<hr>
+  <p><a href="{% url "password_reset_recover" %}">Forgot your password?</a></p>
 </div>
 </div>
 <div class="auth-right">
-<div class="panel-heading panel-heading-login">
-<h3 class="panel-title">Sign up</h3>
-</div>
+  <div class="panel-heading panel-heading-login">
+    <h3 class="panel-title">Sign up</h3>
+  </div>
 <div class="panel-body">
-<a href="" class="zocial googleplus">Sign up with Google</a><br>
-<hr>
-<a href="" class="zocial yahoo">Sign up with Yahoo</a>
-<hr>
-<p><a href="/accounts/register/">Sign
-up</a> with email.</p>
-<hr>
+  <a href="" class="zocial googleplus">Sign in with Google+</a><br>
+  <hr>
+  <a href="" class="zocial yahoo">Sign in with Yahoo</a>
+  <p><a href="/accounts/register/">Sign
+up</a> with email</p>
 </div>
 </div>
 </div>

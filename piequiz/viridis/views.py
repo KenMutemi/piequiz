@@ -92,19 +92,20 @@ def answer(request, test_id):
     request.session['question_id'] = request.POST.getlist('question_id')
 
     if request.is_ajax(): # I don't know why but it works
-        return HttpResponseRedirect(reverse('viridis:results', args=(test.id,)))
+        return HttpResponseRedirect(reverse('viridis:results', args=(test.id, test.slug)))
     else:
-        return HttpResponseRedirect(reverse('viridis:results', args=(test.id,)))
+        return HttpResponseRedirect(reverse('viridis:results', args=(test.id, test.slug)))
 
 
 @login_required
-def results(request, test_id):
+def results(request, test_id, slug):
     test = get_object_or_404(Test, pk=test_id)
     correct_answers = Choice.objects.filter(test_id=test_id, is_correct=True).values_list("id", flat=True)
     y = [unicode(i) for i in correct_answers] # Convert int elements to unicode
     answer_match = set(y).intersection(request.session['choice_id']) # create set
     l_answer_match = list(answer_match) # Convert answer_match to list
     score = len(l_answer_match) * test.marks_per_question # get the total marks of scored by user
+    slug = test.slug
 
     return render(request, 'viridis/results.html',{
         'answer': request.session['choice_id'],

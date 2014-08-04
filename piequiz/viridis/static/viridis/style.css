@@ -28,7 +28,13 @@ textarea {
 
 .auth-wrapper {
   width: 580px;
-  margin: 100px auto;
+  margin: 150px auto;
+}
+
+.auth-banner {
+  padding: 0 0 0 40%;
+  color: #ffffff;
+  background-color: #2cc9f0;
 }
 
 .auth-register {
@@ -40,7 +46,7 @@ textarea {
 }
 
 .auth-left {
-  width: 45%;
+  width: 49%;
   float: left;
   min-width: 20%;
   padding:8px 10px 8px 10px;
@@ -53,7 +59,7 @@ textarea {
   padding:8px 10px 8px 10px;
   border:1px solid #ccc !important;
   background-color: #ffffff;
-  width: 45%;
+  width: 49%;
   float: right;
 }
 
@@ -106,16 +112,23 @@ p, div, textarea, .dropdown-menu {
 
 .navbar-custom {
   background-color: #ffffff;
-  border-bottom: 2px solid #d3d3d3;
-  border-radius:0;
+  border-bottom: 1px solid #d3d3d3;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(178, 178, 178, 0.95);
+  -moz-box-shadow:    0px 0px 5px 0px rgba(178, 178, 178, 0.95);
+  box-shadow:         0px 0px 5px 0px rgba(178, 178, 178, 0.95);
+  /*border-radius:0;*/
 }
 
+#user-pic {
+  margin: 0 0 0 0;
+}
+/*
 * {
   -webkit-border-radius: 0 !important;
      -moz-border-radius: 0 !important;
           border-radius: 0 !important;
 }
-
+*/
 .navbar-custom .navbar-nav > li > a {
   color: #000000; 
 }
@@ -134,12 +147,9 @@ p, div, textarea, .dropdown-menu {
   color: #2cc9f0;
 }
 
-#search {
-  margin-left: 33px;
-}
-
 #search-input {
-  width: 350px;
+  width: 400px;
+  background-color: #F2F2F2;
 }
 
 #btn-search {
@@ -155,7 +165,7 @@ p, div, textarea, .dropdown-menu {
 
 #sidebar {
   float: right;
-  margin-right: 20%;
+  margin: 0 20% 0 0;
   width: 20%;
   background:#ffffff;
 }
@@ -326,7 +336,7 @@ u {
 }
 
 .navbar-brand{
-  /*background-color:red;*/
+  background-color: #d3d3d3;
   font-weight:bold;
 }
 

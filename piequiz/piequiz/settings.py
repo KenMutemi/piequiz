@@ -33,7 +33,6 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.auth',
     'django.contrib.sessions',
-    'django.contrib.admin',
     'django.contrib.formtools',
     'django.contrib.messages',
     'django.contrib.staticfiles',
@@ -47,6 +46,7 @@ INSTALLED_APPS = (
     'endless_pagination',
     'django_tables2',
     'viridis',
+    'django.contrib.admin',
 )
 
 # Registration

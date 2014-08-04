@@ -57,19 +57,17 @@
       {% endif %}
       <form id="search" class="navbar-form navbar-left" method="get" action="/search?=">
         <div class="form-group">
-        <input type="search" id="search-input" name="q" class="form-control" placeholder="Search for quizzes, questions and users" />
-        </div>
-        <button type="submit" id="btn-search" class="btn btn-default"><i class="fa fa-search fa-white"></i></button>
+          <div class="col-sm-12">
+            <div class="left-inner-addon">
+              <i class="glyphicon glyphicon-search"></i>
+              <input type="search" id="search-input" name="q" class="form-control" placeholder="Search for quizzes, questions and users" />
+            </div>
+          </div>
+      </div>
       </form>
       <ul class="nav navbar-nav navbar-right">
         {% if user.is_authenticated %}
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Settings<b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><a href="#" onclick="timeout_init()">Start timer</a></li>
-          </ul>
-      </li>
-        <li id="settings">{% avatar user 40 %}</li>
+        <li id="user-pic">{% avatar user 40 %}</li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ user.username }} <b class="caret"></b></a>
           <ul class="dropdown-menu">
@@ -89,7 +87,6 @@
 
 </div>
 <div id="main">
-<hr>
 {% block content %}
 {% endblock %}
 </div>
@@ -117,22 +114,22 @@
 <div class="panel-heading"><h1 class=panel-title>Log in</h1></div>
 <div class="panel-body">
 <form class="form-horizontal" method="post" action="{% url 'auth_login' %}" role="form">
-    {% csrf_token %}
+  {% csrf_token %}
+  <div class="form-group">
+    <div class="col-sm-12">
+      <div class="left-inner-addon">
+        <i class="glyphicon glyphicon-user"></i>
+        <input class="form-control" type="text" name="username" placeholder="Username"/>
+      </div>
+    </div>
+  </div>
     <div class="form-group">
-    <div class="col-sm-8">
-    <div class="left-inner-addon">
-    <i class="glyphicon glyphicon-user"></i>
-    <input class="form-control" type="text" name="username" placeholder="Username"/>
-    </div>
-    </div>
-    </div>
-    <div class="form-group">
-    <div class="col-sm-8">
-    <div class="left-inner-addon">
-    <i class="glyphicon glyphicon-lock"></i>
-    <input class="form-control" type="password" name="password" placeholder="Password" />
-    </div>
-    </div>
+      <div class="col-sm-12">
+        <div class="left-inner-addon">
+          <i class="glyphicon glyphicon-lock"></i>
+          <input class="form-control" type="password" name="password" placeholder="Password" />
+        </div>
+      </div>
     </div>
     <button class="btn btn-success" type="submit">Sign in</button>
     <input type="hidden" name="next" value="/" />

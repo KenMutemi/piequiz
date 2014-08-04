@@ -1,15 +1,15 @@
-{% load staticfiles %}
 <!DOCTYPE html>
+{% load staticfiles %}
 <html>
-<head> 
-<title>{% block title %}{% endblock %}</title>
-{% block head %}{% endblock %}
-{% load bootstrap3 %}
-{% bootstrap_css %}
-<link rel="stylesheet" type="text/css" href="{% static 'viridis/style.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'viridis/zocial.css' %}">
-</head>
-<body id="auth-body">
-{% block content %}{% endblock %}
-</body>
+  <head> 
+    <title>{% block title %}{% endblock %}</title>
+    {% block head %}{% endblock %}
+    {% load bootstrap3 %}
+    {% bootstrap_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'viridis/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'viridis/zocial.css' %}">
+  </head>
+  <body id="auth-body">
+  {% block content %}{% endblock %}
+  </body>
 </html>

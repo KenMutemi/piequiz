@@ -7,7 +7,7 @@ from viridis import views
 
 urlpatterns = patterns('',
     url(r'^$', TestListView.as_view(), name='home'),
-    url(r'^results/(?P<test_id>\d+)/$', views.results, name='results'),
+    url(r'^(?P<test_id>\d+)/(?P<slug>[\w-]+)/results/$', views.results, name='results'),
     url(r'^(?P<test_id>\d+)/answer/$', views.answer, name='answer'),
     url(r'^quiz/new$', views.add_test, name='add_test'),
     url(r'^profile/$', views.profile, name='profile'),

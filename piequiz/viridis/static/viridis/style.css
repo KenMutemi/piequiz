@@ -119,9 +119,6 @@ p, div, textarea, .dropdown-menu {
   /*border-radius:0;*/
 }
 
-#user-pic {
-  margin: 0 0 0 0;
-}
 /*
 * {
   -webkit-border-radius: 0 !important;
@@ -129,6 +126,11 @@ p, div, textarea, .dropdown-menu {
           border-radius: 0 !important;
 }
 */
+
+.navbar-nav > li{
+  padding-left:10px;
+}
+
 .navbar-custom .navbar-nav > li > a {
   color: #000000; 
 }

@@ -122,7 +122,7 @@ $(document).ready(function() {
       }
       else {
         var elem = base_elem.clone()
-        elem.text("Results not found")
+        elem.text("")
         results_wrapper.append(elem)
       }
 

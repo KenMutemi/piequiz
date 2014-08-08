@@ -42,7 +42,7 @@
       {% if user.is_authenticated %}
       <ul class="nav navbar-nav">
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Quiz<b class="caret"></b></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Create Quiz<b class="caret"></b></a>
           <ul class="dropdown-menu">
             <li><a href="{% url 'viridis:add_test' %}">Multiple Choice</a></li>
             <li><a href="#">Set</a></li>
@@ -72,7 +72,7 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ user.username }} <b class="caret"></b></a>
           <ul class="dropdown-menu">
             <li><a href="{% url 'viridis:profile' %}">Profile</a></li>
-            <li><a href="#">Something else here</a></li>
+            <li><a href="{% url 'viridis:my_tests' %}">My quizzes</a></li>
             <li class="divider"></li>
             <li><a href="{% url 'django.contrib.auth.views.logout' %}?next=/accounts/login/">Sign Out</a></li>
           </ul>

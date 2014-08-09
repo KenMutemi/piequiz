@@ -127,7 +127,19 @@
 </div>
 {% endif %}
 {% if user.has_usable_password == False %}
- <p>Hi {{ user.username }}, you have no usable password. Please set one now.</p>
+<div class="new-password" title="Set a new password">
+  <p>Hi {{ user.username }}, you have not set a password yet. Please set one now.</p>
+  <form action="{% url 'viridis:password_change' %}" method="post" role="form">
+  {% csrf_token %}
+    <div class="form-group">      
+     <input type="password" name="new_password1" class="form-control" placeholder="New Password" autofocus="" />
+    </div>
+    <div class="form-group">
+     <input type="password" name="new_password2" class="form-control" placeholder="Repeat Password"/>
+    </div>
+     <button class="btn btn-md btn-primary" type="submit">Create Password</button>   
+   </form>
+</div>
 {% endif %}
 </div>
 </div>

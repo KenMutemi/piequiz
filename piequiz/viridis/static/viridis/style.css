@@ -172,6 +172,7 @@ p, div, textarea, .dropdown-menu {
   background:#ffffff;
 }
 
+/*
 .new-test-panel {
   background-color: #fff;
  background-image:
@@ -192,6 +193,7 @@ inear-gradient(rgba(0,0,0,.09) .062500em, transparent .062500em);
 background-size: .75em .75em;
 background-position: 0 -0.5em; 
 }
+*/
 
 .new-test-wrap {
   margin: 0 auto;
@@ -370,4 +372,28 @@ u {
   padding:12px;
   margin: 0 auto;
   border:1px solid #999999;
+}
+
+.ui-widget.password-dialog {
+    font-family: Verdana,Arial,sans-serif;
+    font-size: .8em;
+}
+
+.ui-widget-content.password-dialog {
+    background: #F9F9F9;
+    border: 1px solid #2cc9f0;
+    color: #222222;
+}
+
+.ui-dialog.password-dialog .ui-widget-header {
+    background: #2cc9f0;
+    border: 0;
+    color: #fff;
+    font-weight: normal;
+}
+
+.ui-dialog.password-dialog .ui-dialog-titlebar {
+    padding: 0.1em .5em;
+    position: relative;
+    font-size: 1em;
 }

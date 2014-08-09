@@ -10,6 +10,8 @@ $(document).ready(function() {
     $(this).find(".popup").fadeIn("slow");
 });
 
+$(".new-password").dialog({modal: true, dialogClass: 'no-close password-dialog'});
+
     $(".vote_form").submit(function(e) 
     {
         e.preventDefault(); 

@@ -1,4 +1,5 @@
 from django.conf.urls import patterns, url, include
+from django.contrib.auth.forms import SetPasswordForm
 from django.conf import settings
 from django.conf.urls.static import static
 from django.views.generic import RedirectView
@@ -17,6 +18,10 @@ urlpatterns = patterns('',
     url(r'^vote/$', VoteFormView.as_view(), name="vote"),
     url(r'^(?P<test_id>\d+)/$', RedirectView.as_view(url='slug/')),
     url(r'^questions/add$', views.add_question, name='add_question'),
+    url(r'^accounts/password_change/$',
+        'django.contrib.auth.views.password_change',
+        {'password_change_form': SetPasswordForm},
+        name="password_change"),
     url(r'^choices/add$', views.add_choice, name='add_choice'),
     url(r'^(?P<test_id>\d+)/(?P<slug>[\w-]+)/$', views.test, name='test'),
 ) 

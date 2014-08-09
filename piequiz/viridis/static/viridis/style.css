@@ -90,7 +90,7 @@ textarea {
 }
 
 .list-border {
-  border-left-width: thin;
+  border-left-width: thick;
   border-left-style: solid;
   border-left-color: #F00;
   padding: 10px;

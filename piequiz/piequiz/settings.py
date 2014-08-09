@@ -26,6 +26,24 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# Social auth settings
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'social.apps.django_app.context_processors.backends',
+    'social.apps.django_app.context_processors.login_redirect',
+    'django.contrib.auth.context_processors.auth',
+    )
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '301914425823.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'YQs4c_0Qu98GqshGJBYoA3qI'
+
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/'
+
+AUTHENTICATION_BACKENDS = (
+    'social.backends.google.GoogleOAuth2',
+    'social.backends.yahoo.YahooOpenId',
+    'django.contrib.auth.backends.ModelBackend',
+    )
+
 
 # Application definition
 
@@ -37,6 +55,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
+    'social.apps.django_app.default',
     'password_reset',
     'haystack',
     'bootstrap3',

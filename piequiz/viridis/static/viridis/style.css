@@ -26,15 +26,24 @@ textarea {
   color: red;
 }
 
+.auth {  
+  -webkit-border-radius: 4px !important;
+  -moz-border-radius: 4px !important;
+       border-radius: 4px !important;
+}
+
 .auth-wrapper {
   width: 580px;
-  margin: 150px auto;
+  margin: 10px auto;
 }
 
 .auth-banner {
-  padding: 0 0 0 40%;
   color: #ffffff;
-  background-color: #2cc9f0;
+}
+
+.auth-banner h1 {
+	color: #2cc9f0;
+	font-weight: bolder;
 }
 
 .auth-register {
@@ -46,21 +55,44 @@ textarea {
 }
 
 .auth-left {
+  margin-top: 2%;
   width: 49%;
   float: left;
   min-width: 20%;
   padding:8px 10px 8px 10px;
   border:1px solid #ccc !important;
   background-color: #ffffff;
-  /*margin: 100px auto;*/
 }
 
 .auth-right {
-  padding:8px 10px 8px 10px;
+  margin-top: 2%;
+  padding:8px 10px 0 10px;
   border:1px solid #ccc !important;
   background-color: #ffffff;
   width: 49%;
   float: right;
+}
+
+.auth-bottom {
+  padding: 5px;
+  margin: 50% 0 0 0;
+  color: #000000;
+  border: 2px solid #FFFF99;
+  background-color: #FFFFA8;
+}
+
+.auth-footer {
+  margin-top: 5%;
+  color: #ffffff;
+}
+
+.auth-footer ul {
+  text-align: center;
+}
+
+.auth-footer ul li {
+  display: inline;
+  padding: .2em 1em;
 }
 
 .glyphicon {
@@ -255,6 +287,7 @@ td {
   background-color: #fff;
 }
 
+/*
 .popbox {
     display: none;
     position: absolute;
@@ -278,6 +311,7 @@ td {
     margin: -10px 0px 8px -10px;
     padding: 5px 10px;
 }
+*/
 
 .label-choice {
   -webkit-transition: all .5s ease;

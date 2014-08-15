@@ -95,6 +95,13 @@ textarea {
   padding: 5px;
 }
 
+.post-registration {
+  background-color: #ffffff;
+  padding: 5px;
+  width: 50%;
+  margin: 10px auto;
+}
+
 .glyphicon {
   color: #2cc9f0;
 }
@@ -124,8 +131,8 @@ textarea {
 .list-border {
   border-left-width: thick;
   border-left-style: solid;
-  border-left-color: #F00;
-  padding: 10px;
+  border-left-color: #2cc9f0;
+  padding: 0 0 0 10px;
 }
 
 p, div, textarea, .dropdown-menu {

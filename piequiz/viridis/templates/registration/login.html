@@ -50,10 +50,7 @@
       <div class="panel-heading panel-heading-login">
         <h3 class="panel-title">Sign up</h3>
       </div>
-        <!--<div class="btn-group">
-          <button type="button" class="btn btn-danger"><i class="fa fa-google"></i></button>
-          <a href="{% url 'social:begin' 'google-oauth2' %}" class="btn btn-default zocial googleplus">Continue with Google+</a><br>
-        </div>-->
+
         <div class="btn-group">
           <a href="{% url 'social:begin' 'google-oauth2' %}" class= "btn btn-lg btn-danger"><i class="fa fa-google"></i></a>
           <a href="{% url 'social:begin' 'google-oauth2' %}" class="btn btn-lg btn-danger">Sign up with Google</a> 
@@ -63,9 +60,7 @@
           <a href="{% url 'social:begin' 'yahoo' %}" class= "btn btn-lg btn-primary"><i class="fa fa-yahoo"></i></a>
           <a href="{% url 'social:begin' 'yahoo' %}" class="btn btn-lg btn-primary">Sign up with Yahoo</a> 
         </div>
-        <!--<a href="{% url 'social:begin' 'yahoo' %}" class="btn btn-default zocial yahoo">Continue with Yahoo</a>
-        <hr>-->
-        <p><a href="/accounts/register/">Sign up</a> with email</p>
+        <p><a href="/accounts/register/">Sign up with email</a></p>
     </div>
     <div class="auth auth-bottom">
       <p><u>What can you do on Sanzig?</u></p>
@@ -79,9 +74,9 @@
     <div class="auth-footer">
       <ul class="list-unstyled">
         <li>&copy; Copyright Sanzig, 2014</li>
-        <li>About</li>
-        <li>Help</li>
-        <li>Terms of Use</li>
+        <li><a href="">About</a></li>
+        <li><a href="">Help</a></li>
+        <li><a href="">Terms of Use</a></li>
       </ul>
     </div>
 </div>

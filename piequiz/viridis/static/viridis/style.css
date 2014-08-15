@@ -37,12 +37,9 @@ textarea {
   margin: 10px auto;
 }
 
-.auth-banner {
-  color: #ffffff;
-}
-
 .auth-banner h1 {
 	color: #2cc9f0;
+	font-family: 'Delicious', sans-serif;
 	font-weight: bolder;
 }
 
@@ -66,7 +63,7 @@ textarea {
 
 .auth-right {
   margin-top: 2%;
-  padding:8px 10px 0 10px;
+  padding:8px 10px 21px 10px;
   border:1px solid #ccc !important;
   background-color: #ffffff;
   width: 49%;
@@ -77,13 +74,11 @@ textarea {
   padding: 5px;
   margin: 50% 0 0 0;
   color: #000000;
-  border: 2px solid #FFFF99;
-  background-color: #FFFFA8;
+  background-color: #ffffff;
 }
 
 .auth-footer {
   margin-top: 5%;
-  color: #ffffff;
 }
 
 .auth-footer ul {
@@ -93,6 +88,11 @@ textarea {
 .auth-footer ul li {
   display: inline;
   padding: .2em 1em;
+}
+
+.content-related {
+  background-color: #ffffff;
+  padding: 5px;
 }
 
 .glyphicon {

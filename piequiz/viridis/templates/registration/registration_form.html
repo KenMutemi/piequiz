@@ -6,11 +6,14 @@
 
 {% block content %}
 
-  <div class="auth-wrapper">
-  <div class="auth-register">
-  <div class="panel-heading panel-heading-login">
-  <h1 class="panel-title">Create an account</h1>
-  </div>
+  <div class="auth auth-wrapper">
+    <div class="auth auth-banner">
+      <h1>Sanzig</h1>
+    </div>
+  <div class="auth auth-register">
+    <div class="panel-heading panel-heading-login">
+      <h1 class="panel-title">Create an account</h1>
+    </div>
   
   {% if form.errors %}
   <p class="errors">Please correct the errors below ... {{ form.non_field_errors }}</p>
@@ -71,20 +74,30 @@
   </div>
   </form>
   </div>
+  <div class="auth content-related auth-footer">
+    <p>Fill out the form above (all fields are required), and your
+      account will be created; you'll be sent an email with instructions on how
+      to finish your registration.
+    </p>
+
+    <p>
+      We'll only use your email to send you signup instructions. We hate spam
+      as much as you do.
+    </p>
+
+    <p>
+      Your username can only consist of alphanumeric characters and
+      underscores and may be up to 30 characters long.
+    </p>
+    <a href="/accounts/login/" class="btn btn-md btn-primary">Sign in</a>
   </div>
-{% endblock %}
-
-{% block content-related %}
-<p>Fill out the form to the left (all fields are required), and your
-account will be created; you'll be sent an email with instructions on how
-to finish your registration.</p>
-
-<p>We'll only use your email to send you signup instructions. We hate spam
-as much as you do.</p>
-
-<p>This account will let you log into the ticket tracker, claim tickets,
-and be exempt from spam filtering.</p>
-
-<p>Your username can only consist of alphanumeric characters and
-underscores and may be up to 30 characters long.</p>
+      <div class="auth-footer">
+      <ul class="list-unstyled">
+        <li>&copy; Copyright Sanzig, 2014</li>
+        <li><a href="">About</a></li>
+        <li><a href="">Help</a></li>
+        <li><a href="">Terms of Use</a></li>
+      </ul>
+    </div>
+  </div>
 {% endblock %}

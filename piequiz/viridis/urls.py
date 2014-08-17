@@ -4,10 +4,11 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.views.generic import RedirectView
 from viridis.views import VoteFormView, TestListView
+from viridis.models import Test
 from viridis import views
 
 urlpatterns = patterns('',
-    url(r'^$', TestListView.as_view(), name='home'),
+    url(r'^$', TestListView.as_view( model=Test, paginate_by=10 ), name='home'),
     url(r'^(?P<test_id>\d+)/(?P<slug>[\w-]+)/results/$', views.results, name='results'),
     url(r'^(?P<test_id>\d+)/answer/$', views.answer, name='answer'),
     url(r'^quiz/new$', views.add_test, name='add_test'),

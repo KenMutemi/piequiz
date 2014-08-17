@@ -1,11 +1,17 @@
+nav {
+  width: 65%;
+  margin: 0 0 0 15%;
+}
+
 #wrap {
   background-color: #fff !important;
+  margin-top: 70px;
 }
 
 #main {
 float:left;
 width: 40%;
-margin: 0 0 0 15%;
+margin: 0 0 0 16%;
 background:#ffffff;
 }
 
@@ -132,6 +138,20 @@ textarea {
   border-left-width: thick;
   border-left-style: solid;
   border-left-color: #2cc9f0;
+
+  border-top-width: thin;
+  border-top-style: solid;
+  border-top-color:  #d3d3d3;
+
+  border-bottom-width: thin;
+  border-bottom-style: solid;
+  border-bottom-color:  #d3d3d3;
+
+  border-right-width: thin;
+  border-right-style: solid;
+  border-right-color:  #d3d3d3;
+
+  margin: 0 0 50px 0;
   padding: 0 0 0 10px;
 }
 
@@ -197,11 +217,6 @@ p, div, textarea, .dropdown-menu {
   background-color: #2cc9f0;
   color: #fff;
   width: 70px;
-}
-
-#navigation {
-  width: 65%;
-  margin: 0 0 0 15%;
 }
 
 #sidebar {
@@ -381,6 +396,7 @@ u {
 }
 
 .navbar-brand{
+  font-family: 'Delicious', sans-serif;
   background-color: #d3d3d3;
   font-weight:bold;
 }

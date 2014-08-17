@@ -1,29 +1,43 @@
 {% extends "base.html" %}
-{% load endless %}
 
 {% block title %}Home{% endblock %}
 {% block content %}
 <div class="index-div">
-<div class=""><h2 class="">Top Quizzes</h2></div>
-<div class="">
-{% paginate object_list %}
-{% for test in object_list %}
-    <li class="list-unstyled list-border">
-    <p><a href="{{ test.get_absolute_url }}">
-      <b>{{ test.title|truncatechars:140 }}</b>
-    </a>{{ test.votes }}<i class="fa fa-heart fa-green"></i> </p>
-      <p>created on {{ test.pub_date|date:"M d, Y" }} by {{ test.user|truncatechars:20 }}</p>
-      <p><span class="badge">{{ test.question_set.all|length }} question{{ test.question_set.all|length|pluralize:"s" }}</span></p>
-    </li>
-    <hr>
+  <div class=""><h2 class="">Top Quizzes</h2></div>
+    <div class="">
+    {% for test in object_list %}
+      <li class="list-unstyled list-border">
+        <p>
+          <a href="{{ test.get_absolute_url }}">
+            <b>{{ test.title|truncatechars:140 }}</b>
+          </a> 
+          created on {{ test.pub_date|date:"M d, Y" }} by {{ test.user|truncatechars:20 }}
+        </p>
+        <p>
+          <span class="badge">
+            {{ test.question_set.all|length }} question{{ test.question_set.all|length|pluralize:"s" }}
+          </span> 
+          <i class="fa fa-heart"></i> 
+          {{ test.votes }}
+        </p>
+      </li>
 {% empty %}
   <p>Sorry, there are no quizzes available at the moment.</p>
 {% endfor %}
-{% show_pages %}
+{# .... **Pagination section** .... #}
+{% if is_paginated %}
+  <ul class="pagination pagination-centered">
+  {% if page_obj.has_previous %}
+    <li><a href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
+  {% endif %}
+    {% for i in paginator.page_range %}
+    <li {% if page_obj.number == i %} class="active" {% endif %}><a href="?page={{i}}">{{i}}</a></li>
+    {% endfor %}
+    {% if page_obj.has_next %}
+    <li><a href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
+    {% endif %}
+  </ul>
+{% endif %}
+  </div>
 </div>
-</div>
-{% endblock %}
-
-{% block footer %}
-  <p>&copy; Copyright, 2014. Sanzig, inc</p>
 {% endblock %}

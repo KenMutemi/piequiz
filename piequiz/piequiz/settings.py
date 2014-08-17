@@ -36,6 +36,9 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '301914425823.apps.googleusercontent.com'
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'YQs4c_0Qu98GqshGJBYoA3qI'
 
+SOCIAL_AUTH_GOOGLE_OAUTH2_USE_DEPRECATED_API = True
+SOCIAL_AUTH_GOOGLE_PLUS_USE_DEPRECATED_API = True
+
 SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/'
 
 AUTHENTICATION_BACKENDS = (
@@ -62,7 +65,6 @@ INSTALLED_APPS = (
     'registration',
     'widget_tweaks',
     'avatar',
-    'endless_pagination',
     'django_tables2',
     'viridis',
     'django.contrib.admin',
@@ -121,11 +123,6 @@ HAYSTACK_CONNECTIONS = {
 # Dumb SMTP server
 EMAIL_HOST = 'localhost'
 EMAIL_PORT = 1025
-
-# Endless pagination
-ENDLESS_PAGINATION_PER_PAGE = 5
-ENDLESS_PAGINATION_NEXT_LABEL = 'next'
-ENDLESS_PAGINATION_PREVIOUS_LABEL = 'prev'
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/

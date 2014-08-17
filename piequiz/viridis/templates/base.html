@@ -4,7 +4,7 @@
 <html>
 <head>
 {% block head %}{% endblock %}
-<title>{% block title %}{% endblock %} &#124; Sanzig</title>
+<title>{% block title %}{% endblock %} &#124; Quizonia</title>
 {% load bootstrap3 %}
 {% bootstrap_css %}
 <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
@@ -19,11 +19,11 @@
 <div id="wrap">
 <noscript>
   <div id="noscript">
-    <b>Please enable javascript so that this site can play nicely :)</b>
+    <p><b>Please enable javascript so that this site can play nicely :)</b></p>
   </div>
 </noscript>
 <div id="navigation">
-<nav class="navbar navbar-custom" role="navigation">
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -34,7 +34,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="{% url 'viridis:home' %}">Sanzig</a>
+      <a class="navbar-brand" href="{% url 'viridis:home' %}">Quizonia</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->

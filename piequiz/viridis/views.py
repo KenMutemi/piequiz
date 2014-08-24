@@ -225,3 +225,9 @@ def autocomplete(request):
     })
     return HttpResponse(the_data, content_type='application/json')
 
+def about(request):
+    return render(request, 'viridis/about.html')
+
+def tos(request):
+    return render(request, 'viridis/terms.html')
+

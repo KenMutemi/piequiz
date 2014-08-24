@@ -1,6 +1,6 @@
 {% extends "registration/base.html" %}
 
-{% block title %}Account activation failed{% endblock %}
+{% block title %}Account activation failed {% endblock %}
 
 {% block content %}
 <div class="auth post-registration">
@@ -10,13 +10,5 @@
   the activation key for your account has expired; activation keys are
   only valid for {{ expiration_days|apnumber }} days after
   registration.</p>
-</div>
-<div class="auth-footer">
-  <ul class="list-unstyled">
-    <li>&copy; Copyright Sanzig, 2014</li>
-    <li><a href="">About</a></li>
-    <li><a href="">Help</a></li>
-    <li><a href="">Terms of Use</a></li>
-  </ul>
 </div>
 {% endblock %}

@@ -28,6 +28,7 @@
 {% if is_paginated %}
   <ul class="pagination pagination-centered">
   {% if page_obj.has_previous %}
+    <li><a href="?page=1">&lsaquo;&laquo;</a></li>
     <li><a href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
   {% endif %}
     {% for i in paginator.page_range %}
@@ -35,6 +36,7 @@
     {% endfor %}
     {% if page_obj.has_next %}
     <li><a href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
+    <li><a href="?page={{ page_obj.paginator.num_pages }}">&raquo;&rsaquo;</a></li>
     {% endif %}
   </ul>
 {% endif %}

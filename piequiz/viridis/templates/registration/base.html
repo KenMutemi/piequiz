@@ -2,7 +2,7 @@
 {% load staticfiles %}
 <html>
   <head> 
-    <title>{% block title %}{% endblock %}</title>
+    <title>{% block title %}{% endblock %} &#124; Quizonia</title>
     {% block head %}{% endblock %}
     {% load bootstrap3 %}
     {% bootstrap_css %}
@@ -12,5 +12,13 @@
   </head>
   <body id="auth-body">
     {% block content %}{% endblock %}
+    <div class="auth-footer">
+      <ul class="list-unstyled">
+        <li>&copy; Copyright Quizonia, 2014</li>
+        <li><a href="{% url 'viridis:about' %}">about</a></li>
+        <li><a href="">help</a></li>
+        <li><a href="{% url 'viridis:tos' %}">terms of service</a></li>
+      </ul>
+    </div>
   </body>
 </html>

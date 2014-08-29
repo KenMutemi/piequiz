@@ -80,16 +80,6 @@ class Choice(models.Model):
     def __unicode__(self):
         return unicode(self.id)
 
-class Answer(models.Model):
-    user = models.IntegerField()
-    choice = models.ForeignKey(Choice)
-    test = models.IntegerField()
-    question = models.IntegerField()
-    answer_date = models.DateTimeField()
-    
-    def __unicode__(self):
-        return unicode(self.choice.pk)
-
 class Vote(models.Model):
     voter = models.ForeignKey(User)
     test = models.ForeignKey(Test)

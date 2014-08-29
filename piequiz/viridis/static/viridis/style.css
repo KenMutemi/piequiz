@@ -249,29 +249,6 @@ p, div, textarea, .dropdown-menu {
   background:#ffffff;
 }
 
-/*
-.new-test-panel {
-  background-color: #fff;
- background-image:
--webkit-linear-gradient(0deg, transparent .05em, rgba(0,0,0,.09) .05em, rgba(0,0,0,.09) .125000em, transparent .125000em),
--webkit-linear-gradient(rgba(0,0,0,.09) .062500em, transparent .062500em);
-background-image:
--moz-linear-gradient(0deg, transparent .05em, rgba(0,0,0,.09) .05em, rgba(0,0,0,.09) .125000em, transparent .125000em),
--moz-linear-gradient(rgba(0,0,0,.09) .062500em, transparent .062500em);
-background-image:
--ms-linear-gradient(0deg, transparent .05em, rgba(0,0,0,.09) .05em, rgba(0,0,0,.09) .125000em, transparent .125000em),
--ms-linear-gradient(rgba(0,0,0,.09) .062500em, transparent .062500em);
-background-image:
--o-linear-gradient(0deg, transparent .05em, rgba(0,0,0,.09) .05em, rgba(0,0,0,.09) .125000em, transparent .125000em),
--o-linear-gradient(rgba(0,0,0,.09) .062500em, transparent .062500em);
-background-image:
-linear-gradient(0deg, transparent .05em, rgba(0,0,0,.09) .05em, rgba(0,0,0,.09) .125000em, transparent .125000em),
-inear-gradient(rgba(0,0,0,.09) .062500em, transparent .062500em);
-background-size: .75em .75em;
-background-position: 0 -0.5em; 
-}
-*/
-
 .new-test-wrap {
   margin: 0 auto;
   width: 50%;
@@ -443,7 +420,7 @@ u {
 }
 
 .correct_answer {
-  background-color: green;
+  background-color: #2cc9f0;
   color: white;
 }
 

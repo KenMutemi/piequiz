@@ -7,7 +7,7 @@ from django.forms.models import modelformset_factory
 from viridis.forms import AddTestForm, AddQuestionForm, AddChoiceForm, VoteForm
 from django.contrib.auth.decorators import login_required
 from haystack.query import SearchQuerySet
-from viridis.models import Test, Question, Choice, Answer, Vote
+from viridis.models import Test, Question, Choice, Vote
 from itertools import repeat
 from django.core import serializers
 from django.contrib.auth.models import User
@@ -230,4 +230,7 @@ def about(request):
 
 def tos(request):
     return render(request, 'viridis/terms.html')
+
+def faq(request):
+    return render(request, 'viridis/faq.html')
 

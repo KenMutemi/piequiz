@@ -27,6 +27,7 @@ urlpatterns = patterns('',
     url(r'^(?P<test_id>\d+)/(?P<slug>[\w-]+)/$', views.test, name='test'),
     url(r'^about/$', views.about, name='about'),
     url(r'^terms/$', views.tos, name='tos'),
+    url(r'^faq/$', views.faq, name='faq'),
 ) 
 
 if settings.DEBUG:

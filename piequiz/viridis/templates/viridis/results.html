@@ -26,31 +26,6 @@
   </p>
   </div>
   
-  <table class="table" id="data-table" border="1" cellpadding="10" cellspacing="0"
-  summary="The five most recently attempted quiz results.">
-    <caption>Last five quizzes score in %</caption>
-    <thead>
-      <tr>
-        <td>&nbsp;</td>
-          <th scope="col">{{ test.title }} 1</th>
-          <th scope="col">{{ test.title }} 2</th>
-          <th scope="col">{{ test.title }} 3</th>
-          <th scope="col">{{ test.title }} 4</th>
-          <th scope="col">{{ test.title }} {{ test.pub_date }}</th>
-          </tr>
-    </thead>
-      <tbody>
-        <tr>
-          <th scope="row">Score</th>
-            <td>60</td>
-            <td>50</td>
-            <td>80</td>
-            <td>100</td>
-            <td>{{ percentage_score }}</td>
-        </tr>
-      </tbody>
-  </table>
-  <hr>
   <p><i class="fa fa-refresh fa-spin fa-green"></i> <a href="{{ test.get_absolute_url }}">Redo</a> the quiz!</p>
 {% endblock %}
 

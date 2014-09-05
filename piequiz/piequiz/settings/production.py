@@ -26,6 +26,13 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = ['.quizonia.com']
 
+# Smtp settings
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'mutemikennedy@gmail.com'
+EMAIL_HOST_PASSWORD = 'change starts with me'
+EMAIL_PORT = 587
+
 # Social auth settings
 TEMPLATE_CONTEXT_PROCESSORS = (
     'social.apps.django_app.context_processors.backends',
@@ -138,11 +145,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT = '/opt/piequiz/piequiz/piequiz/media/'
 
-STATIC_ROOT = '/opt/python/piequiz/piequiz/piequiz/media/static/'
+STATIC_ROOT = '/opt/piequiz/piequiz/piequiz/media/static/'
 
 

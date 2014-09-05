@@ -26,6 +26,11 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = ['.quizonia.com']
 
+# Quizonia admins
+ADMINS = (
+    ('Kennedy Mutemi', 'mutemikennedy@gmail.com'),
+)
+
 # Smtp settings
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'

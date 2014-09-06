@@ -178,6 +178,11 @@ p, div, textarea, .dropdown-menu {
   /*border-radius:0;*/
 }
 
+.navbar-collapse.collapse.in { display: block!important; }
+
+.collapsing {
+  overflow: hidden!important;
+}
 /*
 * {
   -webkit-border-radius: 0 !important;
@@ -232,7 +237,7 @@ p, div, textarea, .dropdown-menu {
 }
 
 #search-input {
-  width: 400px;
+  width: 150%;
   background-color: #F2F2F2;
 }
 

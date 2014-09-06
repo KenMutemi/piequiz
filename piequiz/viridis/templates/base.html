@@ -49,7 +49,7 @@
           <div class="col-sm-12">
             <div class="left-inner-addon">
               <i class="glyphicon glyphicon-search"></i>
-              <input type="search" id="search-input" name="q" class="form-control" placeholder="Search for quizzes, questions and users" />
+              <input type="search" id="search-input" name="q" class="form-control" placeholder="Search for quizzes and users" />
             </div>
           </div>
       </div>
@@ -98,19 +98,19 @@
 {% endfor %}
 <hr>
 {% else %}
-<div class="panel panel-info">
-<div class="panel-heading"><h1 class=panel-title>Log in</h1></div>
-<div class="panel-body">
-<form class="form-horizontal" method="post" action="{% url 'auth_login' %}" role="form">
-  {% csrf_token %}
-  <div class="form-group">
-    <div class="col-sm-12">
-      <div class="left-inner-addon">
-        <i class="glyphicon glyphicon-user"></i>
-        <input class="form-control" type="text" name="username" placeholder="Username"/>
+<div class="panel panel-info" "panel-login">
+  <div class="panel-heading"><h1 class=panel-title>Log in</h1></div>
+  <div class="panel-body">
+    <form class="form-horizontal" method="post" action="{% url 'auth_login' %}" role="form">
+    {% csrf_token %}
+      <div class="form-group">
+        <div class="col-sm-12">
+          <div class="left-inner-addon">
+            <i class="glyphicon glyphicon-user"></i>
+            <input class="form-control" type="text" name="username" placeholder="Username"/>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
     <div class="form-group">
       <div class="col-sm-12">
         <div class="left-inner-addon">
@@ -121,7 +121,7 @@
     </div>
     <button class="btn btn-success" type="submit">Sign in</button>
     <input type="hidden" name="next" value="/" />
-</form>
+    </form>
 </div>
 </div>
 {% endif %}

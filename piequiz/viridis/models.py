@@ -67,6 +67,9 @@ class Question(models.Model):
     marks = models.IntegerField(default=0)
     pub_date = models.DateTimeField(auto_now_add=True)
 
+    class Meta:
+        ordering = ['pub_date']
+
     def __unicode__(self):
         return self.question_text
 

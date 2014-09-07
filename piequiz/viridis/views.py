@@ -182,7 +182,6 @@ def add_choice(request):
     """
     mark = request.session['mark_per_question']
     test = Test.objects.get(id = request.session['test_id'])
-    question = test.question_set.order_by('pub_date')
     questions = Question.objects.filter(test_id=test.pk)
     questions_pks = [x.pk for item in questions for x in repeat(item, 4)] # multiply ...
         # pk elements in this list by 4

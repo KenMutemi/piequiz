@@ -26,7 +26,6 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = ['.quizonia.com']
 
-# Quizonia admins
 ADMINS = (
     ('Kennedy Mutemi', 'mutemikennedy@gmail.com'),
 )
@@ -81,13 +80,6 @@ INSTALLED_APPS = (
     'viridis',
     'django.contrib.admin',
 )
-
-# SMTP settings
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'mutemikennedy@gmail.com'
-EMAIL_HOST_PASSWORD = 'change starts with me'
-EMAIL_PORT = 587
 
 # Registration
 
@@ -163,4 +155,43 @@ MEDIA_ROOT = '/opt/piequiz/piequiz/piequiz/media/'
 
 STATIC_ROOT = '/opt/piequiz/piequiz/piequiz/media/static/'
 
-
+# Logging configuration
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        # Include the default Django email handler for errors
+        # This is what you'd get without configuring logging at all.
+        'mail_admins': {
+            'class': 'django.utils.log.AdminEmailHandler',
+            'level': 'ERROR',
+             # But the emails are plain text by default - HTML is nicer
+            'include_html': True,
+        },
+        # Log to a text file that can be rotated by logrotate
+        'logfile': {
+            'class': 'logging.handlers.WatchedFileHandler',
+            'filename': '/opt/piequiz/piequiz/piequiz/piequiz.log'
+        },
+    },
+    'loggers': {
+        # Again, default Django configuration to email unhandled exceptions
+        'django.request': {
+            'handlers': ['mail_admins'],
+            'level': 'ERROR',
+            'propagate': True,
+        },
+        # Might as well log any errors anywhere else in Django
+        'django': {
+            'handlers': ['logfile'],
+            'level': 'ERROR',
+            'propagate': False,
+        },
+        # Your own app - this assumes all your logger names start with "myapp."
+        'piequiz': {
+            'handlers': ['logfile'],
+            'level': 'WARNING', # Or maybe INFO or DEBUG
+            'propagate': False
+        },
+    },
+}

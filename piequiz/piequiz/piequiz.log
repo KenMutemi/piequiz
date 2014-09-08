@@ -1,0 +1,23 @@
+Internal Server Error: /login/yahoo/
+Traceback (most recent call last):
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/social/apps/django_app/utils.py", line 45, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/social/apps/django_app/views.py", line 12, in auth
+    return do_auth(request.social_strategy, redirect_name=REDIRECT_FIELD_NAME)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/social/actions.py", line 25, in do_auth
+    return strategy.start()
+  File "/opt/piequiz/local/lib/python2.7/site-packages/social/strategies/base.py", line 68, in start
+    return self.html(self.backend.auth_html())
+  File "/opt/piequiz/local/lib/python2.7/site-packages/social/backends/open_id.py", line 141, in auth_html
+    form_tag_attrs=form_tag)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/openid/consumer/consumer.py", line 1674, in htmlMarkup
+    form_tag_attrs))
+  File "/opt/piequiz/local/lib/python2.7/site-packages/openid/consumer/consumer.py", line 1658, in formMarkup
+    message = self.getMessage(realm, return_to, immediate)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/openid/consumer/consumer.py", line 1603, in getMessage
+    (mode, self.endpoint.server_url, assoc_log_msg))
+  File "/opt/piequiz/local/lib/python2.7/site-packages/openid/oidutil.py", line 109, in log
+    sys.stderr.write(message)
+IOError: [Errno 5] Input/output error

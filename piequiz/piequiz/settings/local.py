@@ -121,8 +121,8 @@ HAYSTACK_CONNECTIONS = {
 }
 
 # Dumb SMTP server
-EMAIL_HOST = 'localhost'
-EMAIL_PORT = 1025
+# EMAIL_HOST = 'localhost'
+# EMAIL_PORT = 1025
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/

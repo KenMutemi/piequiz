@@ -151,6 +151,10 @@ textarea {
   border-right-style: solid;
   border-right-color:  #d3d3d3;
 
+  -webkit-border-radius: 4px !important;
+     -moz-border-radius: 4px !important;
+          border-radius: 4px !important;
+
   margin: 0 0 50px 0;
   padding: 0 0 0 10px;
 }

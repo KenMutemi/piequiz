@@ -63,7 +63,6 @@ def profile(request):
 def my_tests(request):
     test = TestTable(Test.objects.filter(user=request.user.id))
     test.paginate(page=request.GET.get('page', 1), per_page=10)
-    
     # delte selected quizes
     request.POST.get('delete')
     Test.objects.filter(id__in=request.POST.getlist('selection')).delete()

@@ -13,7 +13,7 @@
     </small>
   </p>
   <div> 
-  <p>Selected choices: {{ answer }}</p>
+  <em>Corrent choices are highlighted below</em>
   <p>
   {% if test.question_set.all %}
     {% for question in test.question_set.all %}

@@ -7,6 +7,9 @@
 <title>{% block title %}{% endblock %} &#124; Quizonia</title>
 {% load bootstrap3 %}
 {% bootstrap_css %}
+<meta name="description" content="Take multiple-choice KCPE past papers with Quizonia.
+  Get instant results after completing your paper. No need to download.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
 <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.ico' %}"/>
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
@@ -49,7 +52,7 @@
           <div class="col-sm-12">
             <div class="left-inner-addon">
               <i class="glyphicon glyphicon-search"></i>
-              <input type="search" id="search-input" name="q" class="form-control" placeholder="Search for quizzes and users" />
+              <input type="search" id="search-input" name="q" class="form-control" placeholder="Search for past papers..." />
             </div>
           </div>
       </div>
@@ -98,7 +101,7 @@
 {% endfor %}
 <hr>
 {% else %}
-<div class="panel panel-info" "panel-login">
+<div class="panel panel-info panel-login">
   <div class="panel-heading"><h1 class=panel-title>Log in</h1></div>
   <div class="panel-body">
     <form class="form-horizontal" method="post" action="{% url 'auth_login' %}" role="form">

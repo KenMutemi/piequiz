@@ -21,3 +21,920 @@ Traceback (most recent call last):
   File "/opt/piequiz/local/lib/python2.7/site-packages/openid/oidutil.py", line 109, in log
     sys.stderr.write(message)
 IOError: [Errno 5] Input/output error
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.mafengwo.com'.You may need to add u'www.mafengwo.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'tilder.ch'.You may need to add u'tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'tilder.ch'.You may need to add u'tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'tilder.ch'.You may need to add u'tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'tilder.ch'.You may need to add u'tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'tilder.ch'.You may need to add u'tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'tilder.ch'.You may need to add u'tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'tilder.ch'.You may need to add u'tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.ingosander.net'.You may need to add u'www.ingosander.net' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.ingosander.net'.You may need to add u'www.ingosander.net' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.ingosander.net'.You may need to add u'www.ingosander.net' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.ingosander.net'.You may need to add u'www.ingosander.net' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.ingosander.net'.You may need to add u'www.ingosander.net' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.ingosander.net'.You may need to add u'www.ingosander.net' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.mesregies.com'.You may need to add u'www.mesregies.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.ingosander.net'.You may need to add u'www.ingosander.net' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.anonymitytest.com'.You may need to add u'www.anonymitytest.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25:80'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.mafengwo.com'.You may need to add u'www.mafengwo.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.mafengwo.com'.You may need to add u'www.mafengwo.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'nxapi.appledaily.com.hk'.You may need to add u'nxapi.appledaily.com.hk' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.mafengwo.com'.You may need to add u'www.mafengwo.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.mafengwo.com'.You may need to add u'www.mafengwo.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.google'.You may need to add u'www.google' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.nysf168.com'.You may need to add u'www.nysf168.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.mafengwo.com'.You may need to add u'www.mafengwo.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.google'.You may need to add u'www.google' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.mafengwo.com'.You may need to add u'www.mafengwo.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '6.url.cn'.You may need to add u'6.url.cn' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.mafengwo.com'.You may need to add u'www.mafengwo.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.mafengwo.com'.You may need to add u'www.mafengwo.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.baidu.com'.You may need to add u'www.baidu.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: u'127.0.0.1:8000'.You may need to add u'127.0.0.1' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.mafengwo.com'.You may need to add u'www.mafengwo.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '6.url.cn'.You may need to add u'6.url.cn' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.mafengwo.com'.You may need to add u'www.mafengwo.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.mafengwo.com'.You may need to add u'www.mafengwo.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: u'127.0.0.1:8000'.You may need to add u'127.0.0.1' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.mafengwo.com'.You may need to add u'www.mafengwo.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.mafengwo.com'.You may need to add u'www.mafengwo.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: u'127.0.0.1:8000'.You may need to add u'127.0.0.1' to ALLOWED_HOSTS.
+Internal Server Error: /login/yahoo/
+Traceback (most recent call last):
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/social/apps/django_app/utils.py", line 45, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/social/apps/django_app/views.py", line 12, in auth
+    return do_auth(request.social_strategy, redirect_name=REDIRECT_FIELD_NAME)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/social/actions.py", line 25, in do_auth
+    return strategy.start()
+  File "/opt/piequiz/local/lib/python2.7/site-packages/social/strategies/base.py", line 68, in start
+    return self.html(self.backend.auth_html())
+  File "/opt/piequiz/local/lib/python2.7/site-packages/social/backends/open_id.py", line 141, in auth_html
+    form_tag_attrs=form_tag)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/openid/consumer/consumer.py", line 1674, in htmlMarkup
+    form_tag_attrs))
+  File "/opt/piequiz/local/lib/python2.7/site-packages/openid/consumer/consumer.py", line 1658, in formMarkup
+    message = self.getMessage(realm, return_to, immediate)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/openid/consumer/consumer.py", line 1603, in getMessage
+    (mode, self.endpoint.server_url, assoc_log_msg))
+  File "/opt/piequiz/local/lib/python2.7/site-packages/openid/oidutil.py", line 109, in log
+    sys.stderr.write(message)
+IOError: [Errno 5] Input/output error
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '6.url.cn'.You may need to add u'6.url.cn' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: u'127.0.0.1:8000'.You may need to add u'127.0.0.1' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.mafengwo.com'.You may need to add u'www.mafengwo.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '193.203.48.43'.You may need to add u'193.203.48.43' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '6.url.cn'.You may need to add u'6.url.cn' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: u'127.0.0.1:8000'.You may need to add u'127.0.0.1' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: u'127.0.0.1:8000'.You may need to add u'127.0.0.1' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.mafengwo.com'.You may need to add u'www.mafengwo.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: u'127.0.0.1:8000'.You may need to add u'127.0.0.1' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: u'127.0.0.1:8000'.You may need to add u'127.0.0.1' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.mafengwo.com'.You may need to add u'www.mafengwo.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.mafengwo.com'.You may need to add u'www.mafengwo.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.mafengwo.com'.You may need to add u'www.mafengwo.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.passiontimes.hk'.You may need to add u'www.passiontimes.hk' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'devgirl.co'.You may need to add u'devgirl.co' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.anonymitytest.com'.You may need to add u'www.anonymitytest.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.ingosander.net'.You may need to add u'www.ingosander.net' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.anonymitytest.com'.You may need to add u'www.anonymitytest.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.anonymitytest.com'.You may need to add u'www.anonymitytest.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.mesregies.com'.You may need to add u'www.mesregies.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.ingosander.net'.You may need to add u'www.ingosander.net' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'devgirl.co'.You may need to add u'devgirl.co' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.google'.You may need to add u'www.google' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.passiontimes.hk'.You may need to add u'www.passiontimes.hk' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.google'.You may need to add u'www.google' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.passiontimes.hk'.You may need to add u'www.passiontimes.hk' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '193.203.48.43'.You may need to add u'193.203.48.43' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: u'127.0.0.1:8000'.You may need to add u'127.0.0.1' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.baidu.com'.You may need to add u'www.baidu.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.mafengwo.com'.You may need to add u'www.mafengwo.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.mafengwo.com'.You may need to add u'www.mafengwo.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.mafengwo.com'.You may need to add u'www.mafengwo.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '6.url.cn'.You may need to add u'6.url.cn' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.mafengwo.com'.You may need to add u'www.mafengwo.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.mafengwo.com'.You may need to add u'www.mafengwo.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.mafengwo.com'.You may need to add u'www.mafengwo.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '6.url.cn'.You may need to add u'6.url.cn' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: u'127.0.0.1:8000'.You may need to add u'127.0.0.1' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.google'.You may need to add u'www.google' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.baidu.com'.You may need to add u'www.baidu.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.google'.You may need to add u'www.google' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.google'.You may need to add u'www.google' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.mafengwo.com'.You may need to add u'www.mafengwo.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '6.url.cn'.You may need to add u'6.url.cn' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'example.example'.You may need to add u'example.example' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'example.example'.You may need to add u'example.example' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.google'.You may need to add u'www.google' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.baidu.com'.You may need to add u'www.baidu.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.mafengwo.com'.You may need to add u'www.mafengwo.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'devgirl.co'.You may need to add u'devgirl.co' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.mafengwo.com'.You may need to add u'www.mafengwo.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '24x7-allrequestsallowed.com'.You may need to add u'24x7-allrequestsallowed.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.baidu.com'.You may need to add u'www.baidu.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Internal Server Error: /login/yahoo/
+Traceback (most recent call last):
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/social/apps/django_app/utils.py", line 45, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/social/apps/django_app/views.py", line 12, in auth
+    return do_auth(request.social_strategy, redirect_name=REDIRECT_FIELD_NAME)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/social/actions.py", line 25, in do_auth
+    return strategy.start()
+  File "/opt/piequiz/local/lib/python2.7/site-packages/social/strategies/base.py", line 68, in start
+    return self.html(self.backend.auth_html())
+  File "/opt/piequiz/local/lib/python2.7/site-packages/social/backends/open_id.py", line 141, in auth_html
+    form_tag_attrs=form_tag)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/openid/consumer/consumer.py", line 1674, in htmlMarkup
+    form_tag_attrs))
+  File "/opt/piequiz/local/lib/python2.7/site-packages/openid/consumer/consumer.py", line 1658, in formMarkup
+    message = self.getMessage(realm, return_to, immediate)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/openid/consumer/consumer.py", line 1603, in getMessage
+    (mode, self.endpoint.server_url, assoc_log_msg))
+  File "/opt/piequiz/local/lib/python2.7/site-packages/openid/oidutil.py", line 109, in log
+    sys.stderr.write(message)
+IOError: [Errno 5] Input/output error
+Invalid HTTP_HOST header: '193.203.48.43'.You may need to add u'193.203.48.43' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.sina.com.cn'.You may need to add u'www.sina.com.cn' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.mafengwo.com'.You may need to add u'www.mafengwo.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.mafengwo.com'.You may need to add u'www.mafengwo.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Internal Server Error: /login/yahoo/
+Traceback (most recent call last):
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/social/apps/django_app/utils.py", line 45, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/social/apps/django_app/views.py", line 12, in auth
+    return do_auth(request.social_strategy, redirect_name=REDIRECT_FIELD_NAME)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/social/actions.py", line 25, in do_auth
+    return strategy.start()
+  File "/opt/piequiz/local/lib/python2.7/site-packages/social/strategies/base.py", line 68, in start
+    return self.html(self.backend.auth_html())
+  File "/opt/piequiz/local/lib/python2.7/site-packages/social/backends/open_id.py", line 141, in auth_html
+    form_tag_attrs=form_tag)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/openid/consumer/consumer.py", line 1674, in htmlMarkup
+    form_tag_attrs))
+  File "/opt/piequiz/local/lib/python2.7/site-packages/openid/consumer/consumer.py", line 1658, in formMarkup
+    message = self.getMessage(realm, return_to, immediate)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/openid/consumer/consumer.py", line 1603, in getMessage
+    (mode, self.endpoint.server_url, assoc_log_msg))
+  File "/opt/piequiz/local/lib/python2.7/site-packages/openid/oidutil.py", line 109, in log
+    sys.stderr.write(message)
+IOError: [Errno 5] Input/output error
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.passiontimes.hk'.You may need to add u'www.passiontimes.hk' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: u'127.0.0.1:8000'.You may need to add u'127.0.0.1' to ALLOWED_HOSTS.
+Internal Server Error: /login/yahoo/
+Traceback (most recent call last):
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/social/apps/django_app/utils.py", line 45, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/social/apps/django_app/views.py", line 12, in auth
+    return do_auth(request.social_strategy, redirect_name=REDIRECT_FIELD_NAME)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/social/actions.py", line 25, in do_auth
+    return strategy.start()
+  File "/opt/piequiz/local/lib/python2.7/site-packages/social/strategies/base.py", line 68, in start
+    return self.html(self.backend.auth_html())
+  File "/opt/piequiz/local/lib/python2.7/site-packages/social/backends/open_id.py", line 141, in auth_html
+    form_tag_attrs=form_tag)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/openid/consumer/consumer.py", line 1674, in htmlMarkup
+    form_tag_attrs))
+  File "/opt/piequiz/local/lib/python2.7/site-packages/openid/consumer/consumer.py", line 1658, in formMarkup
+    message = self.getMessage(realm, return_to, immediate)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/openid/consumer/consumer.py", line 1603, in getMessage
+    (mode, self.endpoint.server_url, assoc_log_msg))
+  File "/opt/piequiz/local/lib/python2.7/site-packages/openid/oidutil.py", line 109, in log
+    sys.stderr.write(message)
+IOError: [Errno 5] Input/output error
+Invalid HTTP_HOST header: u'127.0.0.1:8000'.You may need to add u'127.0.0.1' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: u'127.0.0.1:8000'.You may need to add u'127.0.0.1' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.ly.com'.You may need to add u'www.ly.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Internal Server Error: /login/yahoo/
+Traceback (most recent call last):
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/social/apps/django_app/utils.py", line 45, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/social/apps/django_app/views.py", line 12, in auth
+    return do_auth(request.social_strategy, redirect_name=REDIRECT_FIELD_NAME)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/social/actions.py", line 25, in do_auth
+    return strategy.start()
+  File "/opt/piequiz/local/lib/python2.7/site-packages/social/strategies/base.py", line 68, in start
+    return self.html(self.backend.auth_html())
+  File "/opt/piequiz/local/lib/python2.7/site-packages/social/backends/open_id.py", line 141, in auth_html
+    form_tag_attrs=form_tag)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/openid/consumer/consumer.py", line 1674, in htmlMarkup
+    form_tag_attrs))
+  File "/opt/piequiz/local/lib/python2.7/site-packages/openid/consumer/consumer.py", line 1658, in formMarkup
+    message = self.getMessage(realm, return_to, immediate)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/openid/consumer/consumer.py", line 1603, in getMessage
+    (mode, self.endpoint.server_url, assoc_log_msg))
+  File "/opt/piequiz/local/lib/python2.7/site-packages/openid/oidutil.py", line 109, in log
+    sys.stderr.write(message)
+IOError: [Errno 5] Input/output error
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.passiontimes.hk'.You may need to add u'www.passiontimes.hk' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.passiontimes.hk'.You may need to add u'www.passiontimes.hk' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.passiontimes.hk'.You may need to add u'www.passiontimes.hk' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.passiontimes.hk'.You may need to add u'www.passiontimes.hk' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.passiontimes.hk'.You may need to add u'www.passiontimes.hk' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.passiontimes.hk'.You may need to add u'www.passiontimes.hk' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.passiontimes.hk'.You may need to add u'www.passiontimes.hk' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.passiontimes.hk'.You may need to add u'www.passiontimes.hk' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.passiontimes.hk'.You may need to add u'www.passiontimes.hk' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.passiontimes.hk'.You may need to add u'www.passiontimes.hk' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.passiontimes.hk'.You may need to add u'www.passiontimes.hk' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.passiontimes.hk'.You may need to add u'www.passiontimes.hk' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.passiontimes.hk'.You may need to add u'www.passiontimes.hk' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.passiontimes.hk'.You may need to add u'www.passiontimes.hk' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.passiontimes.hk'.You may need to add u'www.passiontimes.hk' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.passiontimes.hk'.You may need to add u'www.passiontimes.hk' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.passiontimes.hk'.You may need to add u'www.passiontimes.hk' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.passiontimes.hk'.You may need to add u'www.passiontimes.hk' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.passiontimes.hk'.You may need to add u'www.passiontimes.hk' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.passiontimes.hk'.You may need to add u'www.passiontimes.hk' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.passiontimes.hk'.You may need to add u'www.passiontimes.hk' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '6.url.cn'.You may need to add u'6.url.cn' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.passiontimes.hk'.You may need to add u'www.passiontimes.hk' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.ly.com'.You may need to add u'www.ly.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.mesregies.com'.You may need to add u'www.mesregies.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.passiontimes.hk'.You may need to add u'www.passiontimes.hk' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.passiontimes.hk'.You may need to add u'www.passiontimes.hk' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.ingosander.net'.You may need to add u'www.ingosander.net' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.ingosander.net'.You may need to add u'www.ingosander.net' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.mesregies.com'.You may need to add u'www.mesregies.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.anonymitytest.com'.You may need to add u'www.anonymitytest.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.ingosander.net'.You may need to add u'www.ingosander.net' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.mesregies.com'.You may need to add u'www.mesregies.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.mesregies.com'.You may need to add u'www.mesregies.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.anonymitytest.com'.You may need to add u'www.anonymitytest.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.ingosander.net'.You may need to add u'www.ingosander.net' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.mesregies.com'.You may need to add u'www.mesregies.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.mesregies.com'.You may need to add u'www.mesregies.com' to ALLOWED_HOSTS.
+Internal Server Error: /login/yahoo/
+Traceback (most recent call last):
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/social/apps/django_app/utils.py", line 45, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/social/apps/django_app/views.py", line 12, in auth
+    return do_auth(request.social_strategy, redirect_name=REDIRECT_FIELD_NAME)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/social/actions.py", line 25, in do_auth
+    return strategy.start()
+  File "/opt/piequiz/local/lib/python2.7/site-packages/social/strategies/base.py", line 68, in start
+    return self.html(self.backend.auth_html())
+  File "/opt/piequiz/local/lib/python2.7/site-packages/social/backends/open_id.py", line 141, in auth_html
+    form_tag_attrs=form_tag)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/openid/consumer/consumer.py", line 1674, in htmlMarkup
+    form_tag_attrs))
+  File "/opt/piequiz/local/lib/python2.7/site-packages/openid/consumer/consumer.py", line 1658, in formMarkup
+    message = self.getMessage(realm, return_to, immediate)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/openid/consumer/consumer.py", line 1603, in getMessage
+    (mode, self.endpoint.server_url, assoc_log_msg))
+  File "/opt/piequiz/local/lib/python2.7/site-packages/openid/oidutil.py", line 109, in log
+    sys.stderr.write(message)
+IOError: [Errno 5] Input/output error
+Invalid HTTP_HOST header: 'www.passiontimes.hk'.You may need to add u'www.passiontimes.hk' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'li207-25.members.linode.com'.You may need to add u'li207-25.members.linode.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 's1.bdstatic.com'.You may need to add u's1.bdstatic.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'li207-25.members.linode.com'.You may need to add u'li207-25.members.linode.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.ly.com'.You may need to add u'www.ly.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.ly.com'.You may need to add u'www.ly.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.ly.com'.You may need to add u'www.ly.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '193.203.48.43'.You may need to add u'193.203.48.43' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.ly.com'.You may need to add u'www.ly.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 's1.bdstatic.com'.You may need to add u's1.bdstatic.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: u'127.0.0.1:8000'.You may need to add u'127.0.0.1' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.ly.com'.You may need to add u'www.ly.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.ly.com'.You may need to add u'www.ly.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 's1.bdstatic.com'.You may need to add u's1.bdstatic.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.ly.com'.You may need to add u'www.ly.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.ly.com'.You may need to add u'www.ly.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.ly.com'.You may need to add u'www.ly.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.ly.com'.You may need to add u'www.ly.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: u'127.0.0.1:8000'.You may need to add u'127.0.0.1' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.baidu.com'.You may need to add u'www.baidu.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Internal Server Error: /login/yahoo/
+Traceback (most recent call last):
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/social/apps/django_app/utils.py", line 45, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/social/apps/django_app/views.py", line 12, in auth
+    return do_auth(request.social_strategy, redirect_name=REDIRECT_FIELD_NAME)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/social/actions.py", line 25, in do_auth
+    return strategy.start()
+  File "/opt/piequiz/local/lib/python2.7/site-packages/social/strategies/base.py", line 68, in start
+    return self.html(self.backend.auth_html())
+  File "/opt/piequiz/local/lib/python2.7/site-packages/social/backends/open_id.py", line 141, in auth_html
+    form_tag_attrs=form_tag)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/openid/consumer/consumer.py", line 1674, in htmlMarkup
+    form_tag_attrs))
+  File "/opt/piequiz/local/lib/python2.7/site-packages/openid/consumer/consumer.py", line 1658, in formMarkup
+    message = self.getMessage(realm, return_to, immediate)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/openid/consumer/consumer.py", line 1603, in getMessage
+    (mode, self.endpoint.server_url, assoc_log_msg))
+  File "/opt/piequiz/local/lib/python2.7/site-packages/openid/oidutil.py", line 109, in log
+    sys.stderr.write(message)
+IOError: [Errno 5] Input/output error
+Invalid HTTP_HOST header: 'www.baidu.com'.You may need to add u'www.baidu.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 's1.bdstatic.com'.You may need to add u's1.bdstatic.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25:80'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'li207-25.members.linode.com'.You may need to add u'li207-25.members.linode.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'li207-25.members.linode.com'.You may need to add u'li207-25.members.linode.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.ly.com'.You may need to add u'www.ly.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.ly.com'.You may need to add u'www.ly.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.ly.com'.You may need to add u'www.ly.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 's1.bdstatic.com'.You may need to add u's1.bdstatic.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25:80'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '193.203.48.43'.You may need to add u'193.203.48.43' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 's1.bdstatic.com'.You may need to add u's1.bdstatic.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.ly.com'.You may need to add u'www.ly.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.ly.com'.You may need to add u'www.ly.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.ly.com'.You may need to add u'www.ly.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: u'127.0.0.1:8000'.You may need to add u'127.0.0.1' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.ly.com'.You may need to add u'www.ly.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 's1.bdstatic.com'.You may need to add u's1.bdstatic.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.

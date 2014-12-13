@@ -1,16 +1,14 @@
 {% extends "base.html" %}
-{% load avatar_tags %}
 {% block title %}{{ user.username }}{% endblock %}
 {% block content %}
 <div class="panel panel-default">
   <div class="panel-heading"><h3 class="panel-title">{{ user.username }}</h3></div>
   <div class="panel-body">
+  {% if user.is_active and user.is_staff %}
       <i class="fa fa-file fa-4x fa-blue"></i>
       <a href="{% url 'viridis:my_tests' %}">My Quizzes</a>
       <hr>
-      {% avatar user 40 %}
-      <a href="{% url 'avatar_change' %}">Change profile picture</a>
-      <hr>
+  {% endif %}
       <i class="fa fa-lock fa-4x fa-blue"></i>
       <a href="{% url 'django.contrib.auth.views.password_change' %}">Change password</a>
       <hr>

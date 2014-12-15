@@ -1,4 +1,22 @@
 $(document).ready(function() {
+  $('input[type="radio"]').keydown(function(e) {
+    var arrowKeys = [37, 38, 39, 40];
+    if (arrowKeys.indexOf(e.which) !== -1)
+    {
+        $(this).blur();
+        if (e.which == 38)
+        {
+            var y = $(window).scrollTop();
+            $(window).scrollTop(y - 10);
+        }
+        else if (e.which == 40)
+        {
+            var y = $(window).scrollTop();
+            $(window).scrollTop(y + 10);
+        }
+        return false;
+    }
+  });
 
   $('.heading-collapse').click(function() {
     $(this).toggleClass('active').find('i').toggleClass('fa fa-chevron-up fa fa-chevron-down')

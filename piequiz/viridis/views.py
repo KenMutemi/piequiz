@@ -81,14 +81,12 @@ class TestListView(ListView):
             context['voted'] = voted
         return context
 
-@login_required(login_url = "/accounts/login/")
 def test(request, test_id, slug):
     test = get_object_or_404(Test, pk=test_id)
     if not slug == test.slug:
         return HttpResponsePermanentRedirect(test.get_absolute_url())
     return render(request, 'viridis/test.html', {'test': test})
 
-@login_required
 def answer(request, test_id):
     test = Test.objects.get(pk=test_id)
     request.session['choice_id'] = request.POST.getlist('choice')
@@ -100,7 +98,6 @@ def answer(request, test_id):
         return HttpResponseRedirect(reverse('viridis:results', args=(test.id, test.slug)))
 
 
-@login_required
 def results(request, test_id, slug):
     test = get_object_or_404(Test, pk=test_id)
     correct_answers = Choice.objects.filter(test_id=test_id, is_correct=True).values_list("id", flat=True)
@@ -117,7 +114,7 @@ def results(request, test_id, slug):
         'test': test })
 
 @login_required(login_url = "/accounts/login/")
-def add_test(request):   
+def add_test(request):
     if request.method == "POST":
         form = AddTestForm(request.POST)
         if form.is_valid():
@@ -211,7 +208,7 @@ def add_choice(request):
         "test": test,
         "mark": mark
     })
-    
+
 def autocomplete(request):
     """User enters search term in search box. The system tries
     to match with words similar to what is being input.

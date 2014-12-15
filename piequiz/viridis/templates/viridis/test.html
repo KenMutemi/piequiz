@@ -53,12 +53,12 @@
         <input type="hidden" id="id_test" name="test" class="hidden_id" value="{{ test.pk }}" />
         <input type="hidden" id="id_voter" name="voter" class="hidden_id" value="{{ user.pk }}" />
         {% if not user.is_authenticated %}
-          <button id="approve" class="btn btn-sm btn-success" disabled title="Please login to vote"><i class="fa fa-thumbs-o-up"></i></button>
+          <button id="approve" class="btn btn-sm btn-success" title="Please log in to vote"><i class="fa fa-thumbs-o-up"></i></button>
         {% elif test.pk not in voted %}
           <button id="approve" class="btn btn-sm btn-success"><i class="fa fa-thumbs-up"></i></button>
         {% else %}
           <div class="btn-group">
-            <button class="btn btn-sm btn-success approve">Upvote</button>    
+            <button class="btn btn-sm btn-success approve">Upvote</button>
             <button class= "btn btn-sm btn-success" title="Approved by {{ test.votes }} pe{{ test.votes|pluralize:"rson,ople" }}">{{ test.votes }} </button>
           </div>
         {% endif %}

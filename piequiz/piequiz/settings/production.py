@@ -33,7 +33,7 @@ ADMINS = (
 # Smtp settings
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'mutemikennedy@gmail.com'
+EMAIL_HOST_USER = 'support@tilder.ch'
 EMAIL_HOST_PASSWORD = 'change starts with me'
 EMAIL_PORT = 587
 
@@ -75,7 +75,6 @@ INSTALLED_APPS = (
     'bootstrap3',
     'registration',
     'widget_tweaks',
-    'avatar',
     'django_tables2',
     'viridis',
     'django.contrib.admin',

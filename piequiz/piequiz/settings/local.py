@@ -64,7 +64,6 @@ INSTALLED_APPS = (
     'bootstrap3',
     'registration',
     'widget_tweaks',
-    'avatar',
     'django_tables2',
     'viridis',
     'django.contrib.admin',

@@ -8,7 +8,6 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
-    (r'^avatar/', include('avatar.urls')),
     (r'^reset/', include('password_reset.urls')),
     url('', include('social.apps.django_app.urls', namespace='social')),
     url(r'', include('django.contrib.auth.urls')),

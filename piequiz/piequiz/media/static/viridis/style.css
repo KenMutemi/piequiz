@@ -44,9 +44,9 @@ textarea {
 }
 
 .auth-banner h1 {
-  color: #2cc9f0;
-  font-family: 'Delicious', sans-serif;
-  font-weight: bolder;
+	color: #2cc9f0;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bolder;
 }
 
 .auth-register {
@@ -159,8 +159,8 @@ textarea {
   padding: 0 0 0 10px;
 }
 
-p, div, textarea, .dropdown-menu {
-  font: 12px/20px 'Helvetica Neue', Arial, sans-serif;
+p, div, textarea, h1, h2 .dropdown-menu {
+  font: 12px/20px 'Roboto', Arial, sans-serif;
 }
 
 .index-div {
@@ -209,8 +209,8 @@ p, div, textarea, .dropdown-menu {
 }
 
 .navbar-custom .navbar-nav > .open > a, .navbar-custom .navbar-nav > .open > a:hover, .navbar-custom .navbar-nav > .open > a:focus {
-  color: #fff;
-  background-color: #2cc9f0;
+	color: #fff;
+	background-color: #2cc9f0;
 }
 
 .navbar-custom .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-custom .navbar-nav .open .dropdown-menu > li > a:focus {
@@ -463,4 +463,3 @@ u {
     position: relative;
     font-size: 1em;
 }
-

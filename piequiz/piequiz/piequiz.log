@@ -938,3 +938,54 @@ Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' t
 Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
 Invalid HTTP_HOST header: 's1.bdstatic.com'.You may need to add u's1.bdstatic.com' to ALLOWED_HOSTS.
 Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: u'127.0.0.1:8000'.You may need to add u'127.0.0.1' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 's1.bdstatic.com'.You may need to add u's1.bdstatic.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'pl.wikipedia.org'.You may need to add u'pl.wikipedia.org' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Internal Server Error: /questions/add
+Traceback (most recent call last):
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/opt/piequiz/piequiz/viridis/views.py", line 161, in add_question
+    question.save()
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/db/models/base.py", line 545, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/db/models/base.py", line 573, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/db/models/base.py", line 654, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/db/models/base.py", line 687, in _do_insert
+    using=using, raw=raw)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/db/models/manager.py", line 232, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/db/models/query.py", line 1514, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 902, in execute_sql
+    for sql, params in self.as_sql():
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 860, in as_sql
+    for obj in self.query.objs
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/db/models/fields/files.py", line 252, in pre_save
+    file.save(file.name, file, save=False)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/db/models/fields/files.py", line 86, in save
+    self.name = self.storage.save(name, content)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/core/files/storage.py", line 49, in save
+    name = self._save(name, content)
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/core/files/storage.py", line 199, in _save
+    fd = os.open(full_path, flags, 0o666)
+OSError: [Errno 13] Permission denied: '/opt/piequiz/piequiz/piequiz/media/images/emblem_money.png'

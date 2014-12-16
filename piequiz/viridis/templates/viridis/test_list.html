@@ -1,6 +1,9 @@
 {% extends "base.html" %}
-
+{% load staticfiles %}
 {% block title %}Home{% endblock %}
+{% block date_created %}
+<img height="150" width="170" src="{% static 'images/free.jpg' %}" alt="Free KCPE Revision"/>
+{% endblock %}
 {% block content %}
 <div class="index-div">
   <div class=""><h2 class="">Top Quizzes</h2></div>

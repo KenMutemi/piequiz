@@ -83,12 +83,12 @@
 {% if user.is_authenticated %}
 {% block date_created %}
 {% endblock %}
+{% if user.is_active and user.is_staff %}
 <hr>
 <div class="btn-group">
 <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
   My Quizzes <span class="caret"></span>
 </button>
-{% if user.is_active and user.is_staff %}
   <ul class="dropdown-menu" role="menu">
     <li><a href="{% url 'viridis:my_tests' %}">View All</a></li>
   </ul>

@@ -989,3 +989,162 @@ Traceback (most recent call last):
   File "/opt/piequiz/local/lib/python2.7/site-packages/django/core/files/storage.py", line 199, in _save
     fd = os.open(full_path, flags, 0o666)
 OSError: [Errno 13] Permission denied: '/opt/piequiz/piequiz/piequiz/media/images/emblem_money.png'
+Invalid HTTP_HOST header: 's1.bdstatic.com'.You may need to add u's1.bdstatic.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.ly.com'.You may need to add u'www.ly.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 's1.bdstatic.com'.You may need to add u's1.bdstatic.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.ly.com'.You may need to add u'www.ly.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.ly.com'.You may need to add u'www.ly.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 's1.bdstatic.com'.You may need to add u's1.bdstatic.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 's1.bdstatic.com'.You may need to add u's1.bdstatic.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Internal Server Error: /5/kiswahili-top-mark-kcpe-revision/results/
+Traceback (most recent call last):
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/opt/piequiz/piequiz/viridis/views.py", line 105, in results
+    answer_match = set(y).intersection(request.session['choice_id']) # create set
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 47, in __getitem__
+    return self._session[key]
+KeyError: 'choice_id'
+Internal Server Error: /8/kcpe-science-2012/results/
+Traceback (most recent call last):
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/opt/piequiz/piequiz/viridis/views.py", line 105, in results
+    answer_match = set(y).intersection(request.session['choice_id']) # create set
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 47, in __getitem__
+    return self._session[key]
+KeyError: 'choice_id'
+Internal Server Error: /2/social-studies/results/
+Traceback (most recent call last):
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/opt/piequiz/piequiz/viridis/views.py", line 105, in results
+    answer_match = set(y).intersection(request.session['choice_id']) # create set
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 47, in __getitem__
+    return self._session[key]
+KeyError: 'choice_id'
+Internal Server Error: /10/kcpe-science-2011/results/
+Traceback (most recent call last):
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/opt/piequiz/piequiz/viridis/views.py", line 105, in results
+    answer_match = set(y).intersection(request.session['choice_id']) # create set
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 47, in __getitem__
+    return self._session[key]
+KeyError: 'choice_id'
+Invalid HTTP_HOST header: 'www.ly.com'.You may need to add u'www.ly.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.ly.com'.You may need to add u'www.ly.com' to ALLOWED_HOSTS.
+Internal Server Error: /8/kcpe-science-2012/results/
+Traceback (most recent call last):
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/opt/piequiz/piequiz/viridis/views.py", line 105, in results
+    answer_match = set(y).intersection(request.session['choice_id']) # create set
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 47, in __getitem__
+    return self._session[key]
+KeyError: 'choice_id'
+Internal Server Error: /10/kcpe-science-2011/results/
+Traceback (most recent call last):
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/opt/piequiz/piequiz/viridis/views.py", line 105, in results
+    answer_match = set(y).intersection(request.session['choice_id']) # create set
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 47, in __getitem__
+    return self._session[key]
+KeyError: 'choice_id'
+Invalid HTTP_HOST header: 'www.mesregies.com'.You may need to add u'www.mesregies.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.anonymitytest.com'.You may need to add u'www.anonymitytest.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.anonymitytest.com'.You may need to add u'www.anonymitytest.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.mesregies.com'.You may need to add u'www.mesregies.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.ingosander.net'.You may need to add u'www.ingosander.net' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.anonymitytest.com'.You may need to add u'www.anonymitytest.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.mesregies.com'.You may need to add u'www.mesregies.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.mesregies.com'.You may need to add u'www.mesregies.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.ingosander.net'.You may need to add u'www.ingosander.net' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.ly.com'.You may need to add u'www.ly.com' to ALLOWED_HOSTS.
+Internal Server Error: /10/kcpe-science-2011/results/
+Traceback (most recent call last):
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/opt/piequiz/piequiz/viridis/views.py", line 105, in results
+    answer_match = set(y).intersection(request.session['choice_id']) # create set
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 47, in __getitem__
+    return self._session[key]
+KeyError: 'choice_id'
+Internal Server Error: /8/kcpe-science-2012/results/
+Traceback (most recent call last):
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/opt/piequiz/piequiz/viridis/views.py", line 105, in results
+    answer_match = set(y).intersection(request.session['choice_id']) # create set
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 47, in __getitem__
+    return self._session[key]
+KeyError: 'choice_id'
+Invalid HTTP_HOST header: 's1.bdstatic.com'.You may need to add u's1.bdstatic.com' to ALLOWED_HOSTS.
+Internal Server Error: /10/kcpe-science-2011/results/
+Traceback (most recent call last):
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/opt/piequiz/piequiz/viridis/views.py", line 105, in results
+    answer_match = set(y).intersection(request.session['choice_id']) # create set
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 47, in __getitem__
+    return self._session[key]
+KeyError: 'choice_id'
+Internal Server Error: /8/kcpe-science-2012/results/
+Traceback (most recent call last):
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/opt/piequiz/piequiz/viridis/views.py", line 105, in results
+    answer_match = set(y).intersection(request.session['choice_id']) # create set
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 47, in __getitem__
+    return self._session[key]
+KeyError: 'choice_id'
+Invalid HTTP_HOST header: 's1.bdstatic.com'.You may need to add u's1.bdstatic.com' to ALLOWED_HOSTS.
+Internal Server Error: /2/social-studies/results/
+Traceback (most recent call last):
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/opt/piequiz/piequiz/viridis/views.py", line 105, in results
+    answer_match = set(y).intersection(request.session['choice_id']) # create set
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 47, in __getitem__
+    return self._session[key]
+KeyError: 'choice_id'
+Internal Server Error: /5/kiswahili-top-mark-kcpe-revision/results/
+Traceback (most recent call last):
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/opt/piequiz/piequiz/viridis/views.py", line 105, in results
+    answer_match = set(y).intersection(request.session['choice_id']) # create set
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 47, in __getitem__
+    return self._session[key]
+KeyError: 'choice_id'
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Internal Server Error: /10/kcpe-science-2011/results/
+Traceback (most recent call last):
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/opt/piequiz/piequiz/viridis/views.py", line 105, in results
+    answer_match = set(y).intersection(request.session['choice_id']) # create set
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 47, in __getitem__
+    return self._session[key]
+KeyError: 'choice_id'
+Internal Server Error: /8/kcpe-science-2012/results/
+Traceback (most recent call last):
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/opt/piequiz/piequiz/viridis/views.py", line 105, in results
+    answer_match = set(y).intersection(request.session['choice_id']) # create set
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 47, in __getitem__
+    return self._session[key]
+KeyError: 'choice_id'
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.

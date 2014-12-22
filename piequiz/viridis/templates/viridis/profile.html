@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block title %}{{ user.username }}{% endblock %}
 {% block content %}
+<hr>
 <div class="panel panel-default">
   <div class="panel-heading"><h3 class="panel-title">{{ user.username }}</h3></div>
   <div class="panel-body">
@@ -11,6 +12,9 @@
   {% endif %}
       <i class="fa fa-lock fa-4x fa-blue"></i>
       <a href="{% url 'django.contrib.auth.views.password_change' %}">Change password</a>
+      <hr>
+      <i class="fa fa-folder-open fa-4x fa-blue"></i>
+      <a href="{% url 'viridis:history' %}">History</a>
       <hr>
   </div>
 </div>

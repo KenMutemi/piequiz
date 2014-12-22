@@ -25,10 +25,11 @@ urlpatterns = patterns('',
         name="password_change"),
     url(r'^choices/add$', views.add_choice, name='add_choice'),
     url(r'^(?P<test_id>\d+)/(?P<slug>[\w-]+)/$', views.test, name='test'),
+    url(r'^history/$', views.history, name='history'),
     url(r'^about/$', views.about, name='about'),
     url(r'^terms/$', views.tos, name='tos'),
     url(r'^faq/$', views.faq, name='faq'),
-) 
+)
 
 if settings.DEBUG:
     # static files (images, css, javascript, etc.)

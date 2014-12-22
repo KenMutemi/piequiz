@@ -33,7 +33,6 @@
     {% for choice in question.choice_set.all %}
       <label for="choice{{ choice.id }}" class="label-choice">{% cycle '(A)' '(B)' '(C)' '(D)' %} <input class="input-choice" type="radio" name="choice" id="choice{{ choice.id }}" value="{{ choice.id }}"/>  {{ choice.choice_text|linebreaksbr }}</label><br />
     {% endfor %}
-<input class="btn btn-default" type="submit" value="Submit" />
 </form>
 <hr>
 {% endfor %}
@@ -53,7 +52,7 @@
         <input type="hidden" id="id_test" name="test" class="hidden_id" value="{{ test.pk }}" />
         <input type="hidden" id="id_voter" name="voter" class="hidden_id" value="{{ user.pk }}" />
         {% if not user.is_authenticated %}
-          <button id="approve" class="btn btn-sm btn-success" title="Please log in to vote"><i class="fa fa-thumbs-o-up"></i></button>
+          <button class="btn btn-sm btn-success" title="Please log in to vote"><i class="fa fa-thumbs-o-up"></i></button>
         {% elif test.pk not in voted %}
           <button id="approve" class="btn btn-sm btn-success"><i class="fa fa-thumbs-up"></i></button>
         {% else %}

@@ -7,7 +7,7 @@ from django.forms.models import modelformset_factory
 from viridis.forms import AddTestForm, AddQuestionForm, AddChoiceForm, VoteForm
 from django.contrib.auth.decorators import login_required
 from haystack.query import SearchQuerySet
-from viridis.models import Test, Question, Choice, Vote
+from viridis.models import Test, Question, Choice, Vote, History
 from itertools import repeat
 from django.core import serializers
 from django.contrib.auth.models import User
@@ -93,9 +93,9 @@ def answer(request, test_id):
     request.session['question_id'] = request.POST.getlist('question_id')
 
     if request.is_ajax(): # I don't know why but it works
-        return HttpResponseRedirect(reverse('viridis:results', args=(test.id, test.slug)))
+        return render(request, 'viridis/test.html', {'test': test})
     else:
-        return HttpResponseRedirect(reverse('viridis:results', args=(test.id, test.slug)))
+        return HttpResponse("Sorry, please enable javascript in your browser to take this test")
 
 
 def results(request, test_id, slug):
@@ -107,11 +107,28 @@ def results(request, test_id, slug):
     score = len(l_answer_match) * test.marks_per_question # get the total marks of scored by user
     slug = test.slug
 
+    if request.user.is_authenticated():
+        try:
+            history = History.objects.get(user=request.user, test_id=test.pk)
+            history.score = score
+            history.save()
+        except (ValueError, History.DoesNotExist):
+            History.objects.create(user=request.user, test=test.title, test_id=test.pk, score=score, marks=test.marks)
+    else:
+        pass
+
     return render(request, 'viridis/results.html',{
         'answer': request.session['choice_id'],
         'score': score,
+        'history': History.objects.filter(user=request.user),
         'percentage_score': int(float(score)/test.marks*100),
         'test': test })
+
+@login_required(login_url = "/accounts/login/")
+def history(request):
+    return render(request, 'viridis/history.html', {
+        'history': History.objects.filter(user=request.user)
+        })
 
 @login_required(login_url = "/accounts/login/")
 def add_test(request):

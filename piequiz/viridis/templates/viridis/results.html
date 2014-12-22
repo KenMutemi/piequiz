@@ -3,17 +3,40 @@
   <link href="http://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet" type="text/css">
 {% endblock %}
 {% block title %}Results for {{ test.title }}{% endblock %}
+{% block date_created %}
+<hr>
+{% if history %}
+Attempted Quizzes (<a href="{% url 'viridis:history' %}">view all</a>)
+<table class="table">
+    <tr>
+      <th>Quiz</th>
+      <th>Score</th>
+      <th>Last Attempt</th>
+    </tr>
+  <tbody>
+{% for history in history|slice:":5" %}
+  <tr>
+    <td>{{ history.test|truncatechars:18 }}</td>
+    <td>{{ history.score }}/{{ history.marks }}</td>
+    <td>{{ history.pub_date|date:"M d, Y" }}</td>
+  </tr>
+{% empty %}
+{% endfor %}
+  </tbody>
+</table>
+{% endif %}
+{% endblock %}
 {% block content %}
   <hr>
   <h2>Quiz Results for <u>{{ test.title }}</u></h2>
   <p id="percent-score">
-    {{ percentage_score }}% 
-    <small> 
+    {{ percentage_score }}%
+    <small>
       <p>You scored <span class="badge">{{score}}</span> marks out of <span class="badge">{{ test.marks }}</span></p>
     </small>
   </p>
-  <div> 
-  <em>Corrent choices are highlighted below</em>
+  <div>
+  <em>Correct choices are highlighted below</em>
   <p>
   {% if test.question_set.all %}
     {% for question in test.question_set.all %}
@@ -25,7 +48,6 @@
   {% endif %}
   </p>
   </div>
-  
   <p><i class="fa fa-refresh fa-spin fa-green"></i> <a href="{{ test.get_absolute_url }}">Redo</a> the quiz!</p>
 {% endblock %}
 

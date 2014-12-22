@@ -13,14 +13,14 @@
         <p>
           <a href="{{ test.get_absolute_url }}">
             <b>{{ test.title|truncatechars:140 }}</b>
-          </a> 
+          </a>
           created on {{ test.pub_date|date:"M d, Y" }}
         </p>
         <p>
           <span class="badge">
             {{ test.question_set.all|length }} question{{ test.question_set.all|length|pluralize:"s" }}
-          </span> 
-          <i class="fa fa-heart"></i> 
+          </span>
+          <i class="fa fa-heart"></i>
           {{ test.votes }}
         </p>
       </li>

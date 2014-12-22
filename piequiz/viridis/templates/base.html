@@ -68,7 +68,7 @@
             {% endif %}
             <li><a href="{% url 'viridis:profile' %}">Profile</a></li>
             <li class="divider"></li>
-            <li><a href="{% url 'django.contrib.auth.views.logout' %}?next=/accounts/login/">Sign Out</a></li>
+            <li><a href="{% url 'django.contrib.auth.views.logout' %}?next={{ request.path }}">Sign Out</a></li>
           </ul>
         </li>
         {% else %}
@@ -134,7 +134,7 @@
       </div>
     </div>
     <button class="btn btn-success" type="submit">Sign in</button>
-    <input type="hidden" name="next" value="/" />
+    <input type="hidden" name="next" value="{{ request.path }}" />
     </form>
 </div>
 </div>

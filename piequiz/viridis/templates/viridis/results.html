@@ -5,26 +5,7 @@
 {% block title %}Results for {{ test.title }}{% endblock %}
 {% block date_created %}
 <hr>
-{% if history %}
-Attempted Quizzes (<a href="{% url 'viridis:history' %}">view all</a>)
-<table class="table">
-    <tr>
-      <th>Quiz</th>
-      <th>Score</th>
-      <th>Last Attempt</th>
-    </tr>
-  <tbody>
-{% for history in history|slice:":5" %}
-  <tr>
-    <td>{{ history.test|truncatechars:18 }}</td>
-    <td>{{ history.score }}/{{ history.marks }}</td>
-    <td>{{ history.pub_date|date:"M d, Y" }}</td>
-  </tr>
-{% empty %}
-{% endfor %}
-  </tbody>
-</table>
-{% endif %}
+See <a href="{% url 'viridis:history' %}">previous scores</a>.
 {% endblock %}
 {% block content %}
   <hr>

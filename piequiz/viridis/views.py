@@ -120,7 +120,6 @@ def results(request, test_id, slug):
     return render(request, 'viridis/results.html',{
         'answer': request.session['choice_id'],
         'score': score,
-        'history': History.objects.filter(user=request.user),
         'percentage_score': int(float(score)/test.marks*100),
         'test': test })
 

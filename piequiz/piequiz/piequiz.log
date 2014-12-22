@@ -1148,3 +1148,32 @@ Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25'
 Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
 Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
 Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Internal Server Error: /vote/
+Traceback (most recent call last):
+  File "/opt/piequiz/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 130, in get_response
+    raise ValueError("The view %s.%s didn't return an HttpResponse object." % (callback.__module__, view_name))
+ValueError: The view viridis.views.VoteFormView didn't return an HttpResponse object.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 's1.bdstatic.com'.You may need to add u's1.bdstatic.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: u'127.0.0.1:8000'.You may need to add u'127.0.0.1' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 's1.bdstatic.com'.You may need to add u's1.bdstatic.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 's1.bdstatic.com'.You may need to add u's1.bdstatic.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'pl.wikipedia.org'.You may need to add u'pl.wikipedia.org' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 's1.bdstatic.com'.You may need to add u's1.bdstatic.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'hk.dv.nextmedia.com'.You may need to add u'hk.dv.nextmedia.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.ly.com'.You may need to add u'www.ly.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.tilder.ch'.You may need to add u'www.tilder.ch' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 's1.bdstatic.com'.You may need to add u's1.bdstatic.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '173.255.197.25'.You may need to add u'173.255.197.25' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 's1.bdstatic.com'.You may need to add u's1.bdstatic.com' to ALLOWED_HOSTS.

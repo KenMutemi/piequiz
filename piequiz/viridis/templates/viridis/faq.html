@@ -1,6 +1,15 @@
 {% extends "base.html" %}
 {% block title %}faq{% endblock %}
+{% block metadesc %}
+Frequently asked questions.
+{% endblock %}
 {% block content %}
+<p><b>Why should I log in?</b></p>
+<p>
+  Log in so that you can keep track of your performance on papers you take.
+  If you take a paper while logged in, you will find your score history
+  <a href="{% url 'viridis:history' %}">here</a>.
+</p>
 <p><b>I never got my registration email</b></p>
 <p>Could be a spam filter problem. Check your junk box.</p>
 {% endblock %}

@@ -16,14 +16,14 @@
     <td>{{ history.score }}/{{ history.marks }}</td>
     <td>{{ history.pub_date|date:"M d, Y" }}</td>
   </tr>
-{% empty %}
+{% endfor %}
+  </tbody>
+</table>
+{% else %}
 <p>
   Sorry, you do not have any previous scores saved yet.
   Please <a href="{% url 'viridis:home' %}">take</a> a quiz while logged in in order to save previous performance
   for a particular quiz.
 </p>
-{% endfor %}
-  </tbody>
-</table>
 {% endif %}
 {% endblock %}

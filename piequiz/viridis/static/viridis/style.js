@@ -18,6 +18,12 @@ $(document).ready(function() {
     }
   });
 
+  $('.tag').click(function() {
+    value = $(this).attr('value');
+    $('#search-input').val(value);
+    $('#search').submit();
+  });
+
 $('input[type=radio]').click(function() {
   $(this).closest("form").submit();
 });

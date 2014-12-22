@@ -159,7 +159,7 @@ textarea {
   padding: 0 0 0 10px;
 }
 
-p, div, textarea, h1, h2 .dropdown-menu {
+p, div, textarea, .dropdown-menu {
   font: 12px/20px 'Roboto', Arial, sans-serif;
 }
 

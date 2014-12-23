@@ -13,11 +13,7 @@ You do not need to download anything.">
 <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
 <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.ico' %}"/>
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-{% bootstrap_javascript %}
-<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 <link rel="stylesheet" type="text/css" href="{% static 'viridis/style.css' %}">
-<script src="{% static 'viridis/style.js' %}"></script>
 </head>
 <body>
 <div id="fb-root"></div>
@@ -158,5 +154,9 @@ You do not need to download anything.">
 {% endif %}
 </div>
 </div>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  {% bootstrap_javascript %}
+  <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  <script src="{% static 'viridis/style.js' %}"></script>
 </body>
 </html>

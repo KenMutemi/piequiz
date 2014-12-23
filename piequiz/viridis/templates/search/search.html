@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block title %}Search Results{% endblock %}
 {% block content %}
+<hr>
 <div class="panel panel-default">
   <div class="panel-heading"><h3="panel-title">Results</h3></div>
 <div class="panel-body">
@@ -16,7 +17,6 @@
         </table>
 
         {% if query %}-->
-        
         {% for result in page.object_list %}
             <p>
                 <a href="{{ result.object.get_absolute_url }}"> {{ result.object.title }}</a> by {{ result.object.user }}

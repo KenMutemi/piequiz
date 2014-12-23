@@ -4,6 +4,11 @@
 {% block metadesc %}
 Take the {{ test.title }} paper now for FREE!
 {% endblock %}
+{% block head %}
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+{% endblock %}
 {% block date_created %}
   <hr>
   <p><i class="fa fa-edit fa-2x fa-blue"></i>created <span class="badge">{{ test.pub_date|naturaltime|capfirst }}</span></p>

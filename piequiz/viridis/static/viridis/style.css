@@ -463,3 +463,7 @@ u {
     position: relative;
     font-size: 1em;
 }
+
+.fb-like span {
+  width: 40px;
+}

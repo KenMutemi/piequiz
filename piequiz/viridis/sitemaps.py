@@ -1,3 +1,4 @@
+from django.contrib.sitemaps import Sitemap
 from viridis.models import Test
 
 class TestSitemap(Sitemap):

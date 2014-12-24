@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
+from os.path import join
+TEMPLATE_DIRS = (
+  join(BASE_DIR,  'templates'),
+)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
@@ -66,8 +70,13 @@ INSTALLED_APPS = (
     'widget_tweaks',
     'django_tables2',
     'viridis',
+    'django.contrib.sites',
     'django.contrib.admin',
+    'django.contrib.flatpages',
+    'django.contrib.sitemaps',
 )
+
+SITE_ID = 1
 
 # Registration
 
@@ -85,6 +94,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
     # viridis SocialAuthExceptionMiddleware
     'viridis.middleware.SocialAuthExceptionMiddleware',
 )

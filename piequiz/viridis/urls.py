@@ -6,6 +6,11 @@ from django.views.generic import RedirectView
 from viridis.views import VoteFormView, TestListView
 from viridis.models import Test
 from viridis import views
+from viridis.sitemaps import TestSitemap
+
+sitemaps = {
+        'test': TestSitemap,
+        }
 
 urlpatterns = patterns('',
     url(r'^$', TestListView.as_view( model=Test, paginate_by=10 ), name='home'),
@@ -25,10 +30,8 @@ urlpatterns = patterns('',
         name="password_change"),
     url(r'^choices/add$', views.add_choice, name='add_choice'),
     url(r'^(?P<test_id>\d+)/(?P<slug>[\w-]+)/$', views.test, name='test'),
+    (r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap', {'sitemaps': sitemaps}),
     url(r'^history/$', views.history, name='history'),
-    url(r'^about/$', views.about, name='about'),
-    url(r'^terms/$', views.tos, name='tos'),
-    url(r'^faq/$', views.faq, name='faq'),
 )
 
 if settings.DEBUG:

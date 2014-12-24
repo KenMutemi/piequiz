@@ -12,5 +12,5 @@ urlpatterns = patterns('',
     url('', include('social.apps.django_app.urls', namespace='social')),
     url(r'', include('django.contrib.auth.urls')),
     (r'^accounts/', include('registration.backends.default.urls')),
-    url(r'^', include('viridis.urls', namespace="viridis"))
+    url(r'^', include('viridis.urls', namespace="viridis")),
 )

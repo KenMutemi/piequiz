@@ -82,6 +82,7 @@ INSTALLED_APPS = (
     'django_tables2',
     'viridis',
     'django.contrib.admin',
+    'django.contrib.sites',
     'django.contrib.flatpages',
     'django.contrib.sitemaps',
 )

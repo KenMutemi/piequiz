@@ -43,3 +43,4 @@ class AddChoiceForm(BaseModelForm):
 class VoteForm(forms.ModelForm):
     class Meta:
         model = Vote
+        fields = ['voter', 'test']

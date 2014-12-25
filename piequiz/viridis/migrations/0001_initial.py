@@ -18,6 +18,7 @@ class Migration(SchemaMigration):
             ('slug', self.gf('django.db.models.fields.SlugField')(max_length=50)),
             ('pub_date', self.gf('django.db.models.fields.DateTimeField')()),
         ))
+        db.rename_column('viridis_test', 'institution', 'tag')
         db.send_create_signal(u'viridis', ['Test'])
 
         # Adding model 'Question'
@@ -63,6 +64,8 @@ class Migration(SchemaMigration):
 
         # Deleting model 'Answer'
         db.delete_table(u'viridis_answer')
+
+        db.rename_column('viridis_test', 'tag', 'institution')
 
 
     models = {

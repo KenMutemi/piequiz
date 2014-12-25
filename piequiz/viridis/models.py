@@ -7,9 +7,9 @@ from django.template.defaultfilters import slugify
 
 
 class TestVoteCountManager(models.Manager):
-    def get_query_set(self):
+    def get_queryset(self):
         return super(TestVoteCountManager,
-self).get_query_set().annotate(
+self).get_queryset().annotate(
         votes=Count('vote')).order_by('-rank_score', '-votes')
 
 class Test(models.Model):

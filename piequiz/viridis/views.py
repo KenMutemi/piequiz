@@ -5,7 +5,7 @@ from viridis.tables import TestTable
 from django.forms.formsets import formset_factory
 from django.forms.models import modelformset_factory
 from viridis.forms import AddTestForm, AddQuestionForm, AddChoiceForm, VoteForm
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, user_passes_test
 from haystack.query import SearchQuerySet
 from viridis.models import Test, Question, Choice, Vote, History
 from itertools import repeat
@@ -59,6 +59,7 @@ class VoteFormView(JSONFormMixin, VoteFormBaseView):
 def profile(request):
     return render(request, 'viridis/profile.html', {"test": test})
 
+@user_passes_test(lambda u: u.is_staff, login_url='/')
 @login_required
 def my_tests(request):
     test = TestTable(Test.objects.filter(user=request.user.id))
@@ -129,6 +130,7 @@ def history(request):
         'history': History.objects.filter(user=request.user)
         })
 
+@user_passes_test(lambda u: u.is_staff, login_url='/')
 @login_required(login_url = "/accounts/login/")
 def add_test(request):
     if request.method == "POST":
@@ -150,6 +152,7 @@ def add_test(request):
         "form": form
     })
 
+@user_passes_test(lambda u: u.is_staff, login_url='/')
 @login_required
 def add_question(request):
     """User accesses the add_question view.
@@ -186,6 +189,7 @@ def add_question(request):
         "title": request.session['test_title']
     })
 
+@user_passes_test(lambda u: u.is_staff, login_url='/')
 @login_required
 def add_choice(request):
     """User accesses the add_choice view.

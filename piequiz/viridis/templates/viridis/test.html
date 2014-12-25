@@ -5,9 +5,11 @@
 Take the {{ test.title }} paper now for FREE!
 {% endblock %}
 {% block head %}
-<script type="text/javascript"
-  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
+{% if test.tag == 'maths' %}
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+{% endif %}
 {% endblock %}
 {% block date_created %}
   <hr>

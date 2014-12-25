@@ -15,12 +15,12 @@ class BaseForm(forms.Form):
 
 class AddTestForm(forms.ModelForm):
     title = forms.CharField(widget=forms.TextInput(attrs={'class' : 'form-control', 'type':'text'}))
-    institution = forms.CharField(required=False, widget=forms.TextInput(attrs={'class' : 'form-control', 'type':'text'}))
+    tag = forms.CharField(required=False, widget=forms.TextInput(attrs={'class' : 'form-control', 'type':'text'}))
     marks = forms.IntegerField(widget=forms.TextInput(attrs={'class' : 'form-control mark-test', 'type':'number'}))
     questions = forms.IntegerField(widget=forms.TextInput(attrs={'class' : 'form-control', 'type':'number', 'title':'number of questions'}))
     class Meta:
         model = Test
-        fields = ['title', 'institution', 'marks']
+        fields = ['title', 'tag', 'marks']
 
 class AddQuestionForm(BaseModelForm):
     question_text = forms.CharField(widget=forms.Textarea(attrs={'class':'form-control','rows':2, 'cols': 15}), label="Question")

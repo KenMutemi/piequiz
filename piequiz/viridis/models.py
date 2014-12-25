@@ -15,7 +15,7 @@ self).get_queryset().annotate(
 class Test(models.Model):
     user = models.ForeignKey(User)
     title = models.CharField(max_length=200, verbose_name='quiz')
-    institution = models.CharField(default=None, max_length=200)
+    tag = models.CharField(max_length=10, blank=True, null=True)
     marks = models.IntegerField(default=0)
     marks_per_question = models.IntegerField(default=0)
     slug = models.SlugField(max_length=200)

@@ -13,4 +13,5 @@ urlpatterns = patterns('',
     url(r'', include('django.contrib.auth.urls')),
     (r'^accounts/', include('registration.backends.default.urls')),
     url(r'^', include('viridis.urls', namespace="viridis")),
+    url(r'^blog/', include('cms.urls')),
 )

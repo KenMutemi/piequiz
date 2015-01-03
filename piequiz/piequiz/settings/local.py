@@ -10,12 +10,30 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+gettext = lambda s: s
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 from os.path import join
 TEMPLATE_DIRS = (
   join(BASE_DIR,  'templates'),
 )
+
+# Some django-cms settings
+
+CMS_TEMPLATES = (
+  ('cms/template_1.html', 'Template One'),
+  ('cms/template_2.html', 'Template Two'),
+)
+
+LANGUAGES = [
+  ('en-us', 'English'),
+]
+
+MIGRATION_MODULES = {
+  'cms': 'cms.migrations_django',
+  'menus': 'menus.migrations_django',
+  'djangocms_text_ckeditor': 'djangocms_text_ckeditor.migrations_django',
+}
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
@@ -74,6 +92,14 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.flatpages',
     'django.contrib.sitemaps',
+    'djangocms_text_ckeditor',
+    'cms',
+    'mptt',
+    'menus',
+    'sekizai',
+    'filer',
+    'easy_thumbnails',
+    'djangocms_admin_style',
 )
 
 SITE_ID = 1
@@ -83,6 +109,12 @@ SITE_ID = 1
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.request',
     'django.contrib.auth.context_processors.auth',
+    'django.contrib.messages.context_processors.messages',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.media',
+    'django.core.context_processors.static',
+    'sekizai.context_processors.sekizai',
+    'cms.context_processors.cms_settings',
 )
 
 ACCOUNT_ACTIVATION_DAYS = 7 # One-week activation window;
@@ -97,6 +129,13 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
     # viridis SocialAuthExceptionMiddleware
     'viridis.middleware.SocialAuthExceptionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
+    'django.middleware.doc.XViewMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'cms.middleware.user.CurrentUserMiddleware',
+    'cms.middleware.page.CurrentPageMiddleware',
+    'cms.middleware.toolbar.ToolbarMiddleware',
+    'cms.middleware.language.LanguageCookieMiddleware',
 )
 
 ROOT_URLCONF = 'piequiz.urls'

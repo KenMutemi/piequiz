@@ -1,7 +1,7 @@
-{% load cms_tags menu_tags %}
 {% load cms_tags sekizai_tags %}
-<!DOCTYPE html>
+{% load cms_tags menu_tags %}
 {% load staticfiles %}
+<!DOCTYPE html>
 <html>
   <head>
     <title>{% page_attribute "page_title" %} | Quizonia</title>
@@ -10,14 +10,13 @@
   <body>
   {% addtoblock "css" %}
   <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" media="screen" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="{% static 'viridis/style.css' %}">
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="{% static 'viridis/style.css' %}" type="text/css" rel="stylesheet">
   {% endaddtoblock %}
 
   {% addtoblock "js" %}
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-  <script src="{% static 'viridis/style.js' %}"></script>
   {% endaddtoblock %}
   <div class="container">
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -109,8 +108,8 @@
     </form>
 </div>
 </div>
-        {% endif%}
-        <ul class="list-unstyled">
+        {% endif %}
+        <ul class="list-group">
           {% show_menu %}
         </ul>
       </div>

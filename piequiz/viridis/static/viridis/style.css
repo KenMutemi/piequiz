@@ -121,9 +121,19 @@ textarea {
 .auth-footer {
   margin-top: 5%;
 }
+@media only screen and (min-width: 320px) and (max-width : 480px) {
+  .auth-footer {
+    width: 100%;
+  } 
+}
 
 .auth-footer ul {
   text-align: center;
+}
+@media only screen and (min-width: 320px) and (max-width : 480px) {
+  .auth-footer ul {
+    text-align: left;
+  } 
 }
 
 .auth-footer ul li {

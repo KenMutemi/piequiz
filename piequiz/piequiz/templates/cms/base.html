@@ -78,12 +78,12 @@
   </div><!-- /.container-fluid -->
 </nav>
     <div id="wrap" class="row row-wrap">
-      <div class="col-sm-8">
+      <div class="col-md-8">
         {% cms_toolbar %}
         {% placeholder base_content %}
         {% block base_content %}{% endblock %}
       </div>
-      <div class="col-sm-4 other">
+      <div class="col-md-4 other">
         {% if not user.is_authenticated %}
 <div class="panel panel-info panel-login">
   <div class="panel-heading"><h1 class=panel-title>Log in</h1></div>

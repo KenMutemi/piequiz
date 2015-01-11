@@ -1,6 +1,14 @@
 from django.conf.urls import patterns, include, url
+from django.contrib.sitemaps.views import sitemap
+from django.contrib.sitemaps import FlatPageSitemap
+from viridis.sitemaps import TestSitemap
 from django.contrib import admin
 admin.autodiscover()
+
+sitemaps = {
+    'flatpages': FlatPageSitemap,
+    'test': TestSitemap,
+}
 
 urlpatterns = patterns('',
     # Examples:
@@ -14,4 +22,5 @@ urlpatterns = patterns('',
     (r'^accounts/', include('registration.backends.default.urls')),
     url(r'^', include('viridis.urls', namespace="viridis")),
     url(r'^blog/', include('cms.urls')),
+    url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
 )

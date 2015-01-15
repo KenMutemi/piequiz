@@ -529,6 +529,10 @@ u {
   padding: 2% 0 0 0;
 }
 
+#tags {
+  font-size: 20px;
+}
+
 .correct_answer {
   background-color: #2cc9f0;
   color: white;

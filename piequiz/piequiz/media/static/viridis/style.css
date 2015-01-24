@@ -587,7 +587,7 @@ u {
 }
 
 @media only screen and (min-width: 320px) and (max-width : 480px) {
-  #test-list-footer {
+  #footer {
     margin-left: 0;
     width: 100%;
   } 

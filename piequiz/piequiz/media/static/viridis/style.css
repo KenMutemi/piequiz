@@ -1,3 +1,13 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
 nav {
   width: 65%;
   margin: 0 0 0 15%;
@@ -228,7 +238,6 @@ p, div, textarea, .dropdown-menu {
 }
 
 .bordered-heading {
-  border-top: 4px solid #006699; /* mid blue */
   background-color: #33CCFF;     /* pale blue */
   color: #ffffff;                /* dark blue */
 }
@@ -397,6 +406,25 @@ u {
 }
 
 .navbar-custom {
+  -webkit-border-bottom-right-radius: 2px;
+  -webkit-border-bottom-left-radius: 2px;
+  -moz-border-radius-bottomright: 2px;
+  -moz-border-radius-bottomleft: 2px;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+
+  border-left-width: thin;
+  border-left-style: solid;
+  border-left-color: #d3d3d3;
+
+  border-bottom-width: thin;
+  border-bottom-style: solid;
+  border-bottom-color:  #d3d3d3;
+
+  border-right-width: thin;
+  border-right-style: solid;
+  border-right-color:  #d3d3d3;
+
   background-color: #d3d3d3;
   border-color: #c2c2c2;
   background-image: -webkit-gradient(linear, left 0%, left 100%, from(#ececec), to(#d3d3d3));
@@ -519,6 +547,50 @@ u {
   display: inline;
   list-style-type: none;
   padding-right: 5%;
+}
+
+#footer {
+  width: 65%;
+  margin: 0 0 0 15%;
+  padding: 5px;
+
+  -webkit-border-top-left-radius: 2px;
+  -webkit-border-top-right-radius: 2px;
+  -moz-border-radius-topleft: 2px;
+  -moz-border-radius-topright: 2px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+
+  position: absolute;
+  bottom: 0;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+
+  background-color: #ffffff;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#999999));
+  background-image: -webkit-linear-gradient(top, #ffffff, #999999);
+  background-image:    -moz-linear-gradient(top, #ffffff, #999999);
+  background-image:      -o-linear-gradient(top, #ffffff, #999999);
+  background-image:         linear-gradient(to bottom, #ffffff, #999999);
+
+  border-left-width: thin;
+  border-left-style: solid;
+  border-left-color: #d3d3d3;
+
+  border-top-width: thin;
+  border-top-style: solid;
+  border-top-color:  #d3d3d3;
+
+  border-right-width: thin;
+  border-right-style: solid;
+  border-right-color:  #d3d3d3;
+}
+
+@media only screen and (min-width: 320px) and (max-width : 480px) {
+  #test-list-footer {
+    margin-left: 0;
+    width: 100%;
+  } 
 }
 
 .vote_form {

@@ -640,3 +640,7 @@ u {
     position: relative;
     font-size: 1em;
 }
+
+#posts-recent {
+  margin-bottom: 0;
+}

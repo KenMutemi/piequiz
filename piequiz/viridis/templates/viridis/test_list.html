@@ -14,9 +14,14 @@ Get multiple-choice KCPE past papers.
 <p><b><a class="tag" href="javascript:void(0);" value="english">English</a></b></p>
 {% endblock %}
 {% block content %}
-<div class="index-div">
-  <div class=""><h2 class="">Top Quizzes</h2></div>
-    <div class="">
+<div id="index-div">
+  <ul id="index-nav-tabs" class="nav nav-tabs">
+    <li role="presentation" class="active">
+    <a href="{% url 'viridis:home' %}"><icon class="fa fa-heart"></icon> Popular</a>
+    </li>
+  </ul>
+  <div id="index-panel" class="tab-content">
+    <div class="tab-pane fade active in">
     {% for test in object_list %}
       <li class="list-unstyled list-border">
         <p>
@@ -36,6 +41,7 @@ Get multiple-choice KCPE past papers.
 {% empty %}
   <p>Sorry, there are no quizzes available at the moment.</p>
 {% endfor %}
+</div>
 {# .... **Pagination section** .... #}
 {% if is_paginated %}
   <ul class="pagination pagination-centered">
@@ -52,6 +58,6 @@ Get multiple-choice KCPE past papers.
     {% endif %}
   </ul>
 {% endif %}
-  </div>
+</div>
 </div>
 {% endblock %}

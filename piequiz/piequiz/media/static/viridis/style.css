@@ -211,19 +211,15 @@ textarea {
 
   border-top-width: thin;
   border-top-style: solid;
-  border-top-color:  #d3d3d3;
+  border-top-color:  #2cc9f0;
 
   border-bottom-width: thin;
   border-bottom-style: solid;
-  border-bottom-color:  #d3d3d3;
+  border-bottom-color:  #2cc9f0;
 
   border-right-width: thick;
   border-right-style: solid;
   border-right-color:  #2cc9f0;
-
-  -webkit-border-radius: 4px !important;
-     -moz-border-radius: 4px !important;
-          border-radius: 4px !important;
 
   margin: 0 0 50px 0;
   padding: 0 0 0 10px;
@@ -233,8 +229,12 @@ p, div, textarea, .dropdown-menu {
   font: 12px/20px 'Roboto', Arial, sans-serif;
 }
 
-.index-div {
+#index-div {
   padding: 0 5% 5% 0;
+}
+
+#index-nav-tabs {
+  margin-bottom: 5%;
 }
 
 .bordered-heading {
@@ -551,7 +551,7 @@ u {
 
 #footer {
   width: 65%;
-  margin: 0 0 0 15%;
+  margin-left: 15%;
   padding: 5px;
 
   -webkit-border-top-left-radius: 2px;

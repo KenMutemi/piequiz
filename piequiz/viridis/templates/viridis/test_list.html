@@ -16,8 +16,11 @@ Get multiple-choice KCPE past papers.
 {% block content %}
 <div id="index-div">
   <ul id="index-nav-tabs" class="nav nav-tabs">
-    <li role="presentation" class="active">
-    <a href="{% url 'viridis:home' %}"><icon class="fa fa-heart"></icon> Popular</a>
+    <li role="presentation" class="{{ popular }}">
+      <a href="{% url 'viridis:home' %}"><icon class="fa fa-heart"></icon> Popular</a>
+    </li>
+    <li role="presentation" class="{{ recent }}">
+      <a href="{% url 'viridis:recent' %}"><icon class="fa fa-clock-o"></icon> Recent</a>
     </li>
   </ul>
   <div id="index-panel" class="tab-content">
@@ -34,8 +37,10 @@ Get multiple-choice KCPE past papers.
           <span class="badge">
             {{ test.question_set.all|length }} question{{ test.question_set.all|length|pluralize:"s" }}
           </span>
+          {% if test.votes %}
           <i class="fa fa-heart"></i>
           {{ test.votes }}
+          {% endif %}
         </p>
       </li>
 {% empty %}

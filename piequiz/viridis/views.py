@@ -69,18 +69,33 @@ def my_tests(request):
     Test.objects.filter(id__in=request.POST.getlist('selection')).delete()
     return render(request, 'viridis/mytests.html', {"test": test})
 
-class TestListView(ListView):
+class PopularTestListView(ListView):
     model = Test
     queryset = Test.with_votes.all()
+    popular = 'active'
     def get_context_data(self, **kwargs):
-        context = super(TestListView, self).get_context_data(**kwargs)
+        context = super(PopularTestListView, self).get_context_data(**kwargs)
         if self.request.user.is_authenticated():
             voted = Vote.objects.filter(voter=self.request.user)
             tests_in_page = [test.id for test in context["object_list"]]
             voted = voted.filter(test_id__in=tests_in_page)
             voted = voted.values_list('test_id', flat=True)
             context['voted'] = voted
+        # Change tab class to active in this page. Not very elegant.
+        # TODO: Create a more elegant solution.
+        context['popular'] = self.popular
         return context
+
+class RecentTestListView(ListView):
+    queryset = Test.objects.order_by('-pub_date')
+    recent = 'active'
+    def get_context_data(self, **kwargs):
+        context = super(RecentTestListView, self).get_context_data(**kwargs)
+        # Change tab class to active in this page. Not very elegant.
+        # TODO: Create a more elegant solution.
+        context['recent'] = self.recent
+        return context
+
 
 def test(request, test_id, slug):
     test = get_object_or_404(Test, pk=test_id)

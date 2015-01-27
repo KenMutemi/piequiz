@@ -16,6 +16,7 @@ from django.views.generic.list import ListView
 from django.core.urlresolvers import reverse
 from django.http import HttpResponsePermanentRedirect, HttpResponseRedirect, HttpResponse
 from django.shortcuts import render, get_object_or_404
+from django.contrib import messages
 
 class JSONFormMixin(object):
     def create_response(self, vdict=dict(), valid_form=True):
@@ -111,7 +112,7 @@ def answer(request, test_id):
     if request.is_ajax(): # I don't know why but it works
         return render(request, 'viridis/test.html', {'test': test})
     else:
-        return HttpResponse("Sorry, please enable javascript in your browser to take this test")
+        return HttpResponse("Sorry, please enable javascript in your browser to take this test.")
 
 
 def results(request, test_id, slug):
@@ -134,7 +135,6 @@ def results(request, test_id, slug):
         pass
 
     return render(request, 'viridis/results.html',{
-        'answer': request.session['choice_id'],
         'score': score,
         'percentage_score': int(float(score)/test.marks*100),
         'test': test })

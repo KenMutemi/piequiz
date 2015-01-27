@@ -16,7 +16,6 @@ from django.views.generic.list import ListView
 from django.core.urlresolvers import reverse
 from django.http import HttpResponsePermanentRedirect, HttpResponseRedirect, HttpResponse
 from django.shortcuts import render, get_object_or_404
-from django.contrib import messages
 
 class JSONFormMixin(object):
     def create_response(self, vdict=dict(), valid_form=True):

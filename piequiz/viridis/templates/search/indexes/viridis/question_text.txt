@@ -1,0 +1,2 @@
+{{ object.question_text }}
+{{ object.pub_date }}

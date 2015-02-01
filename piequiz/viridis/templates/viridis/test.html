@@ -31,9 +31,6 @@ Take the {{ test.title }} paper now for FREE!
 {% if test.question_set.all %}
 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 {% for question in test.question_set.all %}
-<form class="test-form" action="{% url 'viridis:answer' test.id %}" method="post">
-{% csrf_token %}
-    <input type="hidden" name="question_id" value="{{ question.pk }}" />
 <ul class="list-unstyled">
   <li>{{ forloop.counter }}. <a href="{{ question.get_absolute_url }}">{{ question.question_text|linebreaksbr }}</a> (<em>{{ question.marks }} marks</em>)</li>
     {% if question.question_pic %}
@@ -42,9 +39,12 @@ Take the {{ test.title }} paper now for FREE!
       </div>
     {% endif %}
 </ul>
-    {% for choice in question.choice_set.all %}
-      <label for="choice{{ choice.id }}" class="label-choice">{% cycle '(A)' '(B)' '(C)' '(D)' %} <input class="input-choice" type="radio" name="choice" id="choice{{ choice.id }}" value="{{ choice.id }}"/>  {{ choice.choice_text|linebreaksbr }}</label><br />
-    {% endfor %}
+<form class="test-form" action="{% url 'viridis:answer' test.id %}" method="post">
+{% csrf_token %}
+  <input type="hidden" name="question_id" value="{{ question.pk }}" />
+  {% for choice in question.choice_set.all %}
+    <label for="choice{{ choice.id }}" class="label-choice">{% cycle '(A)' '(B)' '(C)' '(D)' %} <input class="input-choice" type="radio" name="choice" id="choice{{ choice.id }}" value="{{ choice.id }}"/>  {{ choice.choice_text|linebreaksbr }}</label><br />
+  {% endfor %}
 </form>
 <hr>
 {% endfor %}

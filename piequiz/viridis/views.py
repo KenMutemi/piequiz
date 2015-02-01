@@ -16,6 +16,7 @@ from django.views.generic.list import ListView
 from django.core.urlresolvers import reverse
 from django.http import HttpResponsePermanentRedirect, HttpResponseRedirect, HttpResponse
 from django.shortcuts import render, get_object_or_404
+from django.template.defaultfilters import slugify
 
 class JSONFormMixin(object):
     def create_response(self, vdict=dict(), valid_form=True):
@@ -102,6 +103,20 @@ def test(request, test_id, slug):
     if not slug == test.slug:
         return HttpResponsePermanentRedirect(test.get_absolute_url())
     return render(request, 'viridis/test.html', {'test': test})
+
+def question(request, question_id, slug):
+    question = get_object_or_404(Question, pk=question_id)
+    if not slug == slugify(question.question_text):
+        return HttpResponsePermanentRedirect(question.get_absolute_url())
+    return render(request, 'viridis/question.html', {'question': question})
+
+def question_answer(request, question_id):
+    correct_choice = Choice.objects.get(question=question_id, is_correct=True)
+    if request.method == 'POST' and request.is_ajax:
+        selected = request.POST.get('choice')
+        question = request.POST.get('question_id')
+
+    return HttpResponse(str(correct_choice) == str(selected))
 
 def answer(request, test_id):
     test = Test.objects.get(pk=test_id)

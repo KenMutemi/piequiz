@@ -24,7 +24,7 @@ $(document).ready(function() {
     $('#search').submit();
   });
 
-$('input[type=radio]').click(function() {
+$('.input-choice').click(function() {
   $(this).closest("form").submit();
 });
 
@@ -72,6 +72,28 @@ $(".new-password").dialog({modal: true, dialogClass: 'no-close password-dialog'}
             }
         });
         return false;
+    });
+
+    /** ajax for question*/
+    var question_form = $('.question-form');
+    $('#question-submit').click(function(event){
+         event.preventDefault(); //so that we stop normal form submit.
+         $.ajax({
+             url: question_form.attr('action'),
+             type: question_form.attr('method'),
+             data: question_form.serialize(),
+             success: function(data) {
+              if(data=="True") {
+                $("#question").append("<i class='fa fa-check fa-2x fa-green'></>");
+              }
+              else if(data=="False") {
+                $("#question").append("<i class='fa fa-times fa-2x error'></>");
+              }
+             },
+              error: function(data) {
+                alert(JSON.stringify(data));
+            }
+         });
     });
 
   window.autocomplete = new Autocomplete({

@@ -229,6 +229,10 @@ textarea {
   border-radius: 2px;
 }
 
+#question {
+  margin-bottom: 62px;
+}
+
 p, div, textarea, .dropdown-menu {
   font: 12px/20px 'Roboto', Arial, sans-serif;
 }

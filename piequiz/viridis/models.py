@@ -63,6 +63,7 @@ class Question(models.Model):
     question_text = models.CharField(max_length = 1000)
     question_pic = models.ImageField(upload_to='images/', blank=True)
     test = models.ForeignKey(Test)
+    slug = models.SlugField(max_length=200, blank=True, null=True)
     marks = models.IntegerField(default=0)
     pub_date = models.DateTimeField(auto_now_add=True)
 
@@ -71,6 +72,16 @@ class Question(models.Model):
 
     def __unicode__(self):
         return self.question_text
+
+    def save(self, *args, **kwargs):
+        if not self.id:
+            # Newly created object, so set slug
+            self.slug = slugify(self.question_text)
+
+        super(Question, self).save(*args, **kwargs)
+
+    def get_absolute_url(self):
+        return "/question/%s/%s/" % (self.id, self.slug)
 
 class Choice(models.Model):
     choice_text = models.CharField(max_length=500)

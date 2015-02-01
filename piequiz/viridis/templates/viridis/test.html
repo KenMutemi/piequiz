@@ -35,7 +35,7 @@ Take the {{ test.title }} paper now for FREE!
 {% csrf_token %}
     <input type="hidden" name="question_id" value="{{ question.pk }}" />
 <ul class="list-unstyled">
-  <li>{{ forloop.counter }}. {{ question.question_text|linebreaksbr }} (<em>{{ question.marks }} marks</em>)</li>
+  <li>{{ forloop.counter }}. <a href="{{ question.get_absolute_url }}">{{ question.question_text|linebreaksbr }}</a> (<em>{{ question.marks }} marks</em>)</li>
     {% if question.question_pic %}
       <div class="img-frame">
         <img class="question-img" src="/media/{{ question.question_pic }}" width="95%" alt="">

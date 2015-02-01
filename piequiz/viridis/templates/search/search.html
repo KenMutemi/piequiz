@@ -19,7 +19,8 @@
         {% if query %}-->
         {% for result in page.object_list %}
             <p>
-            <a href="{{ result.object.get_absolute_url }}"> {{ result.object.title }}_{{ result.object.question_text|linebreaksbr }}</a>
+            <a href="{{ result.object.get_absolute_url }}"> {{ result.object.title }}</a>
+            <a href="{{ result.object.question_text }}">{{ result.object.question_text|linebreaksbr }}</a>
             </p>
             <p>Date: {{ result.object.pub_date }}</p>
         <hr>

@@ -1,5 +1,8 @@
 {% extends "base.html" %}
 {% block title %}{{ question.question_text }}{% endblock %}
+{% block metadesc %}
+  {{ question.question_text }}
+{% endblock %}
 {% block date_created %}
 <hr>
 See <a href="{% url 'viridis:history' %}">previous scores</a>.

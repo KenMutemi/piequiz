@@ -19,7 +19,7 @@ See <a href="{% url 'viridis:history' %}">previous scores</a>.
 {% endblock %}
 {% block content %}
 <div id="question">
-  <p>{{ question.question_text }}</p>
+  <p>{{ question.question_text|linebreaksbr }}</p>
   <form class="question-form" action="{% url 'viridis:question_answer' question.id %}" method="post">
     {% csrf_token %}
     <input type="hidden" name="question_id" value="{{ question.pk }}" />

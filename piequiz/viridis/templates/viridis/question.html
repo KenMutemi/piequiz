@@ -4,6 +4,16 @@
 <hr>
 See <a href="{% url 'viridis:history' %}">previous scores</a>.
 {% endblock %}
+{% block head %}
+{% if test == 'maths' %}
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+  </script>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+{% endif %}
+{% endblock %}
 {% block content %}
 <div id="question">
   <p>{{ question.question_text }}</p>

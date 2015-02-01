@@ -2,13 +2,14 @@ from django.conf.urls import patterns, include, url
 from django.contrib.sitemaps.views import sitemap
 from cms.sitemaps import CMSSitemap
 from django.contrib.sitemaps import FlatPageSitemap
-from viridis.sitemaps import TestSitemap
+from viridis.sitemaps import TestSitemap, QuestionSitemap
 from django.contrib import admin
 admin.autodiscover()
 
 sitemaps = {
     'flatpages': FlatPageSitemap,
     'test': TestSitemap,
+    'question': QuestionSitemap,
 }
 
 urlpatterns = patterns('',

@@ -106,9 +106,10 @@ def test(request, test_id, slug):
 
 def question(request, question_id, slug):
     question = get_object_or_404(Question, pk=question_id)
+    test = question.test.tag
     if not slug == slugify(question.question_text):
         return HttpResponsePermanentRedirect(question.get_absolute_url())
-    return render(request, 'viridis/question.html', {'question': question})
+    return render(request, 'viridis/question.html', {'question': question, 'test': test})
 
 def question_answer(request, question_id):
     correct_choice = Choice.objects.get(question=question_id, is_correct=True)

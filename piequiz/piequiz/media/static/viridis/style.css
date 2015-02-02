@@ -661,3 +661,7 @@ u {
 #posts-recent {
   margin-bottom: 0;
 }
+
+.pagination {
+  margin-bottom: 10px;
+}

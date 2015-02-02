@@ -280,7 +280,7 @@ cursor: default;
 
 #sidebar {
   float: right;
-  margin: 0 20% 0 0;
+  margin: 0 20% 60px 0;
   width: 20%;
   background:#ffffff;
 }
@@ -346,10 +346,6 @@ td {
 
 #table-mytests {
   border:2px solid #d3d3d3;
-}
-
-.panel-default {
-  background-color: #fff;
 }
 
 .label-choice {

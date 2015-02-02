@@ -65,7 +65,7 @@ You do not need to download anything.">
             {% endif %}
             <li><a href="{% url 'viridis:profile' %}">Profile</a></li>
             <li class="divider"></li>
-            <li><a href="{% url 'django.contrib.auth.views.logout' %}?next={{ request.path }}">Sign Out</a></li>
+            <li><a href="{% url 'django.contrib.auth.views.logout' %}?next={{ request.path }}">Sign out</a></li>
           </ul>
         </li>
         {% else %}
@@ -115,7 +115,7 @@ You do not need to download anything.">
 <hr>
 {% else %}
 <hr>
-<div class="panel panel-info panel-login">
+<div id="panel-login" class="panel panel-info">
   <div class="panel-heading"><h1 class=panel-title>Log in</h1></div>
   <div class="panel-body">
     <form class="form-horizontal" method="post" action="{% url 'auth_login' %}" role="form">
@@ -141,6 +141,7 @@ You do not need to download anything.">
     </form>
 </div>
 </div>
+<hr>
 {% endif %}
 {% if user.has_usable_password == False %}
 <div class="new-password" title="Set a new password">

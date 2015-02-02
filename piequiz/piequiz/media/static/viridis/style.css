@@ -278,6 +278,10 @@ cursor: default;
   } 
 }
 
+#panel-search-results {
+  padding-bottom: 40px;
+}
+
 #sidebar {
   float: right;
   margin: 0 20% 60px 0;

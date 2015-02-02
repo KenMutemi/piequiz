@@ -47,7 +47,6 @@ Get multiple-choice KCPE past papers.
 {% empty %}
   <p>Sorry, there are no quizzes available at the moment.</p>
 {% endfor %}
-</div>
 {# .... **Pagination section** .... #}
 {% if is_paginated %}
   <ul class="pagination pagination-centered">
@@ -64,6 +63,7 @@ Get multiple-choice KCPE past papers.
     {% endif %}
   </ul>
 {% endif %}
+  </div>
 </div>
 </div>
 {% endblock %}

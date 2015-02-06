@@ -392,19 +392,18 @@ label{font-weight:normal !important};
 }
 
 .footer {
+  position: absolute;
   bottom: 0;
-  margin: 0 0 0 0;
-  position: fixed;
-  width: 40%;
+  width: 100%;
   /* Set the fixed height of the footer here */
-  height: 50px;
-  color: #ffffff;
-  background-color: #2cc9f0;
+  height: 60px;
+  background-color: #F9F9F9;
 }
-@media only screen and (min-width: 320px) and (max-width : 480px) {
-  .footer {
-    width: 100%;
-  } 
+
+#footer-main {
+  width: 65%;
+  margin-left: 15%;
+  padding: 5px;
 }
 
 #percent-score {

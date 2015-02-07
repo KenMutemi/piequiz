@@ -162,9 +162,21 @@ You do not need to download anything.">
 </div>
 {% block footer %}
 <footer id="footer-main" class="footer">
-    <p>
+  <div class="row">
+    <div class="col-md-6">
       <i class="fa fa-info-circle"></i> <a href="/about/">About</a> <i class="fa fa-question-circle"></i> <a href="/faq/">FAQs</a>
-    </p>
+    </div>
+    <div class="col-md-6">
+      <a class="twitter-follow-button"
+       href="https://twitter.com/quizonia"
+       data-show-count="false"
+       data-lang="en"
+       data-size="large">
+        Follow @quizonia
+      </a>
+      <script>window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));</script>
+    </div>
+  </div>
     <p>&copy; Copyright 2015, Quizonia. All Rights Reserved.</p>
 </footer>
 {% endblock %}

@@ -120,11 +120,13 @@
     </div>
     {% render_block "js" %}
 </div>
-<footer id="footer">
-  <p>
-    <i class="fa fa-info-circle"></i> <a href="/about/">About</a> <i class="fa fa-question-circle"></i> <a href="/faq/">FAQs</a>
-  </p>
-  <p>&copy; Copyright 2014-2015, Quizonia</p>
+{% block footer %}
+<footer id="footer-main" class="footer">
+    <p>
+      <i class="fa fa-info-circle"></i> <a href="/about/">About</a> <i class="fa fa-question-circle"></i> <a href="/faq/">FAQs</a>
+    </p>
+    <p>&copy; Copyright 2015, Quizonia. All Rights Reserved.</p>
 </footer>
+{% endblock %}
   </body>
 </html>

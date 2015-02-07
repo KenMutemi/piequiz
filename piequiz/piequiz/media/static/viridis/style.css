@@ -397,13 +397,35 @@ label{font-weight:normal !important};
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 60px;
-  background-color: #F9F9F9;
+  background-color: #F5F5F5;
+}
+
+.footer-test {
+  bottom: 0;
+  margin: 0 0 0 0;
+  position: fixed;
+  width: 40%;
+  /* Set the fixed height of the footer here */
+  height: 50px;
+  color: #ffffff;
+  background-color: #2cc9f0;
+}
+@media only screen and (min-width: 320px) and (max-width : 480px) {
+  .footer-test {
+    width: 100%;
+  } 
 }
 
 #footer-main {
   width: 65%;
   margin-left: 15%;
   padding: 5px;
+}
+@media only screen and (min-width: 320px) and (max-width : 480px) {
+  #footer-main {
+    width: 100%;
+    margin-left: 0;
+  } 
 }
 
 #percent-score {
@@ -664,4 +686,8 @@ u {
 
 .pagination {
   margin: 0;
+}
+
+.footer-remove {
+  display: none;
 }

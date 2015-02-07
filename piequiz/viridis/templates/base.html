@@ -160,12 +160,14 @@ You do not need to download anything.">
 {% endif %}
 </div>
 </div>
+{% block footer %}
 <footer id="footer-main" class="footer">
     <p>
       <i class="fa fa-info-circle"></i> <a href="/about/">About</a> <i class="fa fa-question-circle"></i> <a href="/faq/">FAQs</a>
     </p>
     <p>&copy; Copyright 2015, Quizonia. All Rights Reserved.</p>
 </footer>
+{% endblock %}
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   {% bootstrap_javascript %}

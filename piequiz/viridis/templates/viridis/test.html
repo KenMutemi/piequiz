@@ -54,7 +54,7 @@ Take the {{ test.title }} paper now for FREE!
     </div>
 </div>
   <hr>
-<div class="footer">
+<div class="footer-test">
   <div class="footer-wrap">
   <div class="rating">
     <ul class="footer-list">
@@ -86,5 +86,7 @@ Take the {{ test.title }} paper now for FREE!
 </div>
 
 {% endblock %}
-
-
+<div class="footer-remove">
+{% block footer %}
+{% endblock %}
+</div>

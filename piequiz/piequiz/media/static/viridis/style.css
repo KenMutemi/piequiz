@@ -666,7 +666,7 @@ u {
   color: #fff;
   margin-left: 17%;
   margin-bottom: 0;
-  background: url("../images/nai.jpg") no-repeat;
+  background: url("nai.jpg") no-repeat;
 }
 @media only screen and (min-width: 320px) and (max-width : 480px) {
   #jumbo-index {

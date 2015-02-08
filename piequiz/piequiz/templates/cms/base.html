@@ -9,6 +9,14 @@
     {% render_block "css" %}
   </head>
   <body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
   {% addtoblock "css" %}
   <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" media="screen" rel="stylesheet">
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
@@ -21,8 +29,23 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
   {% endaddtoblock %}
-  <div class="container">
-<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+<div id="jumbo-index" class="jumbotron">
+  <h1 id="qbrand"><a href="{% url 'viridis:home' %}">Quizonia</a></h1>
+  <p>Your Free KCPE Revision Authority</p>
+  <p class="row">
+    <div class="fb-like col-md-2" data-href="http://www.quizonia.com" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+    <div class="col-md-4">
+      <a class="twitter-follow-button"
+       href="https://twitter.com/quizonia"
+       data-show-count="false"
+       data-lang="en">
+        Follow @quizonia
+      </a>
+      <script>window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));</script>
+    </div>
+  </p>
+</div>
+<nav class="navbar navbar-custom" data-spy="affix" data-offset-top="180" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -32,7 +55,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="{% url 'viridis:home' %}">Quizonia</a>
+      <a class="navbar-brand" href="{% url 'viridis:home' %}">Home</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -48,7 +71,7 @@
           <div class="col-sm-12">
             <div class="left-inner-addon">
               <i class="glyphicon glyphicon-search"></i>
-              <input type="search" id="search-input" name="q" class="form-control input-sm" placeholder="Search for past papers..." />
+              <input type="search" id="search-input" name="q" class="form-control input-sm" placeholder="Search for KCPE past papers and questions..." />
             </div>
           </div>
       </div>
@@ -63,7 +86,7 @@
             {% endif %}
             <li><a href="{% url 'viridis:profile' %}">Profile</a></li>
             <li class="divider"></li>
-            <li><a href="{% url 'django.contrib.auth.views.logout' %}?next={{ request.path }}">Sign Out</a></li>
+            <li><a href="{% url 'django.contrib.auth.views.logout' %}?next={{ request.path }}">Sign out</a></li>
           </ul>
         </li>
         {% else %}
@@ -77,6 +100,7 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+  <div class="container">
     <div id="wrap" class="row row-wrap">
       <div class="col-md-8">
         {% cms_toolbar %}
@@ -122,21 +146,8 @@
 </div>
 {% block footer %}
 <footer id="footer-main" class="footer">
-  <div class="row">
-    <div class="col-md-6">
-      <i class="fa fa-info-circle"></i> <a href="/about/">About</a> <i class="fa fa-question-circle"></i> <a href="/faq/">FAQs</a>
-    </div>
-    <div class="col-md-6">
-      <a class="twitter-follow-button"
-       href="https://twitter.com/quizonia"
-       data-show-count="false"
-       data-lang="en">
-        Follow @quizonia
-      </a>
-      <script>window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));</script>
-    </div>
-  </div>
-    <p>&copy; Copyright 2015, Quizonia. All Rights Reserved.</p>
+  <p><i class="fa fa-info-circle"></i> <a href="/about/">About</a> <i class="fa fa-question-circle"></i> <a href="/faq/">FAQs</a></p>
+  <p>&copy; Copyright 2015, Quizonia. All Rights Reserved.</p>
 </footer>
 {% endblock %}
   </body>

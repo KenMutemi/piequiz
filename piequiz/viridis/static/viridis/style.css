@@ -10,7 +10,7 @@ body {
 
 nav {
   width: 65%;
-  margin: 0 0 0 15%;
+  margin: 0 0 0 17%;
 }
 @media only screen and (min-width: 320px) and (max-width : 480px) {
   nav {
@@ -21,18 +21,18 @@ nav {
 
 .row-wrap {
   width: 77%;
-  margin: 0 0 0 8%;
+  margin: 0 0 0 11%;
 }
 
 #wrap {
   background-color: #fff !important;
-  margin-top: 70px;
+  margin-top: 40px;
 }
 
 #main {
 float:left;
 width: 40%;
-margin: 0 0 0 16%;
+margin: 0 0 0 18%;
 background:#ffffff;
 }
 @media only screen and (min-width: 320px) and (max-width : 480px) {
@@ -397,7 +397,19 @@ label{font-weight:normal !important};
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 60px;
-  background-color: #F5F5F5;
+  color: #FFFFFF;
+  background-color: #71757F;
+
+  -webkit-border-top-right-radius: 2px;
+  -webkit-border-top-left-radius: 2px;
+  -moz-border-top-right-radius: 2px;
+  -moz-border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-top-left-radius: 2px;
+}
+
+.footer a {
+  color: #FFFFFF;
 }
 
 .footer-test {
@@ -418,7 +430,7 @@ label{font-weight:normal !important};
 
 #footer-main {
   width: 65%;
-  margin-left: 15%;
+  margin-left: 17%;
   padding: 5px;
 }
 @media only screen and (min-width: 320px) and (max-width : 480px) {
@@ -445,6 +457,8 @@ u {
 }
 
 .navbar-custom {
+  z-index: 1000;
+
   -webkit-border-bottom-right-radius: 2px;
   -webkit-border-bottom-left-radius: 2px;
   -moz-border-radius-bottomright: 2px;
@@ -452,17 +466,16 @@ u {
   border-bottom-right-radius: 2px;
   border-bottom-left-radius: 2px;
 
-  border-left-width: thin;
-  border-left-style: solid;
-  border-left-color: #d3d3d3;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 
   border-bottom-width: thin;
   border-bottom-style: solid;
   border-bottom-color:  #d3d3d3;
-
-  border-right-width: thin;
-  border-right-style: solid;
-  border-right-color:  #d3d3d3;
 
   background-color: #d3d3d3;
   border-color: #c2c2c2;
@@ -646,4 +659,31 @@ u {
 
 .footer-remove {
   display: none;
+}
+
+#jumbo-index {
+  width: 65%;
+  color: #fff;
+  margin-left: 17%;
+  margin-bottom: 0;
+  background: url("../images/nai.jpg") no-repeat;
+}
+@media only screen and (min-width: 320px) and (max-width : 480px) {
+  #jumbo-index {
+    width: 100%;
+    margin-left: 0;
+  } 
+}
+
+.navbar.affix {
+    top: 0;
+}
+
+#qbrand {
+  font-weight: bolder;
+}
+
+#qbrand a {
+  text-decoration: none;
+  color: #2cc9f0;
 }

@@ -33,11 +33,6 @@
           <div id="collapse{{ forloop.counter }}" class="panel-collapse collapse in">
             <div class="panel-body">
         {% endif %}
-        {% if forloop.revcounter|divisibleby:4 %}
-        {% for question in test.question_set.all %}
-          <p>{{ forloop.counter }}. {{ question.question_text }} <i>({{ mark }} mks)</i></p>
-        {% endfor %}
-        {% endif %}
             {% cycle 'A' 'B' 'C' 'D' %}. {{ field }}
         {% if forloop.counter|divisibleby:4 %}
           </div>

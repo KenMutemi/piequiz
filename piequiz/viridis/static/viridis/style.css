@@ -663,16 +663,20 @@ u {
 
 #jumbo-index {
   width: 65%;
-  color: #fff;
+  color: #18A15E;
   margin-left: 17%;
   margin-bottom: 0;
-  background: url("nai.jpg") no-repeat;
+  background: url("grid.png");
 }
 @media only screen and (min-width: 320px) and (max-width : 480px) {
   #jumbo-index {
     width: 100%;
     margin-left: 0;
   } 
+}
+
+#jumbo-index p {
+  font-weight: bold;
 }
 
 .navbar.affix {

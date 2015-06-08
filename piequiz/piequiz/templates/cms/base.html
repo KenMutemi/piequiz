@@ -17,89 +17,89 @@
     js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
     fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
-  {% addtoblock "css" %}
-  <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" media="screen" rel="stylesheet">
-  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-  <link href="{% static 'viridis/style.css' %}" type="text/css" rel="stylesheet">
-  <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.ico' %}"/>
-  {% endaddtoblock %}
+    {% addtoblock "css" %}
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" media="screen" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href="{% static 'viridis/style.css' %}" type="text/css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.ico' %}"/>
+    {% endaddtoblock %}
 
-  {% addtoblock "js" %}
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-  {% endaddtoblock %}
-<div id="jumbo-index" class="jumbotron">
-  <h1 id="qbrand"><a href="{% url 'viridis:home' %}">Quizonia</a></h1>
-  <p>Your Free KCPE Revision Authority</p>
-  <p class="row">
-    <div class="fb-like col-md-2" data-href="http://www.quizonia.com" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
-    <div class="col-md-4">
-      <a class="twitter-follow-button"
-       href="https://twitter.com/quizonia"
-       data-show-count="false"
-       data-lang="en">
-        Follow @quizonia
-      </a>
-      <script>window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));</script>
+    {% addtoblock "js" %}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    {% endaddtoblock %}
+    <div id="jumbo-index" class="jumbotron">
+      <h1 id="qbrand"><a href="{% url 'viridis:home' %}">Quizonia</a></h1>
+      <p>Your Free KCPE Revision Authority</p>
+      <p class="row">
+        <div class="fb-like col-md-2" data-href="http://www.quizonia.com" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+        <div class="col-md-4">
+          <a class="twitter-follow-button"
+           href="https://twitter.com/quizonia"
+           data-show-count="false"
+           data-lang="en">
+            Follow @quizonia
+          </a>
+          <script>window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));</script>
+        </div>
+      </p>
     </div>
-  </p>
-</div>
-<nav class="navbar navbar-custom" data-spy="affix" data-offset-top="180" role="navigation">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="{% url 'viridis:home' %}">Home</a>
-    </div>
+    <nav class="navbar navbar-custom" data-spy="affix" data-offset-top="180" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="{% url 'viridis:home' %}">Home</a>
+        </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-      {% if user.is_active and user.is_staff %}
-        <li><li><a href="{% url 'viridis:add_test' %}">Create Quiz</a></li>
-      {% endif %}
-        <li><li><a href="/blog/">Blog</a></li>
-      </ul>
-      <form id="search" class="navbar-form navbar-left" method="get" action="/search?=">
-        <div class="form-group">
-          <div class="col-sm-12">
-            <div class="left-inner-addon">
-              <i class="glyphicon glyphicon-search"></i>
-              <input type="search" id="search-input" name="q" class="form-control input-sm" placeholder="Search for KCPE past papers and questions..." />
-            </div>
-          </div>
-      </div>
-      </form>
-      <ul class="nav navbar-nav navbar-right">
-        {% if user.is_authenticated %}
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ user.username }} <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            {% if user.is_staff %}
-            <li><a href="{% url 'viridis:my_tests' %}">My quizzes</a></li>
-            {% endif %}
-            <li><a href="{% url 'viridis:profile' %}">Profile</a></li>
-            <li class="divider"></li>
-            <li><a href="{% url 'django.contrib.auth.views.logout' %}?next={{ request.path }}">Sign out</a></li>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+          {% if user.is_active and user.is_staff %}
+            <li><li><a href="{% url 'viridis:add_test' %}">Create Quiz</a></li>
+          {% endif %}
+            <li><li><a href="/blog/">Blog</a></li>
           </ul>
-        </li>
-        {% else %}
-        <a href="/accounts/register/">
-          <li>
-            <button id="signup" class="btn btn-success navbar-btn btn-sm">Sign up</button>
-          </li>
-        </a>
-        {% endif %}
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+          <form id="search" class="navbar-form navbar-left" method="get" action="/search?=">
+            <div class="form-group">
+              <div class="col-sm-12">
+                <div class="left-inner-addon">
+                  <i class="glyphicon glyphicon-search"></i>
+                  <input type="search" id="search-input" name="q" class="form-control input-sm" placeholder="Search for KCPE past papers and questions..." />
+                </div>
+              </div>
+          </div>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            {% if user.is_authenticated %}
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ user.username }} <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                {% if user.is_staff %}
+                <li><a href="{% url 'viridis:my_tests' %}">My quizzes</a></li>
+                {% endif %}
+                <li><a href="{% url 'viridis:profile' %}">Profile</a></li>
+                <li class="divider"></li>
+                <li><a href="{% url 'django.contrib.auth.views.logout' %}?next={{ request.path }}">Sign out</a></li>
+              </ul>
+            </li>
+            {% else %}
+            <a href="/accounts/register/">
+              <li>
+                <button id="signup" class="btn btn-success navbar-btn btn-sm">Sign up</button>
+              </li>
+            </a>
+            {% endif %}
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
   <div class="container">
     <div id="wrap" class="row row-wrap">
       <div class="col-md-8">
@@ -109,71 +109,70 @@
       </div>
       <div class="col-md-4 other">
         {% if not user.is_authenticated %}
-<div class="panel panel-info panel-login">
-  <div class="panel-heading"><h1 class=panel-title>Log in</h1></div>
-  <div class="panel-body">
-    <form class="form-horizontal" method="post" action="{% url 'auth_login' %}" role="form">
-    {% csrf_token %}
-      <div class="form-group">
-        <div class="col-sm-12">
-          <div class="left-inner-addon">
-            <i class="glyphicon glyphicon-user"></i>
-            <input class="form-control" type="text" name="username" placeholder="Username"/>
-          </div>
+      <div class="panel panel-info panel-login">
+        <div class="panel-heading"><h1 class=panel-title>Log in</h1></div>
+        <div class="panel-body">
+          <form class="form-horizontal" method="post" action="{% url 'auth_login' %}" role="form">
+            {% csrf_token %}
+            <div class="form-group">
+              <div class="col-sm-12">
+                <div class="left-inner-addon">
+                  <i class="glyphicon glyphicon-user"></i>
+                  <input class="form-control" type="text" name="username" placeholder="Username"/>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-12">
+                <div class="left-inner-addon">
+                  <i class="glyphicon glyphicon-lock"></i>
+                  <input class="form-control" type="password" name="password" placeholder="Password" />
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-success btn-sm" type="submit"><i class="fa fa-sign-in"></i> Sign in</button>
+            <input type="hidden" name="next" value="{{ request.path }}" />
+          </form>
         </div>
       </div>
-    <div class="form-group">
-      <div class="col-sm-12">
-        <div class="left-inner-addon">
-          <i class="glyphicon glyphicon-lock"></i>
-          <input class="form-control" type="password" name="password" placeholder="Password" />
-        </div>
-      </div>
-    </div>
-    <button class="btn btn-success btn-sm" type="submit"><i class="fa fa-sign-in"></i> Sign in</button>
-    <input type="hidden" name="next" value="{{ request.path }}" />
-    </form>
-</div>
-</div>
         {% endif %}
         <p id="posts-recent" class="text-muted lead">Recent Posts</p>
         <ul class="list-unstyled">
           {% show_menu %}
         </ul>
       </div>
+       <div id="disqus_thread"></div>
+        <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES * * */
+        var disqus_shortname = 'quizonia';
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        <div id="disqus_thread"></div>
+          <script type="text/javascript">
+          /* * * CONFIGURATION VARIABLES * * */
+          var disqus_shortname = 'quizonia';
+          
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+        </script>
     </div>
-          <div id="disqus_thread"></div>
-          <script type="text/javascript">
-          /* * * CONFIGURATION VARIABLES * * */
-          var disqus_shortname = 'quizonia';
-          
-          /* * * DON'T EDIT BELOW THIS LINE * * */
-          (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-          </script>
-          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-      <div id="disqus_thread"></div>
-          <script type="text/javascript">
-          /* * * CONFIGURATION VARIABLES * * */
-          var disqus_shortname = 'quizonia';
-          
-          /* * * DON'T EDIT BELOW THIS LINE * * */
-          (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-          </script>
     {% render_block "js" %}
-</div>
-{% block footer %}
-<footer id="footer-main" class="footer">
-  <p><i class="fa fa-info-circle"></i> <a href="/about/">About</a> <i class="fa fa-question-circle"></i> <a href="/faq/">FAQs</a></p>
-  <p>&copy; Copyright 2015, Quizonia. All Rights Reserved.</p>
-</footer>
+  </div>
+  {% block footer %}
+  <footer id="footer-main" class="footer">
+    <p><i class="fa fa-info-circle"></i> <a href="/about/">About</a> <i class="fa fa-question-circle"></i> <a href="/faq/">FAQs</a></p>
+    <p>&copy; Copyright 2015, Quizonia. All Rights Reserved.</p>
+  </footer>
 {% endblock %}
-  </body>
+</body>
 </html>

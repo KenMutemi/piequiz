@@ -142,25 +142,17 @@
         </ul>
       </div>
     </div>
-    {% render_block "js" %}
-</div>
-{% block footer %}
-<footer id="footer-main" class="footer">
-  <p><i class="fa fa-info-circle"></i> <a href="/about/">About</a> <i class="fa fa-question-circle"></i> <a href="/faq/">FAQs</a></p>
-  <p>&copy; Copyright 2015, Quizonia. All Rights Reserved.</p>
-</footer>
-{% endblock %}
-      <div id="disqus_thread"></div>
+          <div id="disqus_thread"></div>
           <script type="text/javascript">
           /* * * CONFIGURATION VARIABLES * * */
           var disqus_shortname = 'quizonia';
           
           /* * * DON'T EDIT BELOW THIS LINE * * */
           (function() {
-	      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-	      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-	      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-	  })();
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
           </script>
           <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
       <div id="disqus_thread"></div>
@@ -170,10 +162,18 @@
           
           /* * * DON'T EDIT BELOW THIS LINE * * */
           (function() {
-	      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-	      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-	      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-	  })();
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
           </script>
+    {% render_block "js" %}
+</div>
+{% block footer %}
+<footer id="footer-main" class="footer">
+  <p><i class="fa fa-info-circle"></i> <a href="/about/">About</a> <i class="fa fa-question-circle"></i> <a href="/faq/">FAQs</a></p>
+  <p>&copy; Copyright 2015, Quizonia. All Rights Reserved.</p>
+</footer>
+{% endblock %}
   </body>
 </html>
